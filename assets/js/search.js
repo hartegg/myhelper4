@@ -35,8 +35,7 @@ const getPostsJSON = async () => {
     let response = await fetch('/index.json')
     let data = await response.json()
     return data
-}
-/**
+}/**
  * @param query, element.
  * query: the keyword that user given.
  * element: target element to show the result.
@@ -54,7 +53,7 @@ const filterPostsJSON = (query, element) => {
         </li>`
     ))
     element.style.display = 'block';
-    itemsWithElement.unshift(`<p class="is-size-7 px-2 py-2 has-text-dark">Klik na 'ESC' za otkazivanje pretrage.</p>`)
+    itemsWithElement.unshift(`<p class="">Click 'ESC' for cancle search.</p>`)
     element.innerHTML = itemsWithElement.join('');
 }
 /**
