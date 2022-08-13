@@ -1,0 +1,28 @@
+<div class="expand">
+    <button type="button" class="expand__button" aria-label="Expand Button">
+      <span class="expand-icon expand-icon__right">
+          {{ partial "svgs/arrow/keyboard-arrow-right.svg" (dict "width" 24 "height" 24) }}
+      </span>
+      {{ .Get 0 }}
+    </button>
+    <div class="expand__content">
+        <div>
+            {{ .Inner | markdownify }}
+        </div>
+    </div>
+</div>
+
+
+  {{/*  usage
+  {{< expand "Tko su indigo djeca?" >}}
+
+  Indigo djeca predstavljaju utjelovljenje onoga što je čovječanstvo gotovo zaboravilo. Svijest o našoj istinskoj prirodi
+
+  {{< /expand >}}
+
+  {{< expand "Svjesni su da su svjesni" >}}
+
+  Opisat ću čovjeka kao radioprijemnika sa ograničenim rasponom frekvencija. Dolaskom nove djece radiopriemnici će biti zamjenjeni novim, sofisticiranim, sa neograničenim rasponom frekvencija
+  
+  {{< /expand >}}  */}}
+

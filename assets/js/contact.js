@@ -1,0 +1,69 @@
+	// let contactForm = document.querySelector('.contact-form');
+	
+    const forms = document.querySelectorAll('form');
+    const form = forms[0]; 
+
+   Array.from(form.elements).forEach((input) => {
+        //console.log(input);
+    //contactForm.forEach((item) =>  {
+        //item.style.color = 'white';
+
+        let contact_form = input;
+        //let contact_button = contact_form.find('.form-submit');
+        let contact_button = document.querySelector('.form-submit');
+        let contact_action = '/_sendmailTest/sendemail.php';
+        
+        // Display the hidden form.
+        // contact_form.classList.remove("hidden");
+        document.querySelector('.contact-form').classList.remove("hidden");
+
+        // console.log( "unutrima");
+        // console.log( contact_button);
+
+        // Remove the "no javascript" messages
+        //  $('.contact-no-js').detach();
+        // document.querySelector('.contact-no-js') = '';
+
+        // Wait for a mouse to move, indicating they are human.
+        document.body.addEventListener('mousemove', () => {
+            document.querySelector('.contact-form').setAttribute('action', contact_action);
+            contact_button.removeAttribute('disabled');
+        });
+        
+        // Wait for a touch move event, indicating that they are human.
+        document.body.addEventListener('touchmove', () => {
+            document.querySelector('.contact-form').setAttribute('action', contact_action);
+            contact_button.removeAttribute('disabled');
+        });
+
+        // A tab or enter key pressed
+        document.body.addEventListener("keydown", function (e) {
+            if ((e.keyCode === 9) || (e.keyCode === 13)) {
+                // console.log("tab or enter key pressed")
+                // Unlock the form.
+                document.querySelector('.contact-form').setAttribute('action', contact_action);
+                contact_button.removeAttribute('disabled');
+            }
+        });
+
+
+        contact_button.addEventListener("click",function () {
+            contact_form.classList.add('js-submitted');
+        });
+
+        // Display messages.
+        if (location.search.substring(1) !== '') {
+            switch (location.search.substring(1)) {
+                case 'submitted':
+                    document.querySelector('contact-submited').classList.remove('hidden')
+                    //$('.contact-submitted').removeClass('hidden');
+                    break;
+        
+                case 'error':
+                    document.querySelector('contact-error').classList.remove('hidden')
+                    //$('.contact-error').removeClass('hidden');
+                    break;
+            }
+        }
+    
+    });

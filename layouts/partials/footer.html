@@ -1,0 +1,11 @@
+<footer class="footer footerImage">
+	<div class="container footer__container flex">
+		{{ partial "footer_links.html" . }}
+		<div class="footer__copyright">
+			{{/*  &copy; Indigo kristalni most 2004 - {{ now.Format "2006" }}  */}}
+			 {{/*  {{ .Site.Params.copyright | default .Site.Title }}.  */}}
+			 {{ .Site.Params.copyright | default }}{{ now.Format "2006" }}.
+			<span class="footer__copyright-credits">{{ T "footer_credits" | safeHTML }}</span>
+		</div>
+	</div>
+</footer>

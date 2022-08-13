@@ -1,0 +1,94 @@
+{{- if $thumbnail := .page.Params.thumbnail }}
+	{{- $class := .class }}
+	{{- $visibility := .page.Site.Params.thumbnail.visibility | default (slice "list" "post" "featured") }}
+
+	{{- $valueType := printf "%T" $thumbnail -}}
+	{{- $isMap := in $valueType "map" -}}
+	{{- if $isMap }}
+		{{ $visibility = default (slice "list" "post" "featured") (default .page.Site.Params.thumbnail.visibility $thumbnail.visibility) }}
+		{{ $thumbnail = $thumbnail.src }}
+	{{- end }}
+
+
+	{{- if in $visibility $class }}
+
+
+		<figure class="{{ with $class }}{{ . }}__thumbnail {{ end }}thumbnail">
+			{{/*  <div class="tbumb_par divImgZoom">  */}}
+			{{ if eq $class "list" }}<a class="thumbnail__link" href="{{ .page.RelPermalink }}">{{ end }}
+			
+				{{/*  <img class="thumbnail__image" src="{{ $thumbnail | relURL }}" alt="{{ .page.Title }}">  */}}
+
+				{{ if eq $class "post" }}
+
+					{{/* show on image right-bottom corner image credit source 
+						-> creditname and crediturl + author on hover */}}
+				 	{{/*  {{- if ( .page.Params.thumbnailcredit ) -}}  
+						{{  $creditname := .page.Params.thumbnailcreditname }}
+						{{  $creditUrl := .page.Params.thumbnailcrediturl }}
+						{{  $thumbnailauthor := .page.Params.thumbnailauthor }}
+							<div class="creditContent">
+								<div class="innerCreditContent">
+									<a href="{{ $creditUrl }}" title="Photo from {{ $thumbnailauthor }} on {{ $creditname }}" target="_blank">
+										{{ $creditname  }}
+									</a>
+								</div>
+							</div>
+				    {{- else -}}
+					{{- end -}}       */}}
+
+
+
+					{{ $strAltPost := .page.Title }}
+					{{with  $milePost := resources.Get $thumbnail }}
+
+						{{ if strings.HasSuffix $milePost ".svg"}}
+							<img class="lazyload" style="max-width:50px !important" src="{{ $milePost.RelPermalink }}">  
+						{{ else }} 
+
+							{{ $src1xPost := (.Fill "500x300 q75 Center webp") }}
+							{{/*  {{ $src2x := (.Fill "1000x1240 Center") }}  */}}
+							{{/*  {{ $small := $src.Resize "100x q85 Box" }}  */}}  
+						
+							<img class="thumbnail__image" src="{{ $src1xPost.RelPermalink }}" 
+								height="{{ .Height }}"
+								width="{{ .Width}}" alt="{{ $strAltPost }}" >
+								{{/*  srcset="{{ $src1x.RelPermalink }} 1x, {{ $src2x.RelPermalink }} 2x"  */}}
+						{{end}} 
+
+					{{end}}	
+
+				{{ else if eq $class "list" }}	
+
+						{{ $strAltList := .page.Title }}
+						{{with  $mileList := resources.Get $thumbnail }}
+
+							{{ if strings.HasSuffix $mileList ".svg"}}
+								<img class="lazyload" src="{{ $mileList.RelPermalink }}">  
+							{{ else }}
+							
+								{{ $src1xList := (.Fill "50x50 q75 Center webp") }}
+								{{/* {{ $src1xList := (.Fill "165x100 q75 Center webp") }}
+								{{ $src1xList := (.Fill "260x195 q75 Center") }}
+								{{ $src2x := (.Fill "1000x1240 Center") }}  */}}
+								
+								<img class="thumbnail__image" src="{{ $src1xList.RelPermalink }}" 
+									height="{{ .Height }}"
+									width="{{ .Width}}" alt="{{ $strAltList }}" >
+									{{/*  srcset="{{ $src1x.RelPermalink }} 1x"  */}}
+									{{/*  srcset="{{ $src1x.RelPermalink }} 1x, {{ $src2x.RelPermalink }} 2x"  */}}
+							{{end}}
+
+					    {{end}}
+
+				{{ else }}
+				{{ end }}
+
+			{{ if eq $class "list" }}</a>{{ end }}
+			{{/*  </div>	  */}}
+		</figure>
+
+	{{- end }}
+
+{{- end }}
+

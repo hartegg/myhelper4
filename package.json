@@ -1,0 +1,23 @@
+{
+  "name": "helper4",
+  "version": "1.0.0",
+  "description": "helper4 web page",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "dev": "hugo server --disableFastRender --gc",
+    "dev:preview": "npm run dev -- --buildDrafts --buildFuture",
+    "start": "hugo server --disableFastRender",
+    "build-production": "NODE_ENV=production hugo --gc",
+    "minify": "rm -rf public && hugo --minify && rm -rf public/css && rm -rf public/js && rm -rf public/php && rm -rf public/_sendmail",
+    "renderToDisk": "hugo server --disableFastRender --gc --renderToDisk --cleanDestinationDir",
+    "renderToDisk:preview": "npm run renderToDisk -- --buildDrafts --buildFuture",
+    "rednerToDisk:production": "npm run renderToDisk -- --minify  --environment production ",
+    "hugo version": "hugo --version"
+  },
+  "author": "",
+  "license": "ISC"
+}

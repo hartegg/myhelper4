@@ -1,0 +1,77 @@
+
+{{/* when images are in assete/images folder  */}}
+
+  {{/*  {{ $getImage := .Get 0 }} 
+        {{ $getAlt := .Get 1 }}  */}}
+
+  {{/*  {{ $getImage :=  .Get 0 }}
+  {{ $getAlt := .Get 1 }}
+
+  {{ $image := resources.Get  $getImage }}
+  {{ $alt := resources.Get $getAlt }}  
+
+        getImage = {{ $getImage  }} <br>
+        getAlt= {{ $getAlt  }} <br> <br>
+
+        image = {{ $image  }} <br>
+        alt= {{ $alt  }} <br> <br> 
+
+        <div class="divImgZoom">
+            <img class="post_image" src="{{ $getImage  }}">
+        </div>  */}}
+
+    {{ $Alt := .Get 1 }} 
+    {{ with $pero := resources.Get (.Get 0) }}
+        <!-- You won't see a message below in browser console
+           <script>console.log("You have an image");</script> -->
+
+        <div class="divImgZoom">
+            <img class="post_image" 
+                 height="{{ .Height }}"
+                 width="{{ .Width}}" 
+                 src="{{ $pero.RelPermalink  }}" 
+                 {{ with $Alt }}alt="{{.}}"{{ else }}alt=""{{ end }} >
+        </div>
+
+    {{ end }}
+  
+    
+         {{/*  {{ .Get 0 }} <br> <br>  */}}
+
+    {{/*  {{ $img := resources.GetMatch (printf "*%s*" (.Get 0)) }}
+     {{ $img }} <br> <br>
+
+    {{ $images2 := .Page.Resources.ByType "images/" }}
+    {{ $original := $images2.Get (.Get 0) }}  */}}
+  
+
+ 
+
+    {{/*  {{ with $image :=  .Get 0 }}  */}}
+    {{/*  {{ with $image := .Page.Resources.GetMatch (printf "*%s*" (.Get 0))}}
+    {{ $src :=  resources.Get  $image  }}
+
+          <div class="divImgZoom">
+            <img class="post_image" src="{{ $image.RelPermalink  }}" {{ with $Alt }}alt="{{.}}"{{ else }}alt=""{{ end }} >
+        </div>
+    {{ end }}  */}}
+
+
+  {{/*  {{ with $image  }}
+
+    <img class="post_image" src="{{ . }}" >
+
+  {{ end }}   */}}
+
+    {{/*  {{ with $image }}    {{ with $getAlt }}alt="{{.}}"{{ else }}alt=""{{ end }} 
+        <div class="divImgZoom">
+            <img class="post_image" src="{{ $image | relURL  }}" alt="{{ $getAlt }}" >
+        </div> 
+    {{ end }}    */}}
+
+    {{/*  <img class="post_image" src="{{ $image | relURL  }}" alt="{{ $getAlt }}" >  */}}
+
+{{/* when images are in static/images folder  */}}
+{{/*  <div class="divImgZoom">
+    <img class="post_image"  src="{{ with .Get 0 }}{{.}}{{end}}"  alt="{{ with .Get 1 }}{{.}}{{end}}">
+</div>  */}}

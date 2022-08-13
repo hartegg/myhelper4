@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg height="128px" width="128px" viewBox="0 0 30 30" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+  <clipPath id="a">
+    <path d="m0 0h512v512h-512z"/>
+  </clipPath>
+  <g fill="#fe4088" transform="matrix(0, -0.125348, 0.125348, 0, -0.224204, 30.605814)" clip-path="url(#a)" style="">
+    <rect x="379.238" width="240.263" height="239.334" rx="0.01" ry="0.01" style="fill-opacity: 0.98; paint-order: stroke; stroke: rgb(255, 255, 255); stroke-width: 0px; stroke-miterlimit: 1; fill: rgb(176, 175, 95);" y="290.882" transform="matrix(0, 1, -1, 0, 535.048584, -378.378754)"/>
+  </g>
+  <text style="fill: rgb(255, 255, 255); font-family: &quot;DejaVu Math TeX Gyre&quot;; font-size: 140.033px; font-weight: 700; letter-spacing: 1.9px; white-space: pre;" transform="matrix(0.075471, 0, 0, 0.088851, 9.586377, 18.634092)">JS</text>
+</svg>

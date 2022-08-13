@@ -1,0 +1,7 @@
+{{ $author := index .Site.Data.authors (.Params.author | default "helper4") }}
+{{- if $author -}}
+<div class="meta_item">
+  {{ partial "svg/author.svg" (dict "class" "meta_icon") -}}
+  <span class="meta_text">{{ $author.name }}</span>
+</div>
+{{- end -}}

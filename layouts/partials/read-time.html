@@ -1,0 +1,24 @@
+{{/* {{ $minutes := div .WordCount 150 }} {{ if lt $minutes 1 }} less than 1 min
+read {{ else }} {{ $minutes }} min read {{ end }} */}} {{/* {{ $minutes := div
+.WordCount 150 }} {{ if lt $minutes 1 }}
+<div class="meta__text post-word-count meta__item">manje od minute čitanja</div>
+{{ else }}
+<div class="meta__text post-word-count meta__item">
+  {{ $minutes }} min čitanja, oko {{ .WordCount }} riječi
+</div>
+{{ end }} */}}
+
+<!--
+https://makewithhugo.com/add-a-word-count/-->
+
+{{ $readTime := mul (div (countwords .Content) 150.0) 60 }} {{ if lt $readTime 1
+}}
+<div class="meta__text post-word-count meta__item">less then 1 minute</div>
+{{ else }}
+<!--
+<div class="meta__text post-word-count meta__item"> {{ math.Floor (div $readTime 60) }} min. i {{ mod $readTime 60 }} sec.  čitanja, oko {{ .WordCount }} riječi</div>
+-->
+<div class="meta__text post-word-count meta__item">
+  {{ math.Floor (div $readTime 60) }} min. of reading, {{ .WordCount }} words
+</div>
+{{ end }}

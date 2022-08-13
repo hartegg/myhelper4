@@ -1,0 +1,12 @@
+<!--
+    https://github.com/gohugoio/hugo/commit/a49f838cd03f89aa9eb61584c510177fa5cbd3bd
+-->
+
+{{ $src := .Get "src" }}
+{{ $config := imageConfig (printf "/static/%s" $src) }}
+
+<amp-img src="{{$src}}"
+           height="{{$config.Height}}"
+           width="{{$config.Width}}"
+           layout="responsive">
+</amp-img>

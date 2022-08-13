@@ -1,0 +1,17 @@
+{{with $getTextToImg := resources.Get (.Get 0) }}
+
+{{ $img := resources.Get "/images/background.png"}}
+{{ $img = $img.Filter (images.Text $getTextToImg  (dict 
+    "color" "#ffffff" 
+    "size" 60 
+    "linespacing" 2 
+    "x" 10 
+    "y" 20
+))}} 
+
+  <img class="post_image" 
+                 height="200"
+                 width="200" 
+                 src="{{ $img.RelPermalink  }}" >
+ $img 
+{{end}}

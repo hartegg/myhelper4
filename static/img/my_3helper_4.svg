@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 160 50" preserveAspectRatio="xMidYMin" width="160px" height="50px" xmlns="http://www.w3.org/2000/svg">
+  <text style="fill: rgb(73, 185, 245); font-family: Alessandria; font-size: 20.9533px; font-weight: 700; line-height: 28.8108px; white-space: pre; visibility: hidden;" transform="matrix(1.4163, 0, 0, 1.384027, 34.94249, -7.809717)" x="74.314" y="28.632" dx="2.434" dy="-0.507">4</text>
+  <text style="fill: rgb(255, 255, 255); font-family: monofur; font-size: 30.8px; font-weight: 700; letter-spacing: 0.43px; line-height: 7.31889px; text-transform: lowercase; white-space: pre;"><tspan x="2.631" y="32.988" style="fill: rgba(255, 255, 255, 0.66);">my</tspan><tspan>helper</tspan><tspan style="fill: rgb(73, 185, 245); font-size: 41px;">4</tspan></text>
+  <text style="fill: rgba(255, 255, 255, 0.9); font-family: Alessandria; font-size: 14px; font-weight: 700; text-transform: lowercase; white-space: pre; visibility: hidden;" x="2.673" y="13.132">my</text>
+  <g style="pointer-events: none; visibility: hidden;">
+    <ellipse style="stroke: rgb(8, 26, 48); fill: rgb(8, 26, 48); stroke-width: 0px;" cx="73.591" cy="115.228" rx="45" ry="45"/>
+    <text style="fill: rgb(255, 255, 255); font-family: monofur; font-size: 30.8px; font-weight: 700; letter-spacing: 0.43px; line-height: 7.31889px; text-transform: lowercase; white-space: pre; text-anchor: middle;" x="48.404" y="74.292" transform="matrix(0.89197, 0, 0, 0.89197, 27.316189, -0.382881)"><tspan x="51.035" y="107.28" style="fill: rgba(255, 255, 255, 0.66); font-size: 30.8px; word-spacing: 0px; letter-spacing: 0.43px;">my<tspan x="51.03499984741211" dy="1em">​</tspan></tspan><tspan style="font-size: 30.8px; word-spacing: 0px; letter-spacing: 0.43px;">helper<tspan x="51.03499984741211" dy="1em">​</tspan></tspan><tspan style="fill: rgb(73, 185, 245); font-size: 41px; word-spacing: 0px; letter-spacing: 0.43px;">4</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+{{ $count := .Get "count" | default 3 }}
+
+<div style="width: 100%; font-size: 18px; margin: 20px 0; white-space: nowrap">
+  <div
+    style="width: 100%; font-size: 18px; font-weight: bold; white-space: nowrap"  >
+    Featured Posts
+  </div>
+  {{ range first $count .Site.Taxonomies.tags.featured }}
+  <a style="display: block" href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+  {{ end }}
+</div>
+
+{{/*  usage in .md
+  
+{{< featured count=4 >}}
+
+ */}}

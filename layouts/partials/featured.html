@@ -1,0 +1,47 @@
+
+{{/*  {{- $featured := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}  */}}
+{{- $featured_num := (.Site.Params.featured.featured_num | default 2) }}
+
+
+
+<div class="featured__item featured">
+
+	<div class="featured__content">
+    
+		{{/* from https://gohugo.io/functions/where/#readout  */}}
+		{{/*  {{- range where .Site.Pages "Params.featured" true }}  */}}
+
+		{{/*  https://gohugo.io/functions/where/#use-where-with-first  */}}
+
+		{{- range first $featured_num (where .Site.Pages "Params.featured" true) }}
+			<div class="featured__inner shadow">
+				{{/* List categories https://pakstech.com/blog/hugo-list-page/  */}}
+				<div class="featured__categories">
+					{{ range .Params.categories }}
+						<a class="featured__categories__link" href="/categories/{{ . | urlize}}">{{ . }}</a>
+					{{ end }}
+				</div>
+
+				{{/*  {{ .Params.categories }}   */}}
+				
+				<a class="featured__link" href="{{ .RelPermalink }}">
+					{{/*  <div class="featured__item featured">  */}}
+						{{- if $thumbnail := .Params.thumbnail }}
+							{{with  $milePost := resources.Get $thumbnail }}
+							{{ $featuredImg := (.Fill "500x300 q75 Center") }}
+							
+								<img src="{{ $featuredImg.RelPermalink }}" height="{{ $featuredImg.Height }}" width="{{ $featuredImg.Width }}" alt="{{ .Title }}">
+									
+							{{- end }}
+						{{- end }}
+						
+					{{/*  </div>  */}}
+					<div class="feturedTitle"><span>{{ .Title }}</span></div>
+				</a>
+
+			</div>
+		{{- end }}
+		
+
+	</div>
+</div>

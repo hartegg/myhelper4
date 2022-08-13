@@ -1,0 +1,50 @@
+{{- if $thumbnail := .page.Params.thumbnail }}
+	{{- $class := .class }}
+	{{- $visibility := .page.Site.Params.thumbnail.visibility | default (slice "post" ) }}
+
+	{{- $valueType := printf "%T" $thumbnail -}}
+	{{- $isMap := in $valueType "map" -}}
+	{{- if $isMap }}
+		{{ $visibility = default (slice  "post" ) (default .page.Site.Params.thumbnail.visibility $thumbnail.visibility) }}
+		{{ $thumbnail = $thumbnail.src }}
+	{{- end }}
+
+
+	{{- if in $visibility $class }}
+
+
+		{{/*  <figure class="{{ with $class }}{{ . }}__thumbnail {{ end }}thumbnail">  */}}
+			{{/*  <div class="tbumb_par divImgZoom">  */}}
+			
+				{{/*  <img class="thumbnail__image" src="{{ $thumbnail | relURL }}" alt="{{ .page.Title }}">  */}}
+
+				{{ if eq $class "post" }}
+
+					{{ $strAltPost := .page.Title }}
+					{{with  $milePost := resources.Get $thumbnail }}
+
+						{{ if strings.HasSuffix $milePost ".svg"}}
+							<img class="lazyload" src="{{ $milePost.RelPermalink }}">  
+						{{ else }} 
+
+							{{ $src1xPost := (.Fill "50x50 q75 Center webp") }}
+							{{/*  {{ $src2x := (.Fill "1000x1240 Center") }}  */}}
+							{{/*  {{ $small := $src.Resize "100x q85 Box" }}  */}}  
+						
+							<img class="thumbnail__image" src="{{ $src1xPost.RelPermalink }}" 
+								height="{{ .Height }}"
+								width="{{ .Width}}" alt="{{ $strAltPost }}" >
+								{{/*  srcset="{{ $src1x.RelPermalink }} 1x, {{ $src2x.RelPermalink }} 2x"  */}}
+						{{end}} 
+
+					{{end}}	
+
+				{{ end }}
+
+			{{/*  </div>	  */}}
+		{{/*  </figure>  */}}
+
+	{{- end }}
+
+{{- end }}
+

@@ -1,0 +1,65 @@
+{{- /* ID */ -}}
+{{/*  
+{{- $count := (.Scratch.Get "this").count | default 1 -}}
+{{- $id := printf "id-%d" $count -}}
+{{- $count | add 1 | .Scratch.SetInMap "this" "count" -}}
+{{- with .Content -}}
+    {{- dict $id . | dict "data" | dict "config" | merge ($.Scratch.Get "this") | $.Scratch.Set "this" -}}
+{{- end -}}
+{{- return $id -}}  
+*/}}
+
+
+{{/*  
+{{ $counter := 0 }}
+{{ $counter = add $counter 1 }}
+{{- with .Content -}}
+    {{- $id := printf "suckit-%d" $counter -}}
+{{- end -}}
+{{- return $id -}}   */}}
+
+
+
+
+{{/*  {{ $counter := 0 }}
+{{ $id := "" }}
+{{ range .Title }}
+  {{if add $counter 1 }}
+  {{ $id = printf "suckit-%d"  $counter -}}
+  {{end}}
+{{ end }}  */}}
+
+
+
+{{/*  
+{{ $counter := 0}}
+
+  {{range .Title}}
+      {{$counter = add $counter 1}}
+      {{ printf "suckit-%d" $counter}}
+  {{end}} 
+*/}}
+
+
+  {{/*  {{ $posts := where .Site.Pages "Type" "post" }}  */}}
+
+  <!-- (re)set the counter to 0 -->
+  {{ $tagCounter := $.Scratch.Set "tagCounter" 0 }}
+
+  <!-- increment counter if post contains the current tag-->
+  {{ with $.Param "article"  }}
+      {{/*  {{ if in .Params.tags "article" }}  */}}
+          {{ $tagCounter =  $.Scratch.Add "tagCounter" 1 }}
+      {{/*  {{ end }}  */}}
+  {{ end }}
+   {{$tagCounter =  $.Scratch.Get "tagCounter" }}
+
+
+
+
+
+
+
+
+
+

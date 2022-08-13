@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ .Site.Language.Lang }}">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	{{/*  <title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}{{ end }}</title>  */}}
+	<title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}{{ end }}</title>
+	
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.Description }}{{ end }}">
+	{{- if .Site.Params.opengraph }}
+		{{ template "_internal/opengraph.html" . }}
+	{{- end }}
+	{{- if .Site.Params.schema }}
+		{{ template "_internal/schema.html" . }}
+	{{- end }}
+	{{- if .Site.Params.twitter_cards }}
+		{{ template "_internal/twitter_cards.html" . }}
+	{{- end }}
+
+	<!-- Google Tag Manager 
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KFJ4876');</script>-->
+	<!-- End Google Tag Manager -->	
+
+    {{/*  
+	<link rel="canonical" href="{{ .Permalink }}">
+    <meta name="canonical" content="{{ .Permalink }}">  
+	*/}}
+	
+	{{- with .OutputFormats.Get "RSS" }}<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml">{{ end }}
+	{{ if ne hugo.Environment "production" }}<meta name="robots" content="noindex,nofollow">{{ else }}<meta name="robots" content="index,follow"><meta content="index,follow,snippet,archive" name="googlebot">{{ end }}
+
+	<link rel="preload" href="{{ "/fonts/open-sans-v28-latin-regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin >
+	<link rel="preload" href="{{ "/fonts/BebasNeue-Regular.ttf" | relURL }}" as="font" type="font/ttf" crossorigin >
+	
+	<!-- {{- $googleFontsLink := .Site.Params.googleFontsLink | default "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" }}
+		{{- if hasPrefix $googleFontsLink "https://fonts.googleapis.com/" }}
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="dns-prefetch" href="//fonts.googleapis.com">
+		<link rel="dns-prefetch" href="//fonts.gstatic.com"> 
+		<link rel="stylesheet" {{ printf `href="%s"` $googleFontsLink | safeHTMLAttr }}>
+		{{- end }}
+	-->
+	<!-- {{ $style := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . -}}
+		<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+		{{ range .Site.Params.customCSS -}}
+		<link rel="stylesheet" href="{{ . | relURL }}">
+		{{- end }}  
+	-->
+
+	{{/*  <meta name="color-scheme" content="dark light">  */}}
+
+	{{- partialCached "styles.html" . -}} 
+	{{/*  {{- if .IsHome }}  */}}
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+	{{/*  {{ end -}}  */}}
+	
+
+
+
+	{{- with .OutputFormats.Get "rss" }}
+	{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+	{{- end }}
+
+	<!--<link rel="icon"  type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">-->
+	<link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}" />
+	
+<!--<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23152c46%22></rect><path fill=%22%23f8fcff%22 d=%22M15.93 55.92L51.16 9.00Q53.06 8.45 55.58 8.04Q58.09 7.64 60.00 7.64L60.00 7.64Q62.31 7.64 64.48 8.11Q66.66 8.59 68.36 9.68Q70.06 10.76 71.08 12.67Q72.10 14.57 72.10 17.43L72.10 17.43L72.10 59.18L84.20 59.18Q84.88 60.27 85.43 62.10Q85.97 63.94 85.97 65.98L85.97 65.98Q85.97 69.65 84.27 71.42Q82.57 73.19 79.72 73.19L79.72 73.19L72.10 73.19L72.10 91.28Q71.01 91.55 68.84 91.96Q66.66 92.36 64.48 92.36L64.48 92.36Q60.13 92.36 57.68 91.00Q55.24 89.64 55.24 85.02L55.24 85.02L55.24 73.19L19.60 73.19Q17.29 72.10 15.66 69.58Q14.03 67.07 14.03 63.53L14.03 63.53Q14.03 61.63 14.44 59.59Q14.84 57.55 15.93 55.92L15.93 55.92ZM55.92 59.18L56.05 25.18L55.78 25.18L32.39 59.18L55.92 59.18Z%22></path></svg>" />-->
+
+	{{- if not .Site.IsServer }}
+		{{- if hasPrefix .Site.GoogleAnalytics "G-" }}
+			{{ template "_internal/google_analytics.html" . }}
+		{{- else }}
+			{{ template "_internal/google_analytics_async.html" . }}
+		{{- end }}
+	{{- end }}
+	<meta name="google-site-verification" content="ZvMs7gJZLisLjU752x0PC2JtoHZxzeNPlCAiUK_mjwU">
+
+	<style>
+	  .dark-mode {
+		background: linear-gradient(180deg,#0b0830 0%,#0a2a51 15%,#3d7494 40%,#c7e3f3 70%,#bee3f8 100%);
+  		background-attachment:scroll;
+		color: rgb(133, 33, 33);
+	  }
+	  #mojGumbek {
+		position: fixed;
+	}
+	</style>
+	
+</head>
+
+<body id="top" class="body">
+	
+
+	<!-- <button id="mojGumbek" onclick="myFunction()">Test Toggle dark mode</button>  -->
+
+	<div class="scroll-line"></div>
+
+	{{ partial "logo.html" . }}
+	{{ partial "menu.html" . }}
+
+	
+	
+{{ $svgClose := resources.Get "svg/close.svg" }}  
+<div id="divSearchModal" class="searchModal">
+	 <div class="mSticky"> 
+	{{/* 	<div class="searchHead"> */}}
+			<input class="sInput border-radius" id="searchInput" type="text" placeholder="Upišite traženi pojam...">
+			<img class="svgClose" src="{{ $svgClose.RelPermalink }}" alt="" title="Zatvori pretragu" height="30" width="30" />
+		</div>	
+	<ul id="searchResult">
+	<!-- the search result will appear here -->
+	</ul>
+{{/*  </div>  */}}
+</div>
+
+
+	<div class="container container--outer" >
+		{{/*  {{ if .IsHome }}
+			{{ partial "featured.html" . }}  
+		{{ end }}  */}}
+
+		{{ block "header" . }}{{ partial "header.html" . }}{{ end }}
+		{{/*  <div class="topPrimary">
+		</div>  */}}
+		<div class="wrapper flex" >
+			<div class="primary">
+				
+			{{ block "main" . }}
+				{{ with .Content }}
+				<div class="content main__content clearfix">
+					{{ . }}
+				</div>
+				{{ end }}
+			{{ end }}
+			</div>
+			{{ block "sidebar" . }}{{ partial "sidebar.html" . }}{{ end }}
+		</div>
+		{{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
+	</div>
+
+
+
+
+{{- partial "javascript.html" . -}}  
+{{- partial "cookieconsent.html" . -}}  
+
+
+{{/*  {{ if .IsHome }}
+{{ end }}  */}}
+
+
+
+{{ range .Site.Params.customJS -}}
+	<script src="{{ . | relURL }}"></script>
+{{- end }}
+
+{{- partial "mathjax.html" . -}} 
+{{- partial "scrollToTop.html" . -}}
+
+<script>
+	function myFunction() {
+	   var element = document.body;
+	   element.classList.toggle("dark-mode");
+	}
+</script>
+
+{{/*  {{- $jssvg := resources.Get "js/svg-inject.min.js" | resources.Fingerprint -}}
+<script defer src="{{ $jssvg.RelPermalink }}"></script>    */}}
+
+{{/*  {{- partial "consent.html" . -}}   */}}
+{{/*  <script defer src="{{ "/js/consent.js" | relURL }}" type="text/javascript"></script>  */}}
+</body>
+</html>

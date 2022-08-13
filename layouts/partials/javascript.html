@@ -1,0 +1,64 @@
+<!-- all-min.js contain bellow js files -->
+<!-- menu.js -->
+<!-- expand.js -->
+<!-- progressBar.js -->
+<!-- scrollToTop.js -->
+
+<!-- menu-on-scroll.js -->
+<!-- search.js -->
+<!-- trazi.js -->
+<!-- podnaaslovi.js -->
+<!-- option for more then one file -->
+
+{{/*  {{ $menu := resources.Get "js/menu.js" | resources.ExecuteAsTemplate "js/menu.js" . -}}
+{{ $expand := resources.Get "js/expand.js" | resources.ExecuteAsTemplate "js/expand.js" . -}}
+{{ $progressBar := resources.Get "js/progressBar.js" | resources.ExecuteAsTemplate "js/progressBar.js" . -}}
+{{ $scrollToTop := resources.Get "js/scrollToTop.js" | resources.ExecuteAsTemplate "js/scrollToTop.js" . -}}
+<!-- nek ovoj komentar ostane -->
+{{ $menuOnScroll := resources.Get "js/menu-on-scroll.js" | resources.ExecuteAsTemplate "js/menu-on-scroll.js" . -}}
+{{ $search := resources.Get "js/search.js" | resources.ExecuteAsTemplate "js/search.js" . -}}
+{{ $trazi := resources.Get "js/trazi.js" | resources.ExecuteAsTemplate "js/trazi.js" . -}}
+{{ $podnaaslovi := resources.Get "js/podnaaslovi.js" | resources.ExecuteAsTemplate "js/podnaaslovi.js" . -}}  */}}
+
+{{ $menu := resources.Get "js/menu.js"  -}}
+{{ $expand := resources.Get "js/expand.js"  -}}
+{{ $progressBar := resources.Get "js/progressBar.js"  -}}
+{{ $scrollToTop := resources.Get "js/scrollToTop.js"  -}}
+<!-- nek ovoj komentar ostane -->
+{{ $menuOnScroll := resources.Get "js/menu-on-scroll.js"  -}}
+{{ $search := resources.Get "js/search.js" -}}
+{{ $trazi := resources.Get "js/trazi.js"   -}}
+{{ $podnaaslovi := resources.Get "js/podnaaslovi.js"  -}}
+
+{{ $distAllJS := slice $menu $expand $progressBar $scrollToTop $menuOnScroll $search $trazi $podnaaslovi | resources.Concat "dist/all2.js" | minify  | fingerprint }}
+<script defer src="{{ $distAllJS.RelPermalink }}"></script>
+
+
+{{/*  {{ if .Site.GetPage "/kontakt-forma.md" }} 
+{{if eq .Section "post"}}
+    {{ $contact := resources.Get "js/contact.js"   -}}
+    {{ $contactJS := slice $contact | resources.Concat "dist/contact.js" }}
+    <script defer src="{{ $contactJS.RelPermalink }}"></script>
+
+{{ end }} */}}
+
+<!--  old -->
+<!--  
+{{- $js := resources.Get "js/all-min.js" | resources.Fingerprint -}}
+<script defer src="{{ $js.RelPermalink }}"></script>  
+-->
+
+<!--
+{{- $js := resources.Get "js/menu-on-scroll.js"| resources.Minify | resources.Fingerprint -}}
+<script defer src="{{ $js.RelPermalink }}"></script>
+
+{{- $js := resources.Get "js/search.js" | resources.Minify | resources.Fingerprint -}}
+<script defer src="{{ $js.RelPermalink }}"></script>
+
+{{- $js := resources.Get "js/trazi.js" | resources.Minify | resources.Fingerprint -}}
+<script defer src="{{ $js.RelPermalink }}"></script>
+
+{{- $js := resources.Get "js/podnaaslovi.js" | resources.Minify | resources.Fingerprint -}}
+<script defer src="{{ $js.RelPermalink }}"></script>
+
+-->
