@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/hartegg/myhelper4"
   },
   "scripts": {
     "dev": "hugo server --disableFastRender --gc",
