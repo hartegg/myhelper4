@@ -5,7 +5,7 @@ baseurl = "https://myhelper4.tk/"
 
 title =  "myHelper4" # bez ovoga ne prikazuje logo
 languageCode = "en-us" # ["en-us", "hr-hr"]
-paginate = "10" # Number of posts per page
+paginate = "5" # Number of posts per page
 theme = "mainroad"
 disqusShortname = "" # Enable comments by entering your Disqus shortname
 #googleAnalytics = "G-V2DPHNV1QQ" # Enable Google Analytics by entering your tracking id
