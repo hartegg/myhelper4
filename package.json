@@ -12,7 +12,7 @@
     "dev:preview": "npm run dev -- --buildDrafts --buildFuture",
     "start": "hugo server --disableFastRender",
     "build-production": "NODE_ENV=production hugo --gc",
-    "minify": "rm -rf public && hugo --minify && rm -rf public/css && rm -rf public/js && rm -rf public/php && rm -rf public/_sendmail",
+    "minify2": "rm -rf public && hugo --minify && rm -rf public/css && rm -rf public/js && rm -rf public/php && rm -rf public/_sendmail",
     "renderToDisk": "hugo server --disableFastRender --gc --renderToDisk --cleanDestinationDir",
     "renderToDisk:preview": "npm run renderToDisk -- --buildDrafts --buildFuture",
     "rednerToDisk:production": "npm run renderToDisk -- --minify  --environment production ",
