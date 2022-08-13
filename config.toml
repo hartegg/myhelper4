@@ -1,6 +1,6 @@
 # Config.toml example https://github.com/Vimux/Mainroad/
 
-baseurl = "https://myhelper4.tk/"
+baseurl = "/"
 #baseurl = "/"
 
 title =  "myHelper4" # bez ovoga ne prikazuje logo
