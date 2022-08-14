@@ -18,6 +18,6 @@
     "rednerToDisk:production": "npm run renderToDisk -- --minify  --environment production ",
     "hugo version": "hugo --version"
   },
-  "author": "",
+  "author": "hartegg",
   "license": "ISC"
 }
