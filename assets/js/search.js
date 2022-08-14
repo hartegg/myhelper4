@@ -54,7 +54,7 @@ const filterPostsJSON = (query, element) => {
         </li>`
     ))
     element.style.display = 'block';
-    itemsWithElement.unshift(`<p class="is-size-7 px-2 py-2 has-text-dark">Klik na 'ESC' za otkazivanje pretrage.</p>`)
+    itemsWithElement.unshift(`<p class="">Click 'ESC' for cancel search.</p>`)
     element.innerHTML = itemsWithElement.join('');
 }
 /**
