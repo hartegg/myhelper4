@@ -48,7 +48,7 @@ const filterPostsJSON = (query, element) => {
     // console.log(result);
     itemsWithElement = result.map(item => (
        `<li class="search-result-item">
-            <h2><a href="${item.url}">${item.title}</a></h2>
+            <h2><a href="${item.permalink}">${item.title}</a></h2>
             <em>${item.categories} </em>
             <p>${item.summary}</p>
         </li>`

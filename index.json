@@ -5,7 +5,7 @@
       {
         "title": "{{ $data.Title  }}",
         "summary": "{{ $data.Summary  }}",
-        "url": "{{ $data.RelPermalink }}"
+        "permalink": "{{ $data.RelPermalink }}"
       }
       {{- end }}
     {{- end }}
