@@ -18,7 +18,8 @@
 {{ $menuOnScroll := resources.Get "js/menu-on-scroll.js" | resources.ExecuteAsTemplate "js/menu-on-scroll.js" . -}}
 {{ $search := resources.Get "js/search.js" | resources.ExecuteAsTemplate "js/search.js" . -}}
 {{ $trazi := resources.Get "js/trazi.js" | resources.ExecuteAsTemplate "js/trazi.js" . -}}
-{{ $podnaaslovi := resources.Get "js/podnaaslovi.js" | resources.ExecuteAsTemplate "js/podnaaslovi.js" . -}}  */}}
+
+  */}}
 
 {{ $menu := resources.Get "js/menu.js"  -}}
 {{ $expand := resources.Get "js/expand.js"  -}}
@@ -28,9 +29,8 @@
 {{ $menuOnScroll := resources.Get "js/menu-on-scroll.js"  -}}
 {{ $search := resources.Get "js/search.js" -}}
 {{ $trazi := resources.Get "js/trazi.js"   -}}
-{{ $podnaaslovi := resources.Get "js/podnaaslovi.js"  -}}
 
-{{ $distAllJS := slice $menu $expand $progressBar $scrollToTop $menuOnScroll $search $trazi $podnaaslovi | resources.Concat "dist/all2.js" | minify  | fingerprint }}
+{{ $distAllJS := slice $menu $expand $progressBar $scrollToTop $menuOnScroll $search $trazi | resources.Concat "dist/all2.js" | minify  | fingerprint }}
 <script defer src="{{ $distAllJS.RelPermalink }}"></script>
 
 
@@ -58,7 +58,5 @@
 {{- $js := resources.Get "js/trazi.js" | resources.Minify | resources.Fingerprint -}}
 <script defer src="{{ $js.RelPermalink }}"></script>
 
-{{- $js := resources.Get "js/podnaaslovi.js" | resources.Minify | resources.Fingerprint -}}
-<script defer src="{{ $js.RelPermalink }}"></script>
 
 -->
