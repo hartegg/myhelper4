@@ -35,7 +35,8 @@ const getPostsJSON = async () => {
     let response = await fetch('/index.json')
     let data = await response.json()
     return data
-}/**
+}
+/**
  * @param query, element.
  * query: the keyword that user given.
  * element: target element to show the result.
@@ -47,13 +48,13 @@ const filterPostsJSON = (query, element) => {
     // console.log(result);
     itemsWithElement = result.map(item => (
        `<li class="search-result-item">
-            <h2><a href="${item.url}">${item.title}</a></h2>
+            <h2><a href="${item.permalink}">${item.title}</a></h2>
             <em>${item.categories} </em>
             <p>${item.summary}</p>
         </li>`
     ))
     element.style.display = 'block';
-    itemsWithElement.unshift(`<p class="">Click 'ESC' for cancle search.</p>`)
+    itemsWithElement.unshift(`<p class="">Click 'ESC' for cancel search.</p>`)
     element.innerHTML = itemsWithElement.join('');
 }
 /**
