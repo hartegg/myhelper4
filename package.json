@@ -1,11 +1,11 @@
 {
-  "name": "helper4",
+  "name": "myhelper4",
   "version": "1.0.0",
-  "description": "helper4 web page",
+  "description": "myhelper4 linux, hugo, css, js",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hartegg/myhelper4"
+    "url": ""
   },
   "scripts": {
     "dev": "hugo server --disableFastRender --gc",
@@ -18,6 +18,6 @@
     "rednerToDisk:production": "npm run renderToDisk -- --minify  --environment production ",
     "hugo version": "hugo --version"
   },
-  "author": "",
+  "author": "hartegg",
   "license": "ISC"
 }

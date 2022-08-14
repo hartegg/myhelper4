@@ -1,6 +1,6 @@
 # Config.toml example https://github.com/Vimux/Mainroad/
 
-baseurl = "/"
+baseurl = "https://incredible-figolla-0e5a26.netlify.app/"
 #baseurl = "/"
 
 title =  "myHelper4" # bez ovoga ne prikazuje logo
