@@ -1,7 +1,7 @@
 {
-  "name": "helper4",
+  "name": "myhelper4",
   "version": "1.0.0",
-  "description": "helper4 web page",
+  "description": "myhelper4 linux, hugo, css, js",
   "main": "index.js",
   "repository": {
     "type": "git",
