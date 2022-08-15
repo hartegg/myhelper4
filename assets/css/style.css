@@ -2571,14 +2571,14 @@ background: var(--highlightColor); */
     border-top: 1px solid #aaa;
     background-color: var(--color-white);
 		
-	-webkit-transition: max-height 600ms ease-in-out;
-	transition: max-height 600ms ease-in-out;
+	-webkit-transition: max-height 400ms ease-in-out;
+	transition: max-height 400ms ease-in-out;
 }
 
 	.expand {
 		width: 230px; 
-		-webkit-transition: width 600ms ease-in-out;
-		transition: width 600ms ease-in-out;
+		-webkit-transition: width 400ms ease-in-out;
+		transition: width 400ms ease-in-out;
 		animation-delay: 1000ms;
 	}
 	.expanded {
