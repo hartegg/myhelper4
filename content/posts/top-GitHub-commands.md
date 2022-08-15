@@ -175,6 +175,9 @@ date: 2022-08-15T22:38:59+02:00
       git stash drop
       - discards the most recently stashed changeset.
 ```
-| **References:**  |
+&nbsp;
+| **Reference:**  |
 | :--- |
 | {{< a_blank title="Top GitHub Commands" url="https://gist.github.com/gwenf/19e5748a5391929e8e938a22c8a4b3f2" >}} |
+
+&nbsp;
