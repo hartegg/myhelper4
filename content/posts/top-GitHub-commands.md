@@ -53,6 +53,7 @@ date: 2022-08-15T22:38:59+02:00
 ```text
 1. git config –global user.name “[name]” 
     - sets author name
+
     git config –global user.email “[email address]” 
     - sets author email id
 ```
@@ -71,22 +72,27 @@ date: 2022-08-15T22:38:59+02:00
 ```text
 5. git commit -m “[ Type in the commit message]” 
     - records or snapshots the file permanently in the version history.
+
     git commit -a 
     - commits any files you’ve changed since then.&commits any files you’ve added
 ```
 ```text
 6. git diff 
     - shows the file differences which are not yet staged.
+
     git diff –staged 
     - differences between the files in the staging area and the latest version present.
+
     git diff [first branch] [second branch] 
     - differences between the two branches mentioned.
 ```
 ```text
 7. git reset [file] 
     - unstages the file, but it preserves the file contents.
+
     git reset [commit] 
     - undoes all the commits after the specified commit and preserves the changes locally.
+
     git reset –hard [commit] 
     - discards all history and goes back to the specified commit.
 ```
@@ -101,6 +107,7 @@ date: 2022-08-15T22:38:59+02:00
 ```text
 10. git log 
     - used to list the version history for the current branch.
+
       git log –follow[file] 
       - lists version history for a file, including the renaming of files also.
 ```
@@ -115,14 +122,17 @@ date: 2022-08-15T22:38:59+02:00
 ```text
 13. git branch
     - lists all the local branches in the current repository.
+
       git branch [branch name] 
       - creates a new branch.
+
       git branch -d [branch name] 
       - deletes the feature branch.
 ```
 ```text
 14. git checkout [branch name] 
     - used to switch from one branch to another
+
       git checkout -b [branch name] 
       - creates a new branch and also switches to it.
 ```
@@ -137,10 +147,13 @@ date: 2022-08-15T22:38:59+02:00
 ```text
 17. git push [variable name] master
     - sends the committed changes of master branch to your remote repository.
+
       git push [variable name] [branch] 
       - sends the branch commits to your remote repository.
+
       git push –all [variable name] 
       - pushes all branches to your remote repository.
+
       git push [variable name] :[branch name] 
       - deletes a branch on your remote repository.
 ```
@@ -155,8 +168,13 @@ date: 2022-08-15T22:38:59+02:00
 ```text
 20. git stash pop
     - restores the most recently stashed files.
+
       git stash list
       - lists all stashed changesets.
+
       git stash drop
       - discards the most recently stashed changeset.
 ```
+| **References:**  |
+| :--- |
+| {{< a_blank title="Top GitHub Commands" url="https://gist.github.com/gwenf/19e5748a5391929e8e938a22c8a4b3f2" >}} |
