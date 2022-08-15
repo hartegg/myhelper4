@@ -15,7 +15,6 @@ tags:
 thumbnail: images/hugo.svg
 toc: false
 autonumbering: false
-weight: 1
 keywords:
   - hugo
 ---
