@@ -152,15 +152,25 @@ $ cat /etc/fstab
 ```
 
 ### Edit fstab with Nano
--- use **Ctrl+O** for save, then press **Enter**\
--- use **Ctrl+C** for **Exit Nano**
 ```bash
 $ sudo nano /etc/fstab\
 ```
+and add folowing line to end of fstab
+```bash
+/swapfile none swap sw 0 0
+```
+-- use **Ctrl+O** for save, then press **Enter**\
+-- use **Ctrl+C** for **Exit Nano**
 
-**References**\
-[Create swap file](https://itsfoss.com/create-swap-file-linux/)\
-[How to use swap file instead of swap](https://www.linuxuprising.com/2018/08/how-to-use-swap-file-instead-of-swap.html)\
-[Linux Swap | Different Kinds and How to Use It](https://www.youtube.com/watch?v=HKy-KEtCT9o)
+
+
+&nbsp;
+
+| **References:**  |
+| :--- |
+| {{< a_blank title="Create swap file" url="https://itsfoss.com/create-swap-file-linux" >}} |
+| {{< a_blank title="How to use swap file instead of swap" url="https://www.linuxuprising.com/2018/08/how-to-use-swap-file-instead-of-swap.html" >}} |
+| {{< a_blank title="Linux Swap - Different Kinds and How to Use It" url="https://www.youtube.com/watch?v=HKy-KEtCT9o" >}} |
+
 
 &nbsp;

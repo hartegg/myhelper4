@@ -133,7 +133,7 @@ You can also use inline Markdown.
 
 ## Code
 
-```html
+```text
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -146,16 +146,6 @@ You can also use inline Markdown.
 </html>
 ```
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Example HTML5 Document</title>
-</head>
-<body>
-  <p>Test</p>
-</body>
-</html>
 
 ## Other stuff — abbr, sub, sup, kbd, etc.
 

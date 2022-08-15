@@ -54,8 +54,6 @@ blockquote {
 	--fontFamilySecondary: {{ $fontFamilySecondary }};
 	--fontFamilysFeaturedTitle : {{ $fontFamilysFeaturedTitle }};
 
-
-
 	--backgroundText : #f7f7f7;
 	--color-button-disabled: #999;
 	--color-grey-extra-light: #f6f6f6;
@@ -68,7 +66,9 @@ blockquote {
 	--color-error-bg: #fceded;
 	--color-error: #cd0101;
 	--color-status-bg: #f2fcec;
-	--color-status: #43a908:
+	--color-status: #43a908;
+
+	--table-border-color: #e6e4e4;
 
 	/* --counter: counter(figure);
 	counter-reset: figure;  */
@@ -85,7 +85,7 @@ blockquote {
 	   0 3rem 1rem -2.5rem rgb(148, 148, 148),
 	   0 3.5rem 1rem -3.5rem rgb(148, 148, 148);
 }
-   *,
+*,
 *::before,
 *::after {
 	box-sizing: border-box;
@@ -2008,14 +2008,14 @@ a.list_title_link {
 	margin-bottom: 1.25rem;
 	border-spacing: 0;
 	border-collapse: collapse;
-	border-top: 1px solid #ebebeb;
-	border-left: 1px solid #ebebeb;
+	border-top: 1px solid var(--table-border-color);
+	border-left: 1px solid var(--table-border-color);
 }
    td,
 th {
 	padding: 5px 10px;
-	border-right: 1px solid #ebebeb;
-	border-bottom: 1px solid #ebebeb;
+	border-right: 1px solid var(--table-border-color);
+	border-bottom: 1px solid var(--table-border-color);
 }
    th {
 	font-weight: 700;
