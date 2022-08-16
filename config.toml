@@ -92,14 +92,14 @@ disqusShortname = "" # Enable comments by entering your Disqus shortname
 
 [params]
   description = "Helper 4..." # Description of your site
-  opengraph = false # Enable OpenGraph if true
+  opengraph = true # Enable OpenGraph if true
   schema = false # Enable Schema
   twitter_cards = false # Enable Twitter Cards if true
   readmore = false # Show "Read more" button in list if true false
   authorbox = true  # Show authorbox at bottom of pages if true
   pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
   post_meta = ["date", "categories"] # Order of post meta information
-  mainSections = ["posts", "blog", "hugo", "linux"] # ["post", "blog", "news"] Specify section pages to show on home page and the "Recent articles" widget
+  mainSections = ["hugo", "linux", "markdown", "posts"] # ["post", "blog", "news"] Specify section pages to show on home page and the "Recent articles" widget
   dateformat = "02.01.2006" # Change the format of dates
   copyright =  "© myHelper4. - "  # upisano u partial/footer.html
   # customCSS = ["css/custom.css"] # Include custom CSS files

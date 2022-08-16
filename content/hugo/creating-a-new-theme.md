@@ -11,6 +11,7 @@ tags:
 thumbnail: "images/hugo.svg"
 toc: true
 autonumbering: true
+lastmod: 2022-05-23T15:04:44.773Z
 ---
 
 <!-- # slug =>> mijenja link iz /posts/creating-a-new-theme/ u posts/nova-tema/

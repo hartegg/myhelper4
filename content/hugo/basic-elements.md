@@ -16,6 +16,7 @@ draft: false
 toc: true
 autonumbering: true
 thumbnail: "images/hugo.svg"
+lastmod: 2022-05-23T15:04:44.773Z
 ---
 
 The main purpose of this article is to make sure that all basic HTML Elements are decorated with CSS so as to not miss any possible elements when creating new themes for Hugo.

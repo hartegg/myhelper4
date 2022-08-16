@@ -1,12 +1,17 @@
 ---
 title: Opens link in new browser window or tab
-summary: Opens link in new browser window or tab
+summary:
 date: 2022-04-23T03:24:46+02:00
 draft: false
 author: helper4
+categories:
+  - hugo
 tags:
   - markdown
+  - shortcode
+  - hugo
 thumbnail: images/md.svg
+lastmod: 2022-05-23T15:04:44.773Z
 ---
 
 {{< text_to_img "zuja nije zakon" >}}
