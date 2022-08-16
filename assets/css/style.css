@@ -43,7 +43,7 @@ blockquote {
 /* {{ $footerBG := resources.Get "images/footerBG.jpg" }} */
 .footerImage { 
 	/* background:#00012f url( {{ $footerBG.RelPermalink }} ) !important; */
-	background:#00012f !important;
+	background:#000147 !important;
 	background-size: cover !important;
 }
 
