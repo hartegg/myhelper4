@@ -4,7 +4,7 @@ description: This article helps you get started with the Mainroad theme, includi
   configuration.
 lead: This article helps you get started with the Mainroad theme, including installation and minimal configuration.
 date: 2022-01-24T14:00:00.000Z
-draft: false
+draft: true
 tags:
   - "Installation"
 authorbox: false

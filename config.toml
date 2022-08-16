@@ -1,6 +1,6 @@
 # Config.toml example https://github.com/Vimux/Mainroad/
 
-baseurl = "https://incredible-figolla-0e5a26.netlify.app/"
+baseurl = "https://myhelper4.netlify.app/"
 #baseurl = "/"
 
 title =  "myHelper4" # bez ovoga ne prikazuje logo
@@ -99,7 +99,7 @@ disqusShortname = "" # Enable comments by entering your Disqus shortname
   authorbox = true  # Show authorbox at bottom of pages if true
   pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
   post_meta = ["date", "categories"] # Order of post meta information
-  mainSections = ["posts", "blog", "news"] # ["post", "blog", "news"] Specify section pages to show on home page and the "Recent articles" widget
+  mainSections = ["posts", "blog", "hugo", "linux"] # ["post", "blog", "news"] Specify section pages to show on home page and the "Recent articles" widget
   dateformat = "02.01.2006" # Change the format of dates
   copyright =  "© myHelper4. - "  # upisano u partial/footer.html
   # customCSS = ["css/custom.css"] # Include custom CSS files
@@ -197,11 +197,11 @@ menu = ['main', 'footer']
       url = "/tags/js/"
       weight = 5
 
-    [[menu.main]]
-      identifier = "html"
-      name = "Html"
-      url = "/tags/html/"
-      weight = 5
+    # [[menu.main]]
+    #   identifier = "html"
+    #   name = "Html"
+    #   url = "/tags/html/"
+    #   weight = 5
 
     [[menu.main]]
       identifier = "css"
@@ -209,11 +209,11 @@ menu = ['main', 'footer']
       url = "/tags/css/"
       weight = 5
 
-  [[menu.main]]
-      identifier = "contact"
-      name = "Contact"
-      url = "/contact/"
-      weight = 6
+  # [[menu.main]]
+  #     identifier = "contact"
+  #     name = "Contact"
+  #     url = "/contact/"
+  #     weight = 6
      
       # [[menu.main]]
       #   identifier = "contact"
@@ -223,22 +223,16 @@ menu = ['main', 'footer']
       #   weight = 7
 
 
-  [[menu.footer]]
-      identifier = "home"
-      name = "Home"
-      url = "/"
-      weight = 1
-  [[menu.footer]]
-      identifier = "faq"
-      name = "Faq"
-      url = "/faq/"
-      weight = 2
-
-  [[menu.footer]]
-      identifier = "contact"
-      name = "Contact"
-      url = "/categories/contact/"
-      weight = 3
+  # [[menu.footer]]
+  #     identifier = "home"
+  #     name = "Home"
+  #     url = "/"
+  #     weight = 1
+   # [[menu.footer]]
+  #     identifier = "contact"
+  #     name = "Contact"
+  #     url = "/categories/contact/"
+  #     weight = 2
 
 
 # see https://gohugo.io/about/hugo-and-gdpr/    
