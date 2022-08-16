@@ -40,9 +40,10 @@ blockquote {
 /* only for Featured Title */
 {{- $fontFamilysFeaturedTitle := .Site.Params.style.vars.fontFamilysFeaturedTitle | default $BebasNeueRegular -}}
 
-{{ $footerBG := resources.Get "images/footerBG.jpg" }}
+/* {{ $footerBG := resources.Get "images/footerBG.jpg" }} */
 .footerImage { 
-	background:#00012f url( {{ $footerBG.RelPermalink }} ) !important;
+	/* background:#00012f url( {{ $footerBG.RelPermalink }} ) !important; */
+	background:#00012f !important;
 	background-size: cover !important;
 }
 
