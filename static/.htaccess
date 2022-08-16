@@ -4,8 +4,8 @@ Options All -Indexes
 # Redirect HTTP to HTTPS and WWW to Non-WWW 
 RewriteEngine On
 RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} ^www\.incredible-figolla-0e5a26.netlify\.app [NC]
-RewriteRule ^(.*)$ https://incredible-figolla-0e5a26.netlify.app/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^www\.myhelper4.netlify\.app [NC]
+RewriteRule ^(.*)$ https://myhelper4.netlify.app/$1 [L,R=301]
 
 
 # -------------------------------------------------
