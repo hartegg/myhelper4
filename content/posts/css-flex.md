@@ -8,7 +8,7 @@ categories:
   - "css"
 tags:
   - "css"
-# thumbnail: "images/hugo.svg"
+thumbnail: "images/css.svg"
 toc: true
 autonumbering: false
 lastmod: 2022-05-23T15:04:44.773Z
