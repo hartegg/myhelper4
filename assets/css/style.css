@@ -1351,28 +1351,39 @@ div.content img {
 	background-size: 4px 50px;
   } */
    .hef {
-	display: inline-block;
+	display: inline;
 	position: relative;
 	color: #000;
+	overflow: hidden;
   }
    .hef:after {
 	content: '';
 	position: absolute;
-	width: 100%;
+	/* width: 100%;
 	transform: scaleX(0);
 	height: 2px;
 	bottom: 2px;
 	left: 0;
 	background-color: var(--highlightColor);
-	/* transform-origin: bottom right;
-	transition: transform 0.25s ease-out; */
 	transform: scaleX(0);
 	transform-origin: top left;
-	transition: transform 0.3s ease;
+	transition: transform 0.3s ease; */
+	z-index: -1;
+	right: 0;
+	width: 0;
+	bottom: -5px;
+	background: var(--highlightColor);
+	height: 2px;
+	transition-property: width;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
   }
    .hef:hover:after {
-	transform: scaleX(1);
-	transform-origin: bottom left;
+	/* transform: scaleX(1);
+	transform-origin: bottom left; */
+	  left: 0;
+  right: auto;
+  width: 100%;
   }
    .widget__content a {
 	margin-right: 10px !important;

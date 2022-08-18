@@ -1,17 +1,16 @@
 # Config.toml example https://github.com/Vimux/Mainroad/
 
 baseurl = "https://myhelper4.netlify.app/"
-#baseurl = "/"
 
 title =  "myHelper4" # bez ovoga ne prikazuje logo
 languageCode = "en-us" # ["en-us", "hr-hr"]
 paginate = "5" # Number of posts per page
 theme = "mainroad"
-disqusShortname = "" # Enable comments by entering your Disqus shortname
-#googleAnalytics = "G-V2DPHNV1QQ" # Enable Google Analytics by entering your tracking id
+#disqusShortname = "" # Enable comments by entering your Disqus shortname
+#googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
 
-
+# not sure I need this
 # [permalinks]
 #  posts = '/:monthname/:year/:title/'
 # posts = '/:title/'
@@ -35,10 +34,6 @@ disqusShortname = "" # Enable comments by entering your Disqus shortname
 #disableKinds = [] #["page", "section", "taxonomy", "term", "RSS", "sitemap", "robotsTXT", "404"]
 #disableKinds = ["sitemap"]
 
-#[Author]
-  # name = "ikm"
-  # bio = "Do or do not there is no trying"
-  # avatar = "img/avatar.png"
 
 [outputs] # ovo treba za search - ne diraj
   home = ["HTML", "JSON", "RSS"] # ovo treba za search - ne diraj
@@ -49,13 +44,13 @@ disqusShortname = "" # Enable comments by entering your Disqus shortname
   # taxonomy = ["HTML"]
 
 #https://codingnconcepts.com/hugo/custom-rss-feed-hugo/#add-full-content-in-rssxml
-# ovo ne radi, ne generira rss
+# this not working, doesn't generate rss
 # [outputFormats]
 #   [outputFormats.RSS]
 #     mediatype = "application/rss"
 #     baseName = "rss"
     
-# in Front matter to disable "sitemap_ignore" and "rss_ignore" add
+# in Front matter to disable "sitemap_ignore" and/or "rss_ignore" add
 # sitemap_ignore: true
 # rss_ignore: true    
 
@@ -83,7 +78,7 @@ disqusShortname = "" # Enable comments by entering your Disqus shortname
 #     unsafe = true
 
 # https://gohugo.io/hugo-modules/configuration/#module-config-mounts
-#  BEZ OVOG NE UČITAVA SLIKE IZ assets FOLDERA
+# with this loading images from assets/images folder
 [module]
 [[module.mounts]]
   source = 'assets'
@@ -106,20 +101,20 @@ disqusShortname = "" # Enable comments by entering your Disqus shortname
   # customJS = ["js/custom.js"] # Include custom JS files
 
 # [params.logo]
-# image ="/images/logo_helper4.svg" # slika definirana u partial logo.html
+# image ="/images/logo_helper4.svg" # img defined in partial/logo.html
 # subtitle = "Helper 4" # Logo subtitle
 
 # ignorefiles = [ "/php/\\.*" ]
 
 [params.style.vars]
   highlightColor = "#656ef6" # Override highlight color 656ef6 5596bc
-  # ljubičasta 656ef6
-  # ljubičasta2 7b8ae0
-  # crvena f60038  d44a4a a83e40 903639 5d0e34 c31432
-  # tirkiz tamni 0085a1
-  # tirkiz tamni2 007d9c
-  # tirkiz 4ac0cf         00dfc4
-  # plavo-ljubičasta 2f2e8b 2e85b2 0f3e72
+  # purple 656ef6 7b8ae0
+  # blie-purple 2f2e8b 2e85b2 0f3e72
+  # red f60038  d44a4a a83e40 903639 5d0e34 c31432
+  # tirkiz dark 0085a1
+  # tirkiz darker 007d9c
+  # tirkiz 4ac0cf 00dfc4
+
   #secondHighlightColor = "#a3a8fa" # Override secondHighlightColor color
   #backHighlightColor = "#fff"
 
@@ -130,7 +125,7 @@ disqusShortname = "" # Enable comments by entering your Disqus shortname
   # fontFamilySecondary = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
 
 [params.thumbnail]
-  visibility = ["list", "post"] # ["list", "post"]  Control thumbnail visibility
+  visibility = ["list", "post"] # Control thumbnail visibility
 
 [params.featured]
   featured_num = 2 # number of featured posts, shown only on home page 
