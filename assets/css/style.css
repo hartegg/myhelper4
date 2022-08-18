@@ -424,6 +424,7 @@ code {
    pre {
 	display: block;
 	padding: 20px;
+	padding-bottom: 0px;
 	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
 	overflow: auto;
@@ -1350,6 +1351,7 @@ div.content img {
 .widget__content a:hover {
 	background-size: 4px 50px;
   } */
+/* https://stackoverflow.com/questions/59877478/css-animation-expand-width-from-0-to-100-and-hide-from-0-to-100 */
    .hef {
 	display: inline;
 	position: relative;
@@ -2592,11 +2594,13 @@ background: var(--highlightColor); */
 		width: 230px; 
 		-webkit-transition: width 400ms ease-in-out;
 		transition: width 400ms ease-in-out;
-		animation-delay: 1000ms;
+		/* animation-delay: 1000ms;  */
+
 	}
 	.expanded {
 		
-		width: 100% !important;
+		 width: 100% !important; 
+		
 	}
 
    /* ****** start  fix for post subtitles *************** */
