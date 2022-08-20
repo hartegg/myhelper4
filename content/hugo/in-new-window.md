@@ -10,7 +10,7 @@ tags:
   - markdown
   - shortcode
   - hugo
-thumbnail: images/md.svg
+thumbnail: images/hugo.svg
 lastmod: 2022-05-23T15:04:44.773Z
 ---
 
