@@ -55,7 +55,7 @@ Elements can have attributes, which control how the elements work. For example, 
 - And another item
 
 ### Nested list
-
+{{< rawhtml  >}}
 <ul>
   <li>First item</li>
   <li>Second item
@@ -78,17 +78,21 @@ Elements can have attributes, which control how the elements work. For example, 
   </li>
   <li>Third item</li>
 </ul>
+{{< /rawhtml  >}}
 
 ### Definition List
 
 HTML also supports definition lists.
 
+{{< rawhtml  >}}
 <dl>
   <dt>Blanco tequila</dt>
   <dd>The purest form of the blue agave spirit...</dd>
   <dt>Reposado tequila</dt>
   <dd>Typically aged in wooden barrels for between two and eleven months...</dd>
 </dl>
+
+{{< /rawhtml  >}}
 
 ## Blockquotes
 
@@ -139,13 +143,15 @@ You can also use inline Markdown.
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Example HTML5 Document</title>
+    <title>Example HTML5 Document 11</title>
   </head>
   <body>
     <p>Test</p>
   </body>
 </html>
 ```
+
+
 
 
 ## Other stuff — abbr, sub, sup, kbd, etc.

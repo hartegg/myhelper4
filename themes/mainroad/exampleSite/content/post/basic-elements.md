@@ -134,7 +134,7 @@ You can also use inline Markdown.
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Example HTML5 Document</title>
+  <title>Example HTML5 Document html 11111</title>
 </head>
 <body>
   <p>Test</p>
@@ -142,18 +142,6 @@ You can also use inline Markdown.
 </html>
 ```
 
-{{< highlight html >}}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Example HTML5 Document</title>
-</head>
-<body>
-  <p>Test</p>
-</body>
-</html>
-{{< /highlight >}}
 
 ## Other stuff — abbr, sub, sup, kbd, etc.
 
