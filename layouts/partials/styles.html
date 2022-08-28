@@ -11,12 +11,12 @@
     
     
     {{/*  {{ $css := slice $style $tocnav | resources.Concat "dist/style.css" | minify | fingerprint }} */}}
-    {{ $css := slice $style $tocnav | resources.Concat "dist/style.css" }} 
+    {{ $css := slice $style $tocnav | resources.Concat "dist/style.css" | minify  | fingerprint  }} 
     
     {{/* {{ $css := slice $style  | resources.Concat "dist/style.css" | resources.PostCSS  | fingerprint }}*/}}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}">  
     
-    {{ $cssClipboard := slice $clipboard  | resources.Concat "dist/clipboard.css" }} 
+    {{ $cssClipboard := slice $clipboard  | resources.Concat "dist/clipboard.css" | minify | fingerprint  }} 
     {{/* {{ if (findRE "<pre" .Content 1) }}   */}}
         <link rel="stylesheet" href="{{ $cssClipboard.RelPermalink }}">
     {{/* {{ end }}  */}}
@@ -25,7 +25,8 @@
     
     {{/*  https://gohugo.io/hugo-pipes/postcss/
         {{ $options := dict "use" "autoprefixer postcss-color-alpha" }}
-    {{ $style := resources.Get "css/main.css" | resources.PostCSS $options }}  */}}
+        {{ $style := resources.Get "css/main.css" | resources.PostCSS $options }} 
+    */}}
     
     
     {{/*  {{ $css := resources.Get "css/style.css" }}

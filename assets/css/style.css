@@ -1654,6 +1654,11 @@ div.content img {
 	padding: 0 20px;
 	list-style-type: none; 
 }
+.search-result-item {
+	border-radius: 10px;
+}
+
+
    .search-result-item::before { 
 	content: counter(number-list-counter);
 	position: absolute;
@@ -1670,6 +1675,7 @@ div.content img {
 	color:white;
 	font-weight: bold;	
 	box-sizing: border-box;
+	
 }
    .search-result-item li{
 	margin-left: 15px;
