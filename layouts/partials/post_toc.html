@@ -12,9 +12,11 @@
 {{- end }}
 {{- end }}  */}}
 
-{{- if .Param "toc" }}
+{{/* 
+ {{- if .Param "toc" }}
 {{- if gt (len .TableOfContents) 32 }}<!-- Issue #247 -->
 <div class="expand">
+
     <button type="button" class="expand__button expand__button-fix" aria-label="Expand Button">
       <div class="">{{ T "toc_title" }}</div>     
 	  <span class="expand-icon expand-icon__right expand-icon-fix">
@@ -22,6 +24,7 @@
       </span>
 
     </button>
+
     <div class="expand__content expand__content-fix">
         <div  class="toc__menu">
 			{{ .TableOfContents }}
@@ -29,4 +32,47 @@
     </div>
 </div>
 {{- end }}
+{{- end }} 
+*/}}
+
+{{- if .Param "toc" }}
+{{- if gt (len .TableOfContents) 32 }}<!-- Issue #247 -->
+<div class="tocNav">
+    <button type="button" class="tocNav__button tocNav__button-fix" aria-label="tocNav Button">
+      <div class="">{{ T "toc_title" }}</div>     
+	  <span class="expand-icon expand-icon__right expand-icon-fix">
+          {{ partial "svgs/arrow/keyboard-arrow-right.svg" (dict "width" 24 "height" 24) }}
+      </span>
+    </button>
+    <div class="tocNav__content tocNav__content-fix">
+        <div  class="toc__menu">
+			{{ .TableOfContents }}
+        </div>
+    </div>
+</div>
 {{- end }}
+{{- end }}
+<script>
+let tocNav = document.querySelector('.tocNav');
+let contenttocNav = document.querySelector('.tocNav__content');
+let tocNavButton = document.querySelector('.tocNav__button');
+let tocMenu  = document.querySelector('.toc__menu');
+
+tocNavButton.onclick = function(){
+    tocNav.classList.toggle('active')
+    if (contenttocNav.style.maxHeight) {
+      // close
+      contenttocNav.style.maxHeight = null;
+      this.querySelector('svg').classList.add('expand-icon__right');
+      this.querySelector('svg').classList.remove('expand-icon__down');
+    } else { 
+      // open
+      contenttocNav.style.maxHeight = (tocMenu.scrollHeight + 40)  + "px";
+      this.querySelector('svg').classList.remove('expand-icon__right');
+      this.querySelector('svg').classList.add('expand-icon__down');
+    }
+}
+let sheet = document.createElement('style')
+sheet.innerHTML = ".tocNav.active { height: " +  (tocMenu.scrollHeight + 40)  + "px !important;  width: 100% !important; transition: width 0.3s, height 0.3s;  transition-delay: 0s, 0.65s;}";
+document.body.appendChild(sheet);
+</script>

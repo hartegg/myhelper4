@@ -29,10 +29,16 @@
 {{ $menuOnScroll := resources.Get "js/menu-on-scroll.js"  -}}
 {{ $search := resources.Get "js/search.js" -}}
 {{ $trazi := resources.Get "js/trazi.js"   -}}
+{{ $clipboard := resources.Get "js/clipboard.js"   -}}
 
 {{ $distAllJS := slice $menu $expand $progressBar $scrollToTop $menuOnScroll $search $trazi | resources.Concat "dist/all2.js" | minify  | fingerprint }}
 <script defer src="{{ $distAllJS.RelPermalink }}"></script>
 
+{{ $distClipboard := slice $clipboard  | resources.Concat "dist/clipboard.js" | minify  | fingerprint }}
+
+{{ if (findRE "<pre" .Content 1) }}
+    <script defer src="{{ $distClipboard.RelPermalink }}"></script>
+{{ end }}
 
 {{/*  {{ if .Site.GetPage "/kontakt-forma.md" }} 
 {{if eq .Section "post"}}

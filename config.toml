@@ -116,7 +116,7 @@ theme = "mainroad"
 # ignorefiles = [ "/php/\\.*" ]
 
 [params.style.vars]
-  highlightColor = "#c31432" # Override highlight color 656ef6 5596bc
+  highlightColor = "#007d9c" # Override highlight color 656ef6 5596bc
   # purple 656ef6 7b8ae0
   # blie-purple 2f2e8b 2e85b2 0f3e72
   # red f60038  d44a4a a83e40 903639 5d0e34 c31432

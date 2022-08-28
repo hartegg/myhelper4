@@ -1,0 +1,97 @@
+.tocNav {
+    position: relative;
+    margin: 1.5rem 0; 
+	border-radius: 0.25rem;
+    background: transparent;
+    width: 230px; 
+    height: 40px;
+    transition: height 0.3s, width 0.3s;
+    transition-delay: 0s, 0.65s;;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(85, 85, 85, 0.1);
+}
+/* .tocNav.active >>>  property set in post_toc.html in <script> tag */
+
+.tocNav__button {
+    cursor: pointer;
+    width: 100%;
+    margin: auto 0;
+    text-align: left;
+    outline: none;
+    border: none;
+    /* padding: 0.125rem; */
+    font-size: 1rem;
+    font-family: montserrat, sans-serif;
+    /* border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem; */
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+.tocNav__button-fix {
+	padding: 1px 10px 0px 15px !important;;
+	 /* padding-top:9px!important;*/
+}
+.tocNav__button-fix {
+	background-color: #2a2a2a;
+	background-color: var(--bg-color-black); 
+	color: var(--color-white); 
+	color: var(--color-white);
+	border-radius: 10px;;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.tocNav-label {
+    cursor: pointer;
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+.tocNav-icon {
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+}
+.tocNav-icon__down {
+    transform: rotate(90deg);
+    transition: all 0.15s ease;
+}
+.tocNav-icon__right {
+    transform: rotate(0deg);
+    transition: all 0.15s ease;
+}
+
+
+.toc__menu { 
+    position:relative;
+    background: var(--color-white);
+    white-space: nowrap;
+}
+
+.tocNav__content div {
+	font-size: 15px !important;
+}
+.tocNav__content {
+    /* padding: 0 1.125rem;
+    overflow: hidden; */
+    height: 0px; 
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    transition: all 0.2s ease;
+	color: #111;
+    border-top: 1px solid #aaa;
+    background-color: var(--color-white);
+		
+	/* -webkit-transition: height 400ms ease-in-out;
+	transition: height 400ms ease-in-out; */
+    transition: height 0.5s, width 0.5s;
+    transition-delay: 0s, 0.75s;
+    /* overflow: hidden; */
+}

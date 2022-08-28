@@ -1,0 +1,37 @@
+.copy-code-button {
+    position: absolute;
+    right: 0;
+    padding: 2px 7px 5px 7px;
+    margin: 5px;
+    color: #767676;
+    border-color: #767676;
+    background-color: #ededed;
+    border: 1px solid;
+    border-radius: 6px;
+    font-size: 0.8em;
+    z-index: 999;
+    opacity: 0;
+    transition: 0.1s;
+  }
+  .copy-code-button > svg {
+    fill: #767676;
+  }
+  .copy-code-button:hover {
+    cursor: pointer;
+    border-color: #696969;
+    background-color: #e0e0e0;
+  }
+  .copy-code-button:hover > svg {
+    fill: #696969;
+  }
+  .copy-code-button:focus {
+    outline: 0;
+  }
+  .highlight {
+    position: relative;
+  }
+  .highlight:hover > .copy-code-button {
+    opacity: 1;
+    transition: 0.2s;
+  }
+  

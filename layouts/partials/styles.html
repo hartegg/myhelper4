@@ -1,30 +1,45 @@
 {{/*  
-option for more then one file
-*/}}
-
-
-{{ $style := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . -}}
- {{ $css := slice $style | resources.Concat "dist/style.css" | minify | fingerprint }} 
-
-{{/* {{ $css := slice $style | resources.Concat "dist/style.css" | resources.PostCSS  | fingerprint }}*/}}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}">  
-
-{{/*  https://gohugo.io/hugo-pipes/postcss/
-    {{ $options := dict "use" "autoprefixer postcss-color-alpha" }}
-{{ $style := resources.Get "css/main.css" | resources.PostCSS $options }}  */}}
-
-
-{{/*  {{ $css := resources.Get "css/style.css" }}
-{{ $style := $css | resources.PostCSS }}  */}}
-
-
-{{/* simple version
-{{- $style := resources.Get "css/style.css" | minify | resources.Fingerprint -}}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}"> */}}
-
-{{/*  {{ $style := resources.Get "css/style.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink }}">  */}}
-
-{{ range .Site.Params.customCSS -}}
-    <link rel="stylesheet" href="{{ . | relURL }}">
-{{- end }}
+    option for more then one file
+    */}}
+    
+    
+    {{ $style := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . -}}
+    {{ $tocnav := resources.Get "css/tocnav.css" | resources.ExecuteAsTemplate "css/tocnav.css" . -}}
+    
+    {{ $clipboard := resources.Get "css/clipboard.css" | resources.ExecuteAsTemplate "css/clipboard.css" . -}}
+    
+    
+    
+    {{/*  {{ $css := slice $style $tocnav | resources.Concat "dist/style.css" | minify | fingerprint }} */}}
+    {{ $css := slice $style $tocnav | resources.Concat "dist/style.css" }} 
+    
+    {{/* {{ $css := slice $style  | resources.Concat "dist/style.css" | resources.PostCSS  | fingerprint }}*/}}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">  
+    
+    {{ $cssClipboard := slice $clipboard  | resources.Concat "dist/clipboard.css" }} 
+    {{/* {{ if (findRE "<pre" .Content 1) }}   */}}
+        <link rel="stylesheet" href="{{ $cssClipboard.RelPermalink }}">
+    {{/* {{ end }}  */}}
+    
+    {{/*  <link rel="stylesheet" href="css/tocnav.css"> */}}
+    
+    {{/*  https://gohugo.io/hugo-pipes/postcss/
+        {{ $options := dict "use" "autoprefixer postcss-color-alpha" }}
+    {{ $style := resources.Get "css/main.css" | resources.PostCSS $options }}  */}}
+    
+    
+    {{/*  {{ $css := resources.Get "css/style.css" }}
+    {{ $style := $css | resources.PostCSS }}  */}}
+    
+    
+    {{/* simple version
+    {{- $style := resources.Get "css/style.css" | minify | resources.Fingerprint -}}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}"> */}}
+    
+    {{/*  {{ $style := resources.Get "css/style.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">  */}}
+    
+    {{ range .Site.Params.customCSS -}}
+        <link rel="stylesheet" href="{{ . | relURL }}">
+    {{- end }}
+    

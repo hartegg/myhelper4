@@ -71,10 +71,6 @@ blockquote {
 
 	--table-border-color: #e6e4e4;
 
-	/* --counter: counter(figure);
-	counter-reset: figure;  */
-
-	
 }
    .margin-20 {
 	margin:20px
@@ -94,13 +90,7 @@ blockquote {
    article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
 	display: block;
 }
-   /* figure {
-	counter-increment: figure;
-}
-figure::before {
-	content:counter(figure) ;
-} */
-   .drop {
+.drop {
 	-webkit-animation: fadeIn  .5s ease forwards;
 	        animation: fadeIn  .5s ease forwards;
 	-webkit-animation-delay: calc(var(--order) * 100ms);
@@ -410,39 +400,35 @@ code {
 	background-color: #afb8c133;
 	border: 2px solid #afb8c133;
 }
-   /* pre:hover {
-	border-right: 4px solid #a0a0a0;
-	/*border-left: 5px solid #a0a0a0;
-	 border-bottom: 2px dashed #a0a0a0; 
-} */
 code {
 	padding: 0 5px;
 	color: #c33;
 	font-weight: bold;
 }
-/* pre {
-	padding-bottom: 0px !important ;
-} */
 pre {
 	display: block;
-	padding: 20px;
-	padding-bottom: 0px;
+	/* padding: 20px; */
+	 padding: 5px 20px; 
+	/* padding-bottom: 0px; */
 	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
 	overflow: auto;
 	color: #2a2a2a;
 	font-weight: 550;
 	height: auto;
+	border-radius: 5px;
 }
-   pre code {
-	padding: 0 20px 0 0; 
+pre code {
+	padding: 0 20px 10px 0; 
 	color: inherit;
 	white-space: inherit;
 	background: inherit;
 	border: 0;
 	padding-bottom: 0px !important ;
+	display: inline-block;
+	align-items:baseline;
 }
-   kbd {
+kbd {
 	padding: 2px 3px;
 	color: var(--color-white);
 	background-color: #2a2a2a;
@@ -450,26 +436,16 @@ pre {
 .border-radius { 
 	border-radius: 10px;
 }
-   blockquote {
+blockquote {
 	display: block;
 	padding: 15px;
 	margin: 0 0 20px 15px;
 	margin: 0 0 1.25rem;
 	line-height: 1.6;
-	/* border-bottom: 1px dotted #a83c555f; */
-		
 	border-left: 15px solid var(--highlightColor);
-	/* border-right: 15px solid var(--highlightColor); */
-
 	font-weight: 500;
 	font-style: italic;
-	
-	/* -webkit-transition: all .4s cubic-bezier(.55,0,.1,1) 0s;
-	-moz-transition: all .4s cubic-bezier(.55,0,.1,1) 0s;
-	-o-transition: all .4s cubic-bezier(.55,0,.1,1) 0s;
-	transition: all .4s cubic-bezier(.55,0,.1,1) 0s;  */ 
 	border-radius: 10px;
-
 	/* background-color: rgba({{ $secondHighlightColor }}, 0.2);  */
 	background-color: var(--secondHighlightColor); 
 	-webkit-animation: fromBgGrad2 400ms ; 
@@ -689,21 +665,7 @@ dd {
    .logo__text {
 	text-transform: uppercase;
 }
-   /* ako se koristi i logo slika i title
-   onda znatno smanji logo 
-
-.logo--mixed .logo__item {
-	margin: .5rem auto;
-}
-
-.logo--mixed .logo__img {
-	max-width: 128px;
-	max-height: 128px;
-}
-
-.logo--mixed .logo__text {
-	padding: 0 1rem;
-} */
+ 
 /************ Start featured posts **************/
 .featured__content{
 	position: relative;
@@ -730,15 +692,6 @@ dd {
 	border-radius: 10px;
 	/* margin: 25px 0; */
 }
-
- /* left featured post spacing */
-/* .featured__inner:nth-child(1) {
-	margin:  25px 25px 25px auto; 
-} */
- /* right featured post spacing */
-/* .featured__inner:nth-child(2) { 
-	margin:  25px  25px 25px 0;  
-} */
 
 .featured__inner .featured__categories {
 	position: absolute;
@@ -1090,12 +1043,6 @@ div.tbumb_par {
 	display: flex;
 	justify-content: center; 
 	/* border-radius: 12px;  */
-
-	 /* box-shadow:
-	 0 0  10px    rgb(148, 148, 148),
-		0 1.5rem   1rem -1rem   rgb(148, 148, 148),
-		0 3rem 1rem -2.5rem rgb(148, 148, 148),
-		0 3.5rem 1rem -3.5rem rgb(148, 148, 148); */
 }
    div img.post_image {
 	width: 100% !important;
@@ -1189,25 +1136,8 @@ div.content img {
 	border: 8px solid #f7f7f7;
 	border: 8px solid var(--backgroundText);
 	/* margin-left: 10px 0 5px 15px; */ 
-
-	/* box-shadow:
-		0 1.5rem   1rem -1rem   rgb(148, 148, 148),
-		0 3rem 1rem -2.5rem rgb(148, 148, 148),
-		0 3.5rem 1rem -3.5rem rgb(148, 148, 148); */
 }
-   /* ***** Start *** povečaj prvo slovo prvog elementa p *********** */
-   /* 
-   .content > p:first-of-type:first-letter {
-	float: left;
-	font-size: 4.688rem;
-	line-height: 4.375rem;
-	padding: .5rem;
-	margin-right:  .5rem;
-	font-family: serif; 
-	background-color: var(--secondHighlightColor);
-	border: 0px solid var(--highlightColor);
-} */
-   /* ***** End *** povečaj prvo slovo prvog elementa p *********** */
+  
 .content a,
 .warning a,
 .authorbox__description a {
@@ -1335,26 +1265,6 @@ div.content img {
 }
 
 
-
-   /* 
-.widget__content a {
-	background:
-	   linear-gradient(
-		 to bottom,
-		 var(--highlightColor) 0%,
-		 var(--highlightColor) 100%
-	   );
-	background-position: 0 100%;
-	background-repeat: repeat-x;
-	background-size: 4px 4px;
-	color: #000;
-	text-decoration: none;
-	transition: background-size .2s;
-  }
-  
-.widget__content a:hover {
-	background-size: 4px 50px;
-  } */
 /* https://stackoverflow.com/questions/59877478/css-animation-expand-width-from-0-to-100-and-hide-from-0-to-100 */
    .hef {
 	display: inline;
@@ -1512,11 +1422,6 @@ div.content img {
 	float: left;
 	padding: 4px;
 	margin: 0 15px 0 15px;
-	/* -webkit-border-radius: 250px; 
-	-moz-border-radius: 250px; 
-	border-radius: 250px; */
-	 /* border: 4px solid var(--highlightColor);  */
-	/* border: 4px solid #616; */
 	border-radius: 50%;
 	box-shadow: -10px 0 25px var(--highlightColor)90, 10px 0 25px var(--highlightColor)90;
 	        box-shadow: -10px 0 25px var(--highlightColor)90, 10px 0 25px var(--highlightColor)90;
@@ -1919,20 +1824,7 @@ div.content img {
 	margin-bottom: 10px;
 	margin-bottom: .625rem;
 }
-   /* Sliding underline animation title on hover
-a.list_title_link {
-	font-size: 100%;
-	text-decoration: none;
-	background: linear-gradient(currentColor, currentColor) bottom / 0 3px no-repeat;
-	transition: 0.5s background-size;
-}
-a.list_title_link:hover {
-	background-size: 100% 3px
-}
-a.list_title_link {
-	background-position: left bottom; 
-}  */
-   /* Sliding underline animation title on hover end */
+
    .list__title {
 	font-size: 20px;
 	font-size: 1.25rem;
@@ -2565,15 +2457,15 @@ background: var(--highlightColor); */
    /*
    ----- Expand Page Content TOC - start---------------
    */
-   .expand {
+.expand {
     position: relative;
     margin: 1.5rem 0; 
 	border-radius: 0.25rem;
 }
-   .expand h2,h3,h4,h5,h6 {
+.expand h2,h3,h4,h5,h6 {
 	padding: 14px 0 0;
 }
-   .expand__content div {
+.expand__content div {
 	font-size: 15px !important;
 }
 .expand__content div {
@@ -2594,18 +2486,13 @@ background: var(--highlightColor); */
 	transition: max-height 400ms ease-in-out;
 }
 
-	.expand {
-		width: 230px; 
+.expand {
 		-webkit-transition: width 400ms ease-in-out;
 		transition: width 400ms ease-in-out;
-		/* animation-delay: 1000ms;  */
-
-	}
-	.expanded {
-		
+}
+.expanded {
 		 width: 100% !important; 
-		
-	}
+}
 
    /* ****** start  fix for post subtitles *************** */
    .expand__content .toc__menu{
@@ -3184,202 +3071,6 @@ background: var(--highlightColor); */
 		transform: scale(1);
 	}
 }
-/* ********* Start Banner Widget ************ */
-/* For inline banner  */
-/* 
-
-#boxBannerSVG  {
-	box-shadow:
-		0 0  10px    rgb(148, 148, 148),
-		0 1.5rem   1rem -1rem   rgb(148, 148, 148) ,
-		0 3rem 1rem -2.5rem rgb(148, 148, 148) ,
-		0 3.5rem 1rem -3.5rem rgb(148, 148, 148);
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-	-webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;  
-}
-
-#boxBannerSVG #svgPulsar{
-	--crveniOkvir: #d07373;
-	fill: var(--crveniOkvir);
-	box-shadow: 0 0 0 0.99em transparent;
-	animation: btn_pulsar 2s infinite;
-	animation-delay: 1s;
-} 
-#boxBannerSVG #svgbtnpulsar{
-	animation: btn_pulsar2 2s infinite;
-} 
-#svgbutton .line {
-    fill: none;
-    stroke-width: 5;
-    stroke-linejoin: round;
-    stroke-linecap: round;
-	stroke-dasharray: 328 600;
-	box-shadow: 0 0 0 0.99em transparent;
-} */
-   /* @keyframes btn_pulsar2 {
-     0% { 
-		box-shadow: 0 0 0 0 rgba(208, 115, 115, 0.999);  
-	}
-    30% { 
-		box-shadow: 0 0 0 0 rgba(208, 115, 115, 0.999);  
-	}
-    60% { 
-		box-shadow: 0 0 0 0 rgba(208, 115, 115, 0.999);  
-	}
-    70% { 
-		box-shadow: 0 0 0 0 rgba(208, 115, 115, 0.999);  
-	}
-} */
-   /* @keyframes rotate {
-	0% {
-	  stroke-dashoffset: 0;
-	}
-	50% {
-	  stroke-dashoffset: 928;
-	}
-	100% {
-		stroke-dashoffset: 0;
-	}
-} */
-   /* 
-.widget-banner {
-	width:100%; 
-    display: flex;
-    justify-content:center;
-    align-items: center; 
-	overflow: visible; 
-}
-.widget-banner div {
-	min-width: 280px;
-    max-width: 326px;
-} 
-.boxbanner {
-    position: relative;
-	width: 100%;
-    height: auto;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;  
-    background: rgb(11,39,87);
-    background:    -moz-linear-gradient(180deg, rgba(11,39,87,1) 18%, rgba(15,62,114,1) 18%, rgba(15,62,114,1) 50%, rgba(46,133,178,1) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(11,39,87,1) 18%, rgba(15,62,114,1) 18%, rgba(15,62,114,1) 50%, rgba(46,133,178,1) 100%);
-    background:         linear-gradient(180deg, rgba(11,39,87,1) 18%, rgba(15,62,114,1) 18%, rgba(15,62,114,1) 50%, rgba(46,133,178,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0b2757",endColorstr="#2e85b2",GradientType=1);  
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-    transition: all 500ms;
-	transform: scale(1);
-}
-.boxbanner:hover{
-	animation: pulsar 1.5s ease infinite;
-}
-.boxbanner:first-child  {
-	margin: 5px 0 5px 0;
-	box-shadow:
-		0 0  10px rgb(148, 148, 148),
-		0 1.5rem  1rem -1rem rgb(148, 148, 148) ,
-		0 3rem 1rem -2.5rem rgb(148, 148, 148) ,
-		0 3.5rem 1rem -3.5rem rgb(148, 148, 148);
-}
-.rbox {
-    width: 100%;
-    height: auto;
-    color: black;
-    font-size: 1.6rem;
-    padding: 10px;
-    margin: 0;
-}
-.rbox span {
-    display: block;
-}
-.plr{
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.red1 { 
-    color: #d3f4f9;
-    font-size: 1.7rem;    
-}
-.red2 { 
-    color: #f4f4f4;
-    font-weight: bold;
-    font-size: 1.1rem;
-    letter-spacing: 0.2px;
-}
-
-.red3 { 
-    color: rgb(224, 224, 12);
-    text-transform: uppercase;
-    font-weight:  bold;
-    font-size: 1.1rem;
-}
-.red4 { 
-    font-size: 1.1rem;
-    width: 70%; 
-    color: #f4f4f4;;
-    font-weight: bold;
-    text-align: center;
-    background-color: rgb(193, 52, 52);
-    background:-moz-linear-gradient(160deg, #D44A4A 0%, #6F2424E8 83%); 
-    background:-webkit-linear-gradient(160deg, #D44A4A 0%, #6F2424E8 83%);
-    background:-o-linear-gradient(160deg, #D44A4A 0%, #6F2424E8 83%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6F2424', endColorstr='#D44A4A', GradientType=1 );
-    background:-ms-linear-gradient(160deg, #D44A4A 0%, #6F2424E8 83%);
-    background:linear-gradient(160deg, #D44A4A 0%, #6F2424E8 83%);
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 12px;  
-    margin: 10px auto 25px auto;
-    padding: 10px 0 12px 0;
-    position: relative;
-    z-index: 100;
-	border: 4px solid rgb(208, 115, 115);
-	box-shadow: 0 0 0 0.99em transparent;
-	animation:  btn_pulsar 3s  infinite;
-	animation-delay: 2s;
-}
-.red4 span {
-    text-transform: uppercase;
-    font-weight: bold;
-}
-.red4 a {
-    color: #f4f4f4;;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-	height: 100%;
-} 
-.red4 a:hover {
-    color: var(--color-white)fff;
-} */
-   /* @keyframes btn_pulsar {
-    0% { 
-		box-shadow: 0 0 0 0 rgba(208, 115, 115, 0.999); 
-	}
-    30% { 
-		box-shadow: 0 0 0 0 rgba(208, 115, 115, 0.999);  
-	}
-    60% {
-		box-shadow: 0 0 0 0 rgba(208, 115, 115, 0.999);  
-	}
-    70% { 
-		box-shadow: 0 0 0 0 rgba(208, 115, 115, 0.999);  
-	}
-} */
-/* 
-************ End banner box ************ */
-
 
 /*
 ********* start podnaslovi ********* */
@@ -3505,37 +3196,8 @@ background: var(--highlightColor); */
     /* border: 1px solid #00dfc4; */
 	border: 1px solid var(--highlightColor);
 }
-   /* .inputBox .txtinput:invalid ~ span
-.inputBox .txtinput:focus ~ span  {
-    color: #1d2b3a;
-    transform: translateX(10px) translateY(-7px);
-    font-size: 0.85em;
-    font-weight: bold;
-    padding: 1px 10px;
-    background:#df0061;
-    letter-spacing: 1px;
-    border-radius: 3px;
-}
-.inputBox .txtinput:invalid 
-.inputBox .txtinput:focus {
-    border: 1px solid #df0061;
-} 
 
-input[type=submit],
-input[type=reset] {
-	display: inline-block;
-	min-width: 150px;
-	padding: 10px 15px;
-	font-weight: 700;
-	color: var(--color-white);
-	text-transform: uppercase;
-	cursor: pointer;
-	background: #2a2a2a;
-	border: 0;
-	transition: all .1s linear;
-	-webkit-appearance: none;
-}*/
-   [disabled].button, button[disabled], 
+[disabled].button, button[disabled], 
 [disabled][type="button"], 
 [disabled][type="reset"], 
 [disabled][type="submit"] {
@@ -3735,4 +3397,3 @@ https://zzo-docs.vercel.app/zzo/shortcodes/alert/
     border-left: 5px solid #ffcdd2;
 }
    /*************** End Alert *******************/
-   
