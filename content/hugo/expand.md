@@ -29,17 +29,18 @@ keywords:
 
 ### Expand shortcode
 
-{{< expand "Tko su indigo djeca?" >}}
+{{< expand "What is Lorem Ipsum?" >}}
 
-Indigo djeca predstavljaju utjelovljenje onoga što je čovječanstvo gotovo zaboravilo. Svijest o našoj istinskoj prirodi, svijest o Izvoru utjelovljena je u novim generacijama ogromnog broja djece. Slobodno možemo reći da su nosioci „Kristove svijesti“ kako god to pretenciozno zvučalo.
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 {{< /expand >}}
 
-{{< expand "Tko su indigo djeca - drugi dio" >}}
+{{< expand "Where can I get some?" >}}
 
 ### Title2
 
-Svjesni su da su svjesni. Opisat ću čovjeka kao radioprijemnika sa ograničenim rasponom frekvencija. Dolaskom nove djece radiopriemnici će biti zamjenjeni novim, sofisticiranim, sa neograničenim rasponom frekvencija. Njihove antene primaju informacije iz jedinstvenog polja svijesti, informacije iz dubokog svemira. Neka djeca imaju probleme zbog nemogućnosti da u ovom informacijski prezasićenom svijetu izdvajaju suvišne informacije.
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+
 {{< /expand >}}
 
 &nbsp;

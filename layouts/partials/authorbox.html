@@ -1,5 +1,5 @@
-{{- if .Param "authorbox" }} {{- $author := index .Site.Data.authors
-(.Params.author | default .Site.Author.code) -}}
+{{- if .Param "authorbox" }} 
+{{- $author := index .Site.Data.authors (.Params.author | default .Site.Author.code) -}}
 <div class="authorbox">
   {{- with $author.avatar }}
   <figure class="authorbox__avatar box_avatar">
