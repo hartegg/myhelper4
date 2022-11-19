@@ -5,7 +5,7 @@ summary: Kolačić je informacija koja se u obliku obične tekst datoteke sprema
   mobitel ili tablet)
 date: 2022-06-19T12:59:55+02:00
 draft: false
-author: ikm
+author: myhelper4
 authorbox: false
 pager: false
 thumbnail: ""
@@ -46,12 +46,8 @@ Ovisno o postojećim internetskim preglednicima, kolačići se mogu onemogućiti
 {{< a_blank title="Safari" url="https://support.apple.com/hr-hr/guide/safari/sfri11471/mac" >}}
 
 
-## Kakve kolačiće koristi ikm.hr?
+## Kakve kolačiće koristi myhelper4?
 
-Koristimo kolačiće jedino da omogućimo bolje korisničko iskustvo budući da oni služe za pamćenje određenih postavki stranice (to su tzv. first-party cookies) kako bi web stranica normalno radila. Također koristimo kolačiće trećih strana poput Facebooka i Googlea koji nam trebaju za praćenje aktivnosti svih posjetitelja naše web stranice, kako bi znali je li sadržaj na ikm.hr koristan, te u konačnici zanimljiv. Da budemo kokretni kada su u pitanju kolačići trećih strana, koristimo sljedeće:
+Koristimo kolačiće jedino da omogućimo bolje korisničko iskustvo budući da oni služe za pamćenje određenih postavki stranice (to su tzv. first-party cookies) kako bi web stranica normalno radila. Također koristimo kolačiće trećih strana poput Facebooka i Googlea koji nam trebaju za praćenje aktivnosti svih posjetitelja naše web stranice, kako bi znali je li sadržaj na ikm.hr koristan, te u konačnici zanimljiv. 
 
-**Google Analytics** – s njime pratimo aktivnosti na web stranici ikm.hr i temeljem zaključaka koje dobijemo analizom statistike, unaprijeđujemo dalje našu domenu.
-
-**Google Tag Manager** – ovdje je riječ o posebnom Gooogleovom alatu koji nama pojednostavljuje upravljanje svim trećim servisima koje koristimo, te omogućuje naprednije praćenje pojedinih dijelova ikm.hr.
-
-O kolačićima može još više saznati na  {{< a_blank title="allaboutcookies" url="https://allaboutcookies.org/" >}}
+More about cookies {{< a_blank title="allaboutcookies" url="https://allaboutcookies.org/" >}}
