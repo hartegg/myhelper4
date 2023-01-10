@@ -1144,7 +1144,7 @@ div.content img {
 	font-weight: 700;
 	color: var(--highlightColor);
 }
-   .content a:hover,
+.content a:hover,
 .warning a:hover,
 .authorbox__description a:hover {
 	text-decoration: underline;
