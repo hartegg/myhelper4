@@ -178,7 +178,11 @@ date: 2022-08-15T22:38:59+02:00
 &nbsp;
 | **Reference:**  |
 | :--- |
-| {{< a_blank title="Top GitHub Commands" url="https://gist.github.com/gwenf/19e5748a5391929e8e938a22c8a4b3f2" >}} |
+| {{< rawhtml >}}
+<a class="roll" target="_blank" href="https://gist.github.com/gwenf/19e5748a5391929e8e938a22c8a4b3f2">
+  <span data-attr="Top GitHub Commands">Top GitHub Commands</span>
+</a>
+{{< /rawhtml >}}|
 
 &nbsp;
 

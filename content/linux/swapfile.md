@@ -163,14 +163,22 @@ and add folowing line to end of fstab
 -- use **Ctrl+C** for **Exit Nano**
 
 
-
 &nbsp;
-
-| **References:**  |
+| **Reference:**  |
 | :--- |
-| {{< a_blank title="Create swap file" url="https://itsfoss.com/create-swap-file-linux" >}} |
-| {{< a_blank title="How to use swap file instead of swap" url="https://www.linuxuprising.com/2018/08/how-to-use-swap-file-instead-of-swap.html" >}} |
-| {{< a_blank title="Linux Swap - Different Kinds and How to Use It" url="https://www.youtube.com/watch?v=HKy-KEtCT9o" >}} |
-
-
+| {{< rawhtml >}}
+<a class="roll" target="_blank" href="https://itsfoss.com/create-swap-file-linux">
+  <span data-attr="Create swap file">Create swap file</span>
+</a>
+{{< /rawhtml >}}|
+| {{< rawhtml >}}
+<a class="roll" target="_blank" href="https://www.linuxuprising.com/2018/08/how-to-use-swap-file-instead-of-swap.html">
+  <span data-attr="How to use swap file instead of swap">How to use swap file instead of swap</span>
+</a>
+{{< /rawhtml >}}|
+| {{< rawhtml >}}
+<a class="roll" target="_blank" href="https://www.youtube.com/watch?v=HKy-KEtCT9o">
+  <span data-attr="Linux Swap - Different Kinds and How to Use It">Linux Swap - Different Kinds and How to Use It</span>
+</a>
+{{< /rawhtml >}}|
 &nbsp;

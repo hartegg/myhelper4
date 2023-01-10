@@ -12,7 +12,13 @@ tags:
 lastmod: 2022-05-23T15:04:09.038Z
 ---
 
-Syntax highlighting and snippets for [Hugo](https://gohugo.io/ "https://gohugo.io/") websites.
+Syntax highlighting and snippets for {{< rawhtml >}}
+<a class="roll" target="_blank" href="https://gohugo.io/">
+  <span data-attr="Hugo">Hugo</span>
+</a>
+{{< /rawhtml >}} websites.
+
+
 
 ## Features
 
@@ -58,7 +64,11 @@ For Hugo Shortcode snippets to work in your Markdown files, enable `quickSuggest
 
 ## Release Notes
 
-See the [Changelog](https://github.com/budparr/language-hugo-vscode/blob/master/CHANGELOG.md "https://github.com/budparr/language-hugo-vscode/blob/master/CHANGELOG.md")
+See the {{< rawhtml >}}
+<a class="roll" target="_blank" href="https://github.com/budparr/language-hugo-vscode/blob/master/CHANGELOG.md">
+  <span data-attr="Changelog">Changelog</span>
+</a>
+{{< /rawhtml >}} 
 
 ## Roadmap
 

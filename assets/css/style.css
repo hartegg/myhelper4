@@ -1150,6 +1150,74 @@ div.content img {
 	text-decoration: underline;
 	color: var(--highlightColor);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+a.roll {
+    font-weight: 800;
+	text-decoration: none;
+}
+a.roll span {
+     padding: 2px 0px;
+	 /*margin-right: 2px; */
+    transition: .4s;
+    position: relative;
+    color: var(--color-white) !important;
+  /*    background: #262626;  */
+    display: inline list-item;
+}
+
+a.roll span::before {
+    content: attr(data-attr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 2px;
+    background: var(--highlightColor) ;
+    transition: 0.4s;
+    transform-origin: bottom;
+    transform: rotateX(90deg) translateY(50%);
+}
+a.roll:hover span::before {
+    transform: rotateX(0deg) translateY(0%);
+} 
+
+a.roll span::after {
+	content: attr(data-attr);
+	/* padding: 15px; */
+	position: absolute;
+	top: 0;
+	left: 0;
+    padding: 0 4px;
+    transition: 0.4s;
+    color: var(--highlightColor) !important;
+	background: inherit;  
+	transform-origin: top;
+	transform: rotateX(0deg) translateY(0%);
+}
+a.roll:hover span::after {
+	transform: rotateX(90deg) translateY(-50%);
+}
+  
+
+
+
+
+
+
+
+
+
    .content .alignnone {
 	display: block;
 	margin: 20px 0;

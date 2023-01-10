@@ -137,8 +137,15 @@ Done in 39 ms!
 svgo -f path/to/svgs -0 path/to/optimizesvgs
 ```
 
-\
+<!-- \
 reference:\
 {{< a_blank title="Optimizing Images for the Web from the Command Line" url="https://www.youtube.com/watch?v=8zj44m0hAoU&list=PLnur5_dvCveGQtaSkjP0i-Fege25r5dHs&index=4" >}}
-
+ -->
 &nbsp;
+| **Reference:**  |
+| :--- |
+| {{< rawhtml >}}
+<a class="roll" target="_blank" href="https://www.youtube.com/watch?v=8zj44m0hAoU&list=PLnur5_dvCveGQtaSkjP0i-Fege25r5dHs&index=4">
+  <span data-attr="Optimizing Images for the Web from the Command Line">Optimizing Images for the Web from the Command Line</span>
+</a>
+{{< /rawhtml >}}|

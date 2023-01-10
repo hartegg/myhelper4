@@ -37,7 +37,14 @@ $ sudo gdebi GitHubDesktop-linux-3.0.0-linux2.deb\
 
 | **References:**  |
 | :--- |
-| {{< a_blank title="To install Github Desktop for Ubuntu" url="https://gist.github.com/berkorbay/6feda478a00b0432d13f1fc0a50467f1" >}} |
-| {{< a_blank title="Official website" url="https://desktop.github.com/" >}} |
+| {{< rawhtml >}}
+<a class="roll" target="_blank" href="https://gist.github.com/berkorbay/6feda478a00b0432d13f1fc0a50467f1">
+  <span data-attr="To install Github Desktop for Ubuntu">To install Github Desktop for Ubuntu</span>
+</a> {{< /rawhtml >}} | 
+| {{< rawhtml >}}
+<a class="roll" target="_blank" href="https://desktop.github.com/">
+  <span data-attr="Official website">Official website</span>
+</a>
+{{< /rawhtml >}} |
 
 &nbsp;
