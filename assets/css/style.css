@@ -1151,38 +1151,25 @@ div.content img {
 	color: var(--highlightColor);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* start - content links hover rollup effect  */
 a.roll {
     font-weight: 800;
 	text-decoration: none;
 }
 a.roll span {
-     padding: 2px 0px;
-	 /*margin-right: 2px; */
+    padding: 2px 0px;
     transition: .4s;
     position: relative;
     color: var(--color-white) !important;
-  /*    background: #262626;  */
-    display: inline list-item;
+  /*    background: #262626; 
+    display:flex; */
 }
-
 a.roll span::before {
     content: attr(data-attr);
     position: absolute;
     top: 0;
     left: 0;
-    padding: 0 2px;
+    padding: 0 0px;
     background: var(--highlightColor) ;
     transition: 0.4s;
     transform-origin: bottom;
@@ -1190,15 +1177,14 @@ a.roll span::before {
 }
 a.roll:hover span::before {
     transform: rotateX(0deg) translateY(0%);
-} 
-
+}
 a.roll span::after {
 	content: attr(data-attr);
 	/* padding: 15px; */
 	position: absolute;
 	top: 0;
 	left: 0;
-    padding: 0 4px;
+    padding: 0 0px;
     transition: 0.4s;
     color: var(--highlightColor) !important;
 	background: inherit;  
@@ -1208,17 +1194,10 @@ a.roll span::after {
 a.roll:hover span::after {
 	transform: rotateX(90deg) translateY(-50%);
 }
-  
+/* end - content links hover rollup effect  */
 
 
-
-
-
-
-
-
-
-   .content .alignnone {
+.content .alignnone {
 	display: block;
 	margin: 20px 0;
 	margin: 1.25rem 0;
