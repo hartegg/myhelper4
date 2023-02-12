@@ -25,7 +25,7 @@ JavaScript is the programming language of the Web.
 JavaScript is easy to learn.
 
 This tutorial will teach you JavaScript from basic to advanced.
-jhjhjhh
+This tutorial will teach you JavaScript from basic to advanced.
 ```
 
 https://www.w3schools.com/js/
