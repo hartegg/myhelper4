@@ -2,12 +2,9 @@
 {{ $textAlt := .Get 1 }} 
   
 {{with $miki := resources.Get (.Get 0) }}
-   
         <img class="postImg" 
         src="{{ $miki.RelPermalink  }}" 
         height="{{ .Height }}"
         width="{{ .Width}}" 
         {{ with $textAlt }}alt="{{.}}"{{ else }}alt=""{{ end }} >
-
-
 {{end}}
