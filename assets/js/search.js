@@ -24,7 +24,7 @@ window.addEventListener('keydown', function(event) {
     // open search on CTRL+SHIFT+F
      if (event.ctrlKey && event.shiftKey && event.key == "F" && !searchModal2.classList.contains("active")) {
         event.preventDefault();
-        searchModal.classList.toggle('active');
+        searchModal2.classList.toggle('active');
      }
 })
 
