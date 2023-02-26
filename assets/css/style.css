@@ -903,6 +903,7 @@ a.featured__link:hover .feturedTitle{
 }
    .meta__icon {
 	margin-right: 5px;
+	margin-bottom: 5px;
 	vertical-align: middle;
 	fill: #c4c4c4;
 }
