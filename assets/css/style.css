@@ -1157,8 +1157,12 @@ a.roll {
     font-weight: 800;
 	text-decoration: none;
 }
+a.roll:hover{
+	text-decoration: none;
+}
 a.roll span {
-    padding: 2px 4px;
+    /* margin: 1px 4px 7px 2px; */
+	padding: 2px 2px;
     transition: .4s;
     position: relative;
     color: var(--color-white) !important;
