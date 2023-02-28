@@ -1,1 +1,5 @@
 <a href="{{ .Get "url" }}" target="_blank" rel="noopener">{{ with .Get "title" }}{{.}}{{else}}{{.Get "url"}}{{end}}</a>
+
+{{/* usage
+     {{< a_blank title="Opens link in new window / tab" url="https://codingnconcepts.com/" >}}  
+*/}}

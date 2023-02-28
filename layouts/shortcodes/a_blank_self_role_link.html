@@ -1,0 +1,12 @@
+<a class="roll" target="{{ .Get "target" }}" href="{{ .Get "url" }}">
+    <span data-attr="{{ .Get "title" }}">{{ .Get "title" }}</span>
+</a>
+
+{{/* usage 
+
+    target="_self | _blank" 
+    title="some link2"
+    url="https://somelink.com"
+
+      {{< a_blank_self_role_link target="_blank" title="some link2" url="https://codingnconcepts.com/" >}} 
+*/}}

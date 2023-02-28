@@ -22,9 +22,7 @@ Create a shortcode layouts/shortcode/a_blank.htnl
 ```
 &nbsp;
 
----
 
-&nbsp;
 
 ```text
 [Coding N Concepts](https://codingnconcepts.com/)
@@ -43,6 +41,11 @@ for use remove two \ backslash
 
 &nbsp;
 
+{{< a_blank_self_role_link target="_self" title="some link2 _self" url="https://codingnconcepts.com/" >}}
+
 ---
 
+{{< a_blank_self_role_link target="_blank" title="some link2 _blank" url="https://codingnconcepts.com/" >}}
+
+---
 &nbsp;
