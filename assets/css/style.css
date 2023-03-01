@@ -1161,13 +1161,13 @@ a.roll:hover{
 	text-decoration: none;
 }
 a.roll span {
-    /* margin: 1px 4px 7px 2px; */
+     margin: 1px 4px 7px 2px; 
 	padding: 2px 2px;
     transition: .4s;
     position: relative;
     color: var(--color-white) !important;
-  /*    background: #262626; 
-    display:flex; */
+  /*    background: #262626;  */
+    display:flex;
 }
 a.roll span::before {
     content: attr(data-attr);
@@ -1185,7 +1185,6 @@ a.roll:hover span::before {
 }
 a.roll span::after {
 	content: attr(data-attr);
-	
 	position: absolute;
 	top: 0;
 	left: 0;
