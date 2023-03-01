@@ -1167,7 +1167,7 @@ a.roll span {
     position: relative;
     color: var(--color-white) !important;
   /*    background: #262626;  */
-    display:flex;
+    display:inline list-item;
 }
 a.roll span::before {
     content: attr(data-attr);
