@@ -1159,15 +1159,19 @@ a.roll {
 }
 a.roll:hover{
 	text-decoration: none;
+	padding: 0;
 }
 a.roll span {
-     margin: 1px 4px 7px 2px; 
+     /* margin: 1px 4px 7px 2px;  */
 	padding: 2px 2px;
     transition: .4s;
     position: relative;
     color: var(--color-white) !important;
   /*    background: #262626;  */
     display:inline list-item;
+	list-style-type: none;
+	padding-right: -2px;
+	white-space: pre-line;
 }
 a.roll span::before {
     content: attr(data-attr);
