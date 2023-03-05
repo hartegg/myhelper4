@@ -9,7 +9,7 @@ categories:
 tags:
   - "access"
   - "linux"
-# thumbnail: "images/js.svg"
+thumbnail: images/linux.svg
 toc: true
 autonumbering: false
 ---
