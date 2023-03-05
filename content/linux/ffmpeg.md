@@ -31,7 +31,7 @@ In this article, we'll explore some practical examples of using FFmpeg to conver
 
 ## Installing FFmpeg on Windows:
 
-- Download the latest FFmpeg build from the official website: https://ffmpeg.org/download.html
+- Download the latest FFmpeg build from the  {{< a_blank_self_role_link target="_blank" title="official website" url="https://ffmpeg.org/download.html" >}}
 - Extract the downloaded archive to a folder on your computer.
 - Add the FFmpeg bin directory to your system's PATH environment variable. This can be done by following these steps:
     - Open the Start menu and search for "Environment Variables".
@@ -149,14 +149,13 @@ This command speeds up an input MP4 video file by 2x using the FFmpeg setpts and
 
 ## Explore yourself
 
-- FFmpeg documentation: https://ffmpeg.org/documentation.html
-- FFmpeg Wiki: https://trac.ffmpeg.org/wiki
-- FFmpeg Filters documentation: https://ffmpeg.org/ffmpeg-filters.html
-- FFmpeg Trac ticket system: https://trac.ffmpeg.org/
-- Stack Overflow: https://stackoverflow.com/search?q=FFmpeg&s=764b4d0b-7c94-4f80-b405-4351c0e920e0
-- FFmpeg Crash Course | Install, Convert, Reduce File Size, Trim, Crop, Watermark, Chroma Key, Overlay: https://www.youtube.com/watch?v=yieG9DZQ_vM
-- FFmpeg subreddit: https://www.reddit.com/r/ffmpeg/
-
+- {{< a_blank_self_role_link target="_blank" title="FFmpeg documentation " url="https://ffmpeg.org/documentation.html" >}} 
+- {{< a_blank_self_role_link target="_blank" title="FFmpeg Wiki" url="https://trac.ffmpeg.org/wiki" >}} 
+- {{< a_blank_self_role_link target="_blank" title="FFmpeg Filters documentation" url="https://ffmpeg.org/ffmpeg-filters.html" >}} 
+- {{< a_blank_self_role_link target="_blank" title="FFmpeg Trac ticket system" url="https://trac.ffmpeg.org/" >}} 
+- {{< a_blank_self_role_link target="_blank" title="Stack Overflow" url="https://stackoverflow.com/search?q=FFmpeg&s=764b4d0b-7c94-4f80-b405-4351c0e920e0" >}} 
+- {{< a_blank_self_role_link target="_blank" title="FFmpeg Crash Course" url="https://www.youtube.com/watch?v=yieG9DZQ_vM" >}} 
+- {{< a_blank_self_role_link target="_blank" title="FFmpeg subreddit " url="https://www.reddit.com/r/ffmpeg/" >}} 
 
 These resources provided me with a wealth of information and examples that I was able to use to put together this article. They are excellent sources of information for anyone looking to learn more about FFmpeg and its capabilities.
 
