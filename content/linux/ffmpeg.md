@@ -25,8 +25,7 @@ In this article, we'll explore some practical examples of using FFmpeg to conver
 
 - Open a terminal window.
 - Run the command _sudo apt-get update_ to update the package list.
-- Run the command _sudo apt-get install ffmpeg_ to install FFmpeg. {{< highlight go >}} A bunch of code here {{< /highlight >}}
-
+- Run the command _sudo apt-get install ffmpeg_ to install FFmpeg.
 - Wait for the installation to complete.
 - Verify the installation by running the command ffmpeg -version.
 
