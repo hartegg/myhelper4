@@ -1167,8 +1167,8 @@ a.roll span {
     transition: .4s;
     position: relative;
     color: var(--color-white) !important;
-  /*    background: #262626;  */
-    display:inline list-item;
+  /*    background: #262626; 
+    display:inline list-item; */
 	list-style-type: none;
 	padding-right: -2px;
 	white-space: pre-line;
