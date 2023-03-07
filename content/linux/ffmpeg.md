@@ -7,6 +7,7 @@ hideSummary: false
 ShowCodeCopyButtons: true
 categories:
   - Linux
+  - Windows
 tags:
   - ffmpeg
   - linux
