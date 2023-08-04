@@ -89,7 +89,7 @@ ffmpeg -i input.mp4 -vn -acodec copy output.mp3
 another example
 
 ```bash
- ffmpeg -i video.avi -f mp3 audio.mp3
+ffmpeg -i video.avi -f mp3 audio.mp3
 ```
 
 
