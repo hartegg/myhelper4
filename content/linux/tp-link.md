@@ -1,6 +1,6 @@
 ---
 title: Install Tp Link driver for WIFI AC1300
-summary: FFmpeg is a powerful multimedia framework that can be used to convert, shrink, and manipulate audio and video files. Whether you're working with high-definition footage or simple audio recordings, FFmpeg has the tools you need to get the job done quickly and efficiently.
+summary:Drivar for TP-Link AC1300 Dual Band USB Adapter
 date: 2023-08-06T00:29:53+02:00
 draft: false
 hideSummary: false
