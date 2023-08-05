@@ -1,6 +1,6 @@
 ---
 title: Install Tp Link driver for WIFI AC1300
-summary:Drivar for TP-Link AC1300 Dual Band USB Adapter
+summary: Drivar for TP-Link AC1300 Dual Band USB Adapter
 date: 2023-08-06T00:29:53+02:00
 draft: false
 hideSummary: false
