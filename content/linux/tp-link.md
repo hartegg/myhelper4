@@ -18,7 +18,7 @@ author: helper4
 thumbnail: images/linux.svg
 ---
 
-Install Tp Link driver in Debian
+## Install Tp Link driver in Debian
 
 ```bash
 git clone https://github.com/cilynx/rtl88x2bu.git
@@ -32,6 +32,6 @@ sudo modprobe 88x2bu
 
 ```
 
-## Explore yourself
+Explore yourself
 
-- {{< a_blank_self_role_link target="_blank" title="Install TP Link" url="https://community.tp-link.com/en/home/forum/topic/208022" >}} 
+- {{< a_blank target="_blank" title="Install TP Link" url="https://community.tp-link.com/en/home/forum/topic/208022" >}} 
