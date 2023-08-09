@@ -95,8 +95,8 @@ theme = "mainroad"
 
 
 [params]
-  description = "My Helper 4 is esentially a How to... of everything I use with Hugo, css, js, linux ect." # Description of your site
-  opengraph = true # Enable OpenGraph if true
+  description = "My Helper 4 is esentially a How to... of things I use with Hugo, css, js, linux, windows ect." # Description of your site
+  opengraph = false # Enable OpenGraph if true
   schema = false # Enable Schema
   twitter_cards = false # Enable Twitter Cards if true
   readmore = false # Show "Read more" button in list if true false
