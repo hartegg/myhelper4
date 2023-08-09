@@ -1,20 +1,17 @@
 ---
 title: Optimizing images for web from command line
 summary: Optimizing images for web from command line
-date: 2022-04-29T02:41:54+02:00
+date: 2023-08-09T23:02:33+02:00
 draft: false
 categories:
   - Linux
 tags:
-  - Linux
+  - linux
+  - image
 toc: true
 autonumbering: true
 author: helper4
 thumbnail: images/linux.svg
-keywords:
-  - Linux
-  - Optimizing images
-lastmod: 2022-05-23T15:04:44.773Z
 ---
 
 ## Resize images
