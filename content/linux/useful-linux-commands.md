@@ -8,7 +8,7 @@ ShowCodeCopyButtons: true
 categories:
   - Linux
 tags:
-  - Linux commands
+  - terminal
   - debian
 toc: true
 autonumbering: true
