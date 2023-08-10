@@ -72,6 +72,17 @@ blockquote {
 	--table-border-color: #e6e4e4;
 
 }
+
+
+
+::-moz-selection {
+	color: var(--color-white);
+	background-color: {{ $highlightColor }}80;
+  }
+   ::selection {
+	color: var(--color-white);
+	background-color: {{ $highlightColor }}80;
+  }
    .margin-20 {
 	margin:20px
 }
@@ -197,12 +208,9 @@ blockquote {
       transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 	  z-index: 999999999999;
     }
-   ::-moz-selection {
-	background:  #ecac16;
-  }
-   ::selection {
-	background:  #ecac16;
-  }
+   
+	
+
    .container {
 	position: relative;
 	width: 100%;
