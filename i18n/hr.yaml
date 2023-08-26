@@ -73,7 +73,7 @@
 
 - id: 404_text
   translation:
-    "Tražena stranica ne postoji ili je premještena ili izbrisana. Koristite pretragu ili idite"
+    "Tražena stranica ne postoji ili je premještena ili izbrisana. Koristite pretragu ili idite na "
 
 - id: 404_linktext
   translation: "na početnu stranicu"
@@ -102,7 +102,6 @@
   
 - id: contact_error
   translation: "Došlo je do greške"
-  
   
 - id: contact_name
   translation: "Vaše ime"
