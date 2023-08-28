@@ -25,23 +25,23 @@ In this article, we'll explore some practical examples of using FFmpeg to conver
 ## Installing FFmpeg on Linux:
 
 - Open a terminal window.
-- Run the command _sudo apt-get update_ to update the package list.
-- Run the command _sudo apt-get install ffmpeg_ to install FFmpeg.
+- Run the command ```sudo apt-get update``` to update the package list.
+- Run the command ```sudo apt-get install ffmpeg``` to install FFmpeg.
 - Wait for the installation to complete.
 - Verify the installation by running the command ffmpeg -version.
 
 ## Installing FFmpeg on Windows:
 
-- Download the latest FFmpeg build from the  {{< a_blank_self_role_link target="_blank" title="official website" url="https://ffmpeg.org/download.html" >}}
+- Download the latest FFmpeg build from the  {{< a_blank target="_blank" title="official website" url="https://ffmpeg.org/download.html" >}}
 - Extract the downloaded archive to a folder on your computer.
 - Add the FFmpeg bin directory to your system's PATH environment variable. This can be done by following these steps:
-    - Open the Start menu and search for "Environment Variables".
-    - Click "Edit the system environment variables".
-    - Click "Environment Variables".
-    - In the "System variables" section, scroll down and find "Path".
-    - Click "Edit".
-    - Click "New" and add the path to the FFmpeg bin directory, e.g., C:\ffmpeg\bin
-    - Click "OK" to save your changes.
+    - Open the Start menu and search for ```Environment Variables```
+    - Click ```Edit the system environment variables```
+    - Click ```Environment Variables```
+    - In the ```System variables``` section, scroll down and find ```Path```
+    - Click ```Edit```
+    - Click ```New``` and add the path to the FFmpeg bin directory, e.g., ```C:\ffmpeg\bin```
+    - Click ```OK``` to save your changes.
     Open a new command prompt window and verify the installation by running the command ffmpeg -version.
 
 These procedures should get you up and running with FFmpeg on Linux and Windows. However, keep in mind that there may be some additional steps or requirements depending on your specific operating system and configuration.
@@ -157,13 +157,13 @@ This command speeds up an input MP4 video file by 2x using the FFmpeg setpts and
 
 ## Explore yourself
 
-- {{< a_blank_self_role_link target="_blank" title="FFmpeg documentation " url="https://ffmpeg.org/documentation.html" >}} 
-- {{< a_blank_self_role_link target="_blank" title="FFmpeg Wiki" url="https://trac.ffmpeg.org/wiki" >}} 
-- {{< a_blank_self_role_link target="_blank" title="FFmpeg Filters documentation" url="https://ffmpeg.org/ffmpeg-filters.html" >}} 
-- {{< a_blank_self_role_link target="_blank" title="FFmpeg Trac ticket system" url="https://trac.ffmpeg.org/" >}} 
-- {{< a_blank_self_role_link target="_blank" title="Stack Overflow" url="https://stackoverflow.com/search?q=FFmpeg&s=764b4d0b-7c94-4f80-b405-4351c0e920e0" >}} 
-- {{< a_blank_self_role_link target="_blank" title="FFmpeg Crash Course" url="https://www.youtube.com/watch?v=yieG9DZQ_vM" >}} 
-- {{< a_blank_self_role_link target="_blank" title="FFmpeg subreddit " url="https://www.reddit.com/r/ffmpeg/" >}} 
+- {{< a_blank target="_blank" title="FFmpeg documentation " url="https://ffmpeg.org/documentation.html" >}} 
+- {{< a_blank target="_blank" title="FFmpeg Wiki" url="https://trac.ffmpeg.org/wiki" >}} 
+- {{< a_blank target="_blank" title="FFmpeg Filters documentation" url="https://ffmpeg.org/ffmpeg-filters.html" >}} 
+- {{< a_blank target="_blank" title="FFmpeg Trac ticket system" url="https://trac.ffmpeg.org/" >}} 
+- {{< a_blank target="_blank" title="Stack Overflow" url="https://stackoverflow.com/search?q=FFmpeg&s=764b4d0b-7c94-4f80-b405-4351c0e920e0" >}} 
+- {{< a_blank target="_blank" title="FFmpeg Crash Course" url="https://www.youtube.com/watch?v=yieG9DZQ_vM" >}} 
+- {{< a_blank target="_blank" title="FFmpeg subreddit " url="https://www.reddit.com/r/ffmpeg/" >}} 
 
 These resources provided me with a wealth of information and examples that I was able to use to put together this article. They are excellent sources of information for anyone looking to learn more about FFmpeg and its capabilities.
 
