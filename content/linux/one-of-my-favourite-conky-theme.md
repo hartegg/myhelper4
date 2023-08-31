@@ -69,7 +69,7 @@ sudo apt --fix-broken install
 
 Save it as GothamWithSeconds in folder ```/home/YourUsername/.conky/Gotham```
 
-```bash
+```text
  --[[
 Conky, a system monitor, based on torsmo
 Any original torsmo code is licensed under the BSD license
@@ -151,7 +151,7 @@ ${voffset 30}${offset 12}${font Ubuntu:pixelsize=22}${color FFA300}HD ${offset 9
 
 Save it as GothamWithoutSeconds in folder ```/home/YourUsername/.conky/Gotham```
 
-```bash
+```text
 
  --[[
 Conky, a system monitor, based on torsmo
