@@ -63,11 +63,11 @@ sudo apt --fix-broken install
 ```
 
 ## Theme Gotham
-### Conky theme Gotham Without seconds
+### Conky theme Gotham With seconds
 
-{{< img_in_post "/images/gothamsec2.jpg" "Conky theme Gotham Without seconds" >}}
+{{< img_in_post "/images/gothamsec2.jpg" "Conky theme Gotham With seconds" >}}
 
-Save it as GothamWithoutSeconds in folder ```/home/YourUsername/.conky/Gotham```
+Save it as GothamWithSeconds in folder ```/home/YourUsername/.conky/Gotham```
 
 ```bash
  --[[
@@ -145,11 +145,11 @@ ${voffset 30}${offset 12}${font Ubuntu:pixelsize=22}${color FFA300}HD ${offset 9
 
 ```
 
-### Conky theme Gotham With seconds
+### Conky theme Gotham Without seconds
  
-{{< img_in_post "/images/gothamsec2.jpg" "Conky theme Gotham With seconds" >}}
+{{< img_in_post "/images/gothamsec2.jpg" "Conky theme Gotham Without seconds" >}}
 
-Save it as GothamWithSeconds in folder ```/home/YourUsername/.conky/Gotham```
+Save it as GothamWithoutSeconds in folder ```/home/YourUsername/.conky/Gotham```
 
 ```bash
 
