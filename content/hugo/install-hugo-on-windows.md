@@ -11,7 +11,7 @@ categories:
 tags:
   - Hugo
   - Windows
-toc: false
+toc: true
 autonumbering: false
 author: helper4
 thumbnail: images/hugo.svg
