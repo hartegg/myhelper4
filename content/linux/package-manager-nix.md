@@ -7,12 +7,10 @@ hideSummary: false
 ShowCodeCopyButtons: true
 categories:
   - Linux
-  - Windows
 tags:
   - package-manager
   - linux
-  - windows
-  - debiannix
+  - nix
 toc: true
 autonumbering: true
 author: helper4
