@@ -425,6 +425,7 @@ pre {
 	font-weight: 550;
 	height: auto;
 	border-radius: 5px;
+	max-height: 400px
 }
 pre code {
 	padding: 0 20px 10px 0; 

@@ -1,5 +1,5 @@
 ---
-title: Install Hugo on Windows
+title: Install Hugo and Git on Windows
 summary:  Install Hugo on Windows
 date: 2023-08-28T22:19:19+02:00
 draft: false
@@ -11,6 +11,7 @@ categories:
 tags:
   - Hugo
   - Windows
+  - git
 toc: true
 autonumbering: false
 author: helper4
@@ -25,12 +26,12 @@ Hugo is a powerful and flexible static site generator that allows you to build f
 Using Chocolatey simplifies the Hugo installation process. 
 In cmd or PowerShell window with administrator privileges for:
 
-# Install Hugo via Chocolatey
+##### Install Hugo via Chocolatey
 
 ```bash
 choco install hugo -confirm
 ```
-# To verify Installation
+##### To verify Installation
 
 ```bash
 hugo version
@@ -49,17 +50,33 @@ hugo version
     - Click ```New``` and add the path to the directory where you extracted the Hugo binary (e.g., C:\Hugo\bin).
     - Then click ```OK``` to save changes.
 
-# And to verify Installation
+##### And to verify Installation
 
 ```bash
 hugo version
 ```
-&nbsp;
+
+## Install Git using winget tool
+
+Install {{< a_blank target="_blank" title="winget tool" url="https://docs.microsoft.com/en-us/windows/package-manager/winget" >}} if you don't have it, then command bellow in command prompt or Powershell.
+
+```bash
+winget install --id Git.Git -e --source winget
+```
+
+## Install GUI Clients
+
+And now you are ready to download and install {{< a_blank target="_blank" title="GUI Clients" url="https://git-scm.com/downloads/guis" >}}
+
+----
+
+
 
 | **References:**  |
 | :--- |
 | {{< a_blank target="_blank" title="Hugo releases page" url="https://github.com/gohugoio/hugo/releases" >}}  |
 | {{< a_blank target="_blank" title="Hugo official documentation" url="https://gohugo.io/documentation/" >}}  |
+| {{< a_blank target="_blank" title="Git" url="https://git-scm.com/downloads" >}} |
 
 
 &nbsp;

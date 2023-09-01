@@ -147,7 +147,7 @@ ${voffset 30}${offset 12}${font Ubuntu:pixelsize=22}${color FFA300}HD ${offset 9
 
 ### Conky theme Gotham Without seconds
  
-{{< img_in_post "/images/gothamsec2.jpg" "Conky theme Gotham Without seconds" >}}
+{{< img_in_post "/images/gothamsec.jpg" "Conky theme Gotham Without seconds" >}}
 
 Save it as GothamWithoutSeconds in folder ```/home/YourUsername/.conky/Gotham```
 
