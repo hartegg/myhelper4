@@ -114,10 +114,14 @@ ln -s /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/app
 ```
 
 
-| **Reference:**  |
-| :--- |
-| - {{< a_blank target="_blank" title="Nix" url="https://nixos.org/" >}} | 
-| - {{< a_blank target="_blank" title="Nix Package Manager" url="https://christitus.com/nix-package-manager/" >}} | 
+ **Reference:**  
+ 
+{{< rawhtml >}} <div class="lnkRef"> {{< /rawhtml >}}
+
+{{< a_blank target="_blank" title="Nix" url="https://nixos.org/" >}} 
+{{< a_blank target="_blank" title="Nix Package Manager" url="https://christitus.com/nix-package-manager/" >}} 
+
+{{< rawhtml >}} </div> {{< /rawhtml >}}
 
 
 &nbsp;

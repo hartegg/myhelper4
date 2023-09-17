@@ -416,7 +416,7 @@ code {
 pre {
 	display: block;
 	/* padding: 20px; */
-	 padding: 5px 20px; 
+	 padding: 15px 20px; 
 	/* padding-bottom: 0px; */
 	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
@@ -424,8 +424,23 @@ pre {
 	color: #2a2a2a;
 	font-weight: 550;
 	height: auto;
-	border-radius: 5px;
+	border-radius: 3px;
+	border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 	max-height: 400px
+}
+pre:hover {
+	outline: 3px solid var(--highlightColor);
+	outline-offset: 2px;
+}
+pre:focus {
+	outline: 3px solid var(--highlightColor);
+	outline-offset: 2px;
+
+	
+	background: linear-gradient(138deg, var(--color-purple) 19%, var(--color-podnaslovi) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--color-purple)",endColorstr="var(--color-podnaslovi)",GradientType=1);	
+
 }
 pre code {
 	padding: 0 20px 10px 0; 
@@ -507,7 +522,7 @@ blockquote:hover {
 		opacity: 0.3;
 	}
 }
-   blockquote blockquote,
+blockquote blockquote,
 blockquote blockquote:hover,
 blockquote blockquote p:hover {
 	padding-top: 0;
@@ -2664,6 +2679,91 @@ background: var(--highlightColor); */
     transition: all 0.15s ease;
 }
 /*----- Expand end-----------------*/
+
+
+/*-------lnkRef start-----------------*/
+
+.lnkRef {
+    font-size: 2rem;
+    line-height: 1.1;
+    	margin-left: 25px;;
+    list-style: none;
+    text-decoration: none;
+}
+
+.lnkRef a {
+    position: relative;
+    font-weight: 400;
+    transition: .25s ease-in-out;
+    display: block;
+	padding: 5px 0;
+}
+
+.lnkRef .pressed a:hover {
+    /*color: hsl(0, 100%, 25%);*/
+    text-shadow: 1px 1px 0px hsl(0, 0%, 5%), -1px -1px 0px hsl(0, 0%, 15%);
+    text-decoration: none;
+}
+
+.lnkRef a:hover {
+    color: var(--HighlightColor);;
+	text-decoration: none;
+}
+
+.lnkRef a::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: -1.49em;
+    top: 43%;
+    width: .50em;
+    height: .50em;
+    box-sizing: border-box;
+    border-radius: 100%;
+    border: .1em solid hsl(0, 0%, 99.2%);
+    background-color: hsl(200, 100%, 50%);
+    transition: .125s ease-in-out;
+    box-shadow: 0 0 .1rem .1rem hsla(0, 0%, 50%, .25);
+    animation: pulse 1s 1s infinite linear alternate;
+	/* padding: 3px; */
+}
+
+@keyframes pulse {
+    from { background-color: hsl(200, 100%, 50%); }
+    to { background-color: hsl(200, 0%, 20%); }
+}
+
+.lnkRef a:hover::before {
+    border-width: 0;
+    background-color: hsl(200.1, 80%, 43.1%);
+    box-shadow: 0 0 .5rem .1rem hsl(216.7, 60.5%, 68.2%);
+    animation: none;
+	text-decoration: none;
+	width: .75em;
+    height: .75em;
+	top: 30%;
+	left: -1.66em;
+}
+
+.lnkRef .pressed {
+    color: hsl(0, 0%, 10%);
+    text-shadow: -1px -1px 0px hsl(0, 0%, 5%), 1px 1px 0px hsl(0, 0%, 15%);
+}
+
+@-webkit-keyframes input-shadow {
+    0% {text-shadow: none; }
+    50% {text-shadow: 0px 0px 1px #0076be; }
+    100% {text-shadow: none; }
+}
+
+@keyframes input-shadow {
+    0% {text-shadow: none; }
+    50% {text-shadow: 0px 0px 1px #0076be; }
+    100% {text-shadow: none;}
+}
+/* ******** lnkReference End ********** */
+
+
 
    /* ******** Media Queries ********** */
    @media screen and (max-width: 1475px) {

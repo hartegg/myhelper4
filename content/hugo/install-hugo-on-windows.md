@@ -72,11 +72,15 @@ And now you are ready to download and install {{< a_blank target="_blank" title=
 
 
 
-| **References:**  |
-| :--- |
-| {{< a_blank target="_blank" title="Hugo releases page" url="https://github.com/gohugoio/hugo/releases" >}}  |
-| {{< a_blank target="_blank" title="Hugo official documentation" url="https://gohugo.io/documentation/" >}}  |
-| {{< a_blank target="_blank" title="Git" url="https://git-scm.com/downloads" >}} |
+ **References:**    
+
+{{< rawhtml >}} <div class="lnkRef"> {{< /rawhtml >}}
+
+ {{< a_blank_rel title="Hugo releases page" url="https://github.com/gohugoio/hugo/releases" >}}  
+ {{< a_blank_rel title="Hugo official documentation" url="https://gohugo.io/documentation/" >}}  
+ {{< a_blank_rel title="Git" url="https://git-scm.com/downloads" >}} 
+
+{{< rawhtml >}} </div> {{< /rawhtml >}}
 
 
 &nbsp;
