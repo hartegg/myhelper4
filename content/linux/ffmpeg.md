@@ -156,14 +156,18 @@ ffmpeg -i input.mp4 -filter:v "setpts=0.5*PTS" -filter:a "atempo=2.0" -c:v libx2
 This command speeds up an input MP4 video file by 2x using the FFmpeg setpts and atempo filters and saves it as an output MP4
 
 ## Explore yourself
+{{< rawhtml >}} <div class="lnkRef"> {{< /rawhtml >}}
 
-- {{< a_blank target="_blank" title="FFmpeg documentation " url="https://ffmpeg.org/documentation.html" >}} 
-- {{< a_blank target="_blank" title="FFmpeg Wiki" url="https://trac.ffmpeg.org/wiki" >}} 
-- {{< a_blank target="_blank" title="FFmpeg Filters documentation" url="https://ffmpeg.org/ffmpeg-filters.html" >}} 
-- {{< a_blank target="_blank" title="FFmpeg Trac ticket system" url="https://trac.ffmpeg.org/" >}} 
-- {{< a_blank target="_blank" title="Stack Overflow" url="https://stackoverflow.com/search?q=FFmpeg&s=764b4d0b-7c94-4f80-b405-4351c0e920e0" >}} 
-- {{< a_blank target="_blank" title="FFmpeg Crash Course" url="https://www.youtube.com/watch?v=yieG9DZQ_vM" >}} 
-- {{< a_blank target="_blank" title="FFmpeg subreddit " url="https://www.reddit.com/r/ffmpeg/" >}} 
+{{< a_blank target="_blank" title="FFmpeg documentation " url="https://ffmpeg.org/documentation.html" >}} 
+{{< a_blank target="_blank" title="FFmpeg Wiki" url="https://trac.ffmpeg.org/wiki" >}} 
+{{< a_blank target="_blank" title="FFmpeg Filters documentation" url="https://ffmpeg.org/ffmpeg-filters.html" >}} 
+{{< a_blank target="_blank" title="FFmpeg Trac ticket system" url="https://trac.ffmpeg.org/" >}} 
+{{< a_blank target="_blank" title="Stack Overflow" url="https://stackoverflow.com/search?q=FFmpeg&s=764b4d0b-7c94-4f80-b405-4351c0e920e0" >}} 
+{{< a_blank target="_blank" title="FFmpeg Crash Course" url="https://www.youtube.com/watch?v=yieG9DZQ_vM" >}} 
+{{< a_blank target="_blank" title="FFmpeg subreddit " url="https://www.reddit.com/r/ffmpeg/" >}} 
+
+
+{{< rawhtml >}} </div> {{< /rawhtml >}}
 
 These resources provided me with a wealth of information and examples that I was able to use to put together this article. They are excellent sources of information for anyone looking to learn more about FFmpeg and its capabilities.
 

@@ -427,21 +427,25 @@ pre {
 	border-radius: 3px;
 	border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-	max-height: 400px
+	max-height: 400px;
+
+
 }
 pre:hover {
 	outline: 3px solid var(--highlightColor);
 	outline-offset: 2px;
+	/* transition: all 200ms linear; */
 }
+
 pre:focus {
 	outline: 3px solid var(--highlightColor);
 	outline-offset: 2px;
-
 	
 	background: linear-gradient(138deg, var(--color-purple) 19%, var(--color-podnaslovi) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--color-purple)",endColorstr="var(--color-podnaslovi)",GradientType=1);	
-
+	transition: all 200ms linear;
 }
+
 pre code {
 	padding: 0 20px 10px 0; 
 	color: inherit;
@@ -452,6 +456,7 @@ pre code {
 	display: inline-block;
 	align-items:baseline;
 }
+
 kbd {
 	padding: 2px 3px;
 	color: var(--color-white);
@@ -2706,7 +2711,7 @@ background: var(--highlightColor); */
 }
 
 .lnkRef a:hover {
-    color: var(--HighlightColor);;
+    color: var(--HighlightColor);
 	text-decoration: none;
 }
 

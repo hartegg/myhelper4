@@ -203,15 +203,20 @@ These are just a few examples of the many useful Linux commands that you can use
 
 ## Usefull resources
 
-- {{< a_blank title="Linux Command Line Basics" url="https://www.youtube.com/watch?v=cBokz0LTizk" >}}
-- {{< a_blank title="Linux Commands for Beginners" url="https://www.youtube.com/watch?v=o2jMsoHJ48A" >}}
-- {{< a_blank title="40 Most Used Linux Commands" url="https://www.hostinger.com/tutorials/linux-commands" >}}
-- {{< a_blank title="The Ultimate Linux Command Line Guide" url="https://www.freecodecamp.org/news/the-ultimate-linux-command-line-guide/" >}}
-- {{< a_blank title="Bash Commands Cheat Sheet" url="https://www.educative.io/blog/bash-commands-cheat-sheet" >}}
-- {{< a_blank title="Linux Command Line Tips and Tricks" url="https://www.linux.com/training-tutorials/linux-command-line-tips-and-tricks/" >}}
-- {{< a_blank title="Advanced Linux Commands for Developers" url="https://www.linuxjournal.com/content/advanced-linux-commands-developers" >}}
-- {{< a_blank title="Essential Linux Commands for DevOps" url="https://devconnected.com/essential-linux-commands-for-devops/" >}}
-- {{< a_blank title="Linux Commands Cheat Sheet" url="https://cheatography.com/davechild/cheat-sheets/linux-command-line/" >}}
+{{< rawhtml >}} <div class="lnkRef"> {{< /rawhtml >}}
+
+{{< a_blank title="Linux Command Line Basics" url="https://www.youtube.com/watch?v=cBokz0LTizk" >}}
+{{< a_blank title="Linux Commands for Beginners" url="https://www.youtube.com/watch?v=o2jMsoHJ48A" >}}
+{{< a_blank title="40 Most Used Linux Commands" url="https://www.hostinger.com/tutorials/linux-commands" >}}
+{{< a_blank title="The Ultimate Linux Command Line Guide" url="https://www.freecodecamp.org/news/the-ultimate-linux-command-line-guide/" >}}
+{{< a_blank title="Bash Commands Cheat Sheet" url="https://www.educative.io/blog/bash-commands-cheat-sheet" >}}
+{{< a_blank title="Linux Command Line Tips and Tricks" url="https://www.linux.com/training-tutorials/linux-command-line-tips-and-tricks/" >}}
+{{< a_blank title="Advanced Linux Commands for Developers" url="https://www.linuxjournal.com/content/advanced-linux-commands-developers" >}}
+{{< a_blank title="Essential Linux Commands for DevOps" url="https://devconnected.com/essential-linux-commands-for-devops/" >}}
+{{< a_blank title="Linux Commands Cheat Sheet" url="https://cheatography.com/davechild/cheat-sheets/linux-command-line/" >}}
+
+
+{{< rawhtml >}} </div> {{< /rawhtml >}}
 
 
 

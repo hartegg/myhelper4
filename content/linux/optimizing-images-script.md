@@ -26,7 +26,6 @@ sudo apt install jpegoptim optipng imagemagick webp -y
 git clone https://github.com/VirtuBox/img-optimize.git $HOME/.img-optimize
 sudo ln -s $HOME/.img-optimize/optimize.sh /usr/local/bin/img-optimize
 sudo chmod +x /usr/local/bin/img-optimize
-
 ```
 
 # Custom Script
@@ -57,9 +56,12 @@ img-optimize --std --path ${FOLDER}
 
 ```
 
-| **Reference:**  |
-| :--- |
-| - {{< a_blank target="_blank" title="Script for Optimizing Images" url="https://christitus.com/script-for-optimizing-images/#dependencies" >}} | 
-| - {{< a_blank target="_blank" title="My favorite Linux commands for optimizing web images" url="https://opensource.com/article/21/12/optimize-web-images-linux" >}} | 
+**Reference:**
+{{< rawhtml >}} <div class="lnkRef"> {{< /rawhtml >}}
+
+  {{< a_blank target="_blank" title="Script for Optimizing Images" url="https://christitus.com/script-for-optimizing-images/#dependencies" >}} 
+  {{< a_blank target="_blank" title="My favorite Linux commands for optimizing web images" url="https://opensource.com/article/21/12/optimize-web-images-linux" >}} 
+
+{{< rawhtml >}} </div> {{< /rawhtml >}}
 
 &nbsp;

@@ -25,7 +25,7 @@ The main purpose of this article is to make sure that all basic HTML Elements ar
 
 Let's start with all possible headings. The HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest.
 
-```
+```text
 # Heading 1
 ## Heading 2
 ### Heading 3

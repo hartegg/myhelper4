@@ -57,9 +57,8 @@ Includes snippets for Hugo Shortcodes in Markdown and TOML file, list to come.
 
 For Hugo Shortcode snippets to work in your Markdown files, enable `quickSuggestions` in your User Settings
 
-```
+```bash
 "[markdown]": {  "editor.quickSuggestions": true}
-
 ```
 
 ## Release Notes

@@ -50,7 +50,6 @@ title = "creating a new theme"
 +++
 
 bah and humbug
-$
 ```
 
 ## Some Definitions
@@ -137,7 +136,6 @@ drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 archetypes
 drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 content
 drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 layouts
 drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 static
-$
 ```
 
 Take a look in the content/ directory to confirm that it is empty.
@@ -175,7 +173,6 @@ drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 content
 drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 layouts
 drwxr-xr-x  4 quoha  staff  136 Sep 29 17:02 public
 drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 static
-$
 ```
 
 See that new public/ directory? Hugo placed all generated content there. When you're ready to publish your web site, that's the place to start. For now, though, let's just confirm that we have what we'd expect from a site with no content.
@@ -185,7 +182,6 @@ $ ls -l public
 total 16
 -rw-r--r--  1 quoha  staff  416 Sep 29 17:02 index.xml
 -rw-r--r--  1 quoha  staff  262 Sep 29 17:02 sitemap.xml
-$
 ```
 
 Hugo created two XML files, which is standard, but there are no HTML files.
@@ -269,7 +265,6 @@ $ find themes -type f | xargs ls -l
 -rw-r--r--  1 quoha  staff     0 Sep 29 17:31 themes/zafta/layouts/partials/footer.html
 -rw-r--r--  1 quoha  staff     0 Sep 29 17:31 themes/zafta/layouts/partials/header.html
 -rw-r--r--  1 quoha  staff    93 Sep 29 17:31 themes/zafta/theme.toml
-$
 ```
 
 The skeleton includes templates (the files ending in .html), license file, a description of your theme (the theme.toml file), and an empty archetype.
@@ -284,7 +279,6 @@ license = "MIT"
 name = "zafta"
 source_repo = ""
 tags = ["tags", "categories"]
-:wq
 
 ## also edit themes/zafta/LICENSE.md and change
 ## the bit that says "YOUR_NAME_HERE"
@@ -299,7 +293,6 @@ $ find themes/zafta -name '*.html' | xargs ls -l
 -rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/index.html
 -rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/partials/footer.html
 -rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/partials/header.html
-$
 ```
 
 ### Update the Configuration File to Use the Theme
@@ -315,9 +308,6 @@ baseurl = ""
 languageCode = "en-us"
 title = "zafta - totally refreshing"
 MetaDataFormat = "toml"
-:wq
-
-$
 ```
 
 ### Generate the Site
@@ -336,7 +326,6 @@ WARN: 2014/09/29 Unable to locate layout: [404.html theme/404.html]
 0 tags created
 0 categories created
 in 2 ms
-$
 ```
 
 Did you notice that the output is different? The warning message for the home page has disappeared and we have an additional information line saying that Hugo is syncing from the theme's directory.
@@ -351,7 +340,6 @@ drwxr-xr-x  2 quoha  staff   68 Sep 29 17:56 css
 -rw-r--r--  1 quoha  staff  407 Sep 29 17:56 index.xml
 drwxr-xr-x  2 quoha  staff   68 Sep 29 17:56 js
 -rw-r--r--  1 quoha  staff  243 Sep 29 17:56 sitemap.xml
-$
 ```
 
 Notice four things:
@@ -377,7 +365,6 @@ When Hugo created our theme, it created an empty home page template. Now, when w
 $ find . -name index.html | xargs ls -l
 -rw-r--r--  1 quoha  staff  0 Sep 29 20:21 ./public/index.html
 -rw-r--r--  1 quoha  staff  0 Sep 29 17:31 ./themes/zafta/layouts/index.html
-$
 ```
 
 #### The Magic of Static
@@ -396,7 +383,6 @@ drwxr-xr-x  4 quoha  staff  136 Sep 29 17:31 themes/zafta/layouts/partials
 drwxr-xr-x  4 quoha  staff  136 Sep 29 17:31 themes/zafta/static
 drwxr-xr-x  2 quoha  staff   68 Sep 29 17:31 themes/zafta/static/css
 drwxr-xr-x  2 quoha  staff   68 Sep 29 17:31 themes/zafta/static/js
-$
 ```
 
 ## The Theme Development Cycle
@@ -487,7 +473,7 @@ We could update one of the default templates, but a good design decision is to u
 
 Right now, that page is empty because we don't have any content and we don't have any logic in the template. Let's change that by adding some text to the template.
 
-```bashs
+```bash
 $ vi themes/zafta/layouts/index.html
 <!DOCTYPE html>
 <html>
@@ -495,9 +481,6 @@ $ vi themes/zafta/layouts/index.html
   <p>hugo says hello!</p>
 </body>
 </html>
-:wq
-
-$
 ```
 
 Build the web site and then verify the results.

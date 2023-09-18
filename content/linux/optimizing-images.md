@@ -3,6 +3,8 @@ title: Optimizing images for web from command line
 summary: Optimizing images for web from command line
 date: 2023-08-09T23:02:33+02:00
 draft: false
+hideSummary: false
+ShowCodeCopyButtons: true
 categories:
   - Linux
 tags:
@@ -134,15 +136,16 @@ Done in 39 ms!
 svgo -f path/to/svgs -0 path/to/optimizesvgs
 ```
 
-<!-- \
-reference:\
-{{< a_blank title="Optimizing Images for the Web from the Command Line" url="https://www.youtube.com/watch?v=8zj44m0hAoU&list=PLnur5_dvCveGQtaSkjP0i-Fege25r5dHs&index=4" >}}
- -->
 &nbsp;
-| **Reference:**  |
-| :--- |
-| {{< rawhtml >}}
-<a class="roll" target="_blank" href="https://www.youtube.com/watch?v=8zj44m0hAoU&list=PLnur5_dvCveGQtaSkjP0i-Fege25r5dHs&index=4">
-  <span data-attr="Optimizing Images for the Web from the Command Line">Optimizing Images for the Web from the Command Line</span>
-</a>
-{{< /rawhtml >}}|
+
+
+**References:**  
+{{< rawhtml >}} <div class="lnkRef"> {{< /rawhtml >}}
+
+  {{< a_blank  target="_blank" title="Optimizing Images for the Web from the Command Line" url="https://www.youtube.com/watch?v=8zj44m0hAoU&list=PLnur5_dvCveGQtaSkjP0i-Fege25r5dHs&index=4" >}}
+  {{< a_blank  target="_blank" title="ImageMUseful Linux Commandsagick JPEG script" url="https://github.com/ericmurphyxyz/dotfiles/blob/master/.local/bin/webjpeg" >}}
+  
+{{< rawhtml >}} </div> {{< /rawhtml >}}
+
+&nbsp;
+
