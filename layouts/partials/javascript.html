@@ -30,6 +30,7 @@
 {{ $search := resources.Get "js/search.js" -}}
 {{ $trazi := resources.Get "js/trazi.js"   -}}
 {{ $clipboard := resources.Get "js/clipboard.js"   -}}
+{{ $parentingDataLang := resources.Get "js/parentingData-lang.js"   -}}
 
 {{ $distAllJS := slice $menu $expand $progressBar $scrollToTop $menuOnScroll $search $trazi | resources.Concat "dist/all2.js" | minify  | fingerprint }}
 <script defer src="{{ $distAllJS.RelPermalink }}"></script>

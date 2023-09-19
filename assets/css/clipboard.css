@@ -1,6 +1,7 @@
 .copy-code-button {
     position: absolute;
-    right: 0;
+    right: 7px;
+    top: 37px;
     padding: 2px 7px 5px 7px;
     margin: 5px;
     color: #767676;

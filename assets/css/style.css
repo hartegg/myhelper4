@@ -425,6 +425,8 @@ pre {
 	font-weight: 550;
 	height: auto;
 	border-radius: 3px;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
 	border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
 	max-height: 400px;
@@ -441,9 +443,9 @@ pre:focus {
 	outline: 3px solid var(--highlightColor);
 	outline-offset: 2px;
 	
-	background: linear-gradient(138deg, var(--color-purple) 19%, var(--color-podnaslovi) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--color-purple)",endColorstr="var(--color-podnaslovi)",GradientType=1);	
-	transition: all 200ms linear;
+	 background: linear-gradient(138deg, var(--color-podnaslovi) 19%, var(--color-purple) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--color-podnaslovi)",endColorstr="var(--color-purple)",GradientType=1);	
+  transition: all 200ms linear;
 }
 
 pre code {
@@ -456,6 +458,33 @@ pre code {
 	display: inline-block;
 	align-items:baseline;
 }
+
+/* parenting data-lang start */
+pre code {
+	padding: 0 20px 10px 0; 
+	color: inherit;
+	white-space: inherit;
+	background: inherit;
+	border: 0;
+	padding-bottom: 0px !important ;
+	display: inline-block;
+	align-items:baseline;
+}
+pre::before {
+    content: attr(data-lang);
+    /* display: block; */
+    margin: 10px 0 0 0;
+    font-weight: bold;
+    color: #d5daaa;
+    z-index: 9999999999999999;
+    position:absolute;
+    top: -4px;
+	left: 15px;
+	background-color: #272822;
+	padding: 5px 15px 2px 15px;
+	border-radius: 10px 10px 0 0;
+}
+/* parenting data-lang end */
 
 kbd {
 	padding: 2px 3px;
@@ -976,6 +1005,8 @@ a.featured__link:hover .feturedTitle{
 .highlight {
 	max-width: 100%;
 	width: fit-content;
+	position: relative;
+	padding-top: 20px !important;
 }
 
 /* 
@@ -1159,7 +1190,7 @@ div.content p img,
 div.content img {
  border-radius: 10px !important;
 }
-   div.content p img,
+div.content p img,
 div.content img {
 	float: right;
     width: auto;
