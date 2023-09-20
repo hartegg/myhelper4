@@ -17,14 +17,14 @@ lastmod: 2022-05-23T15:04:44.773Z
 {{< text_to_img "zuja nije zakon" >}}
 
 Create a shortcode layouts/shortcode/a_blank.htnl
-``` text
+``` go
 <a href="{{ .Get "url" }}" target="_blank" rel="noopener">{{ with .Get "title" }}{{.}}{{else}}{{.Get "url"}}{{end}}</a>
 ```
 &nbsp;
 
 
 
-```text
+```md
 [Coding N Concepts](https://codingnconcepts.com/)
 Opens in same browser window
 ```
@@ -32,7 +32,7 @@ Opens in same browser window
 
 
 
-```text
+```go
 for use remove two \ backslash
 
 {{\< a_blank title="Opens link in new window" url=" https://codingnconcepts.com/ " >\}}

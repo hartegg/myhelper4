@@ -18,7 +18,6 @@ autonumbering: false
 author: helper4
 thumbnail: images/linux.svg
 date: 2022-08-15T22:38:59+02:00
-
 ---
 
 
@@ -50,33 +49,33 @@ date: 2022-08-15T22:38:59+02:00
 
 ### Top GitHub Commands 
 
-```text
+```bash
 1. git config –global user.name “[name]” 
     - sets author name
 
     git config –global user.email “[email address]” 
     - sets author email id
 ```
-```text
+```bash
 2. git init [repository name] 
     - start new repository
 ```
-```text
+```bash
 3. git clone [url] 
     - obtain a repository from an existing URL.
 ```
-```text
+```bash
 4. git add [file] 
     - adds a file to the staging area.
 ```
-```text
+```bash
 5. git commit -m “[ Type in the commit message]” 
     - records or snapshots the file permanently in the version history.
 
     git commit -a 
     - commits any files you’ve changed since then.&commits any files you’ve added
 ```
-```text
+```bash
 6. git diff 
     - shows the file differences which are not yet staged.
 
@@ -86,7 +85,7 @@ date: 2022-08-15T22:38:59+02:00
     git diff [first branch] [second branch] 
     - differences between the two branches mentioned.
 ```
-```text
+```bash
 7. git reset [file] 
     - unstages the file, but it preserves the file contents.
 
@@ -96,30 +95,30 @@ date: 2022-08-15T22:38:59+02:00
     git reset –hard [commit] 
     - discards all history and goes back to the specified commit.
 ```
-```text
+```bash
 8. git status 
     - command lists all the files that have to be committed.
 ```
-```text
+```bash
 9. git rm [file] 
     - deletes the file from your working directory and stages the deletion.
 ```
-```text
+```bash
 10. git log 
     - used to list the version history for the current branch.
 
       git log –follow[file] 
       - lists version history for a file, including the renaming of files also.
 ```
-```text
+```bash
 11. git show [commit] 
     - shows the metadata and content changes of the specified commit.
 ```
-```text
+```bash
 12. git tag [commitID] 
     - used to give tags to the specified commit.
 ```
-```text
+```bash
 13. git branch
     - lists all the local branches in the current repository.
 
@@ -129,22 +128,22 @@ date: 2022-08-15T22:38:59+02:00
       git branch -d [branch name] 
       - deletes the feature branch.
 ```
-```text
+```bash
 14. git checkout [branch name] 
     - used to switch from one branch to another
 
       git checkout -b [branch name] 
       - creates a new branch and also switches to it.
 ```
-```text
+```bash
 15. git merge [branch name] 
     - merges the specified branch’s history into the current branch.
 ```
-```text
+```bash
 16. git remote add [variable name] [Remote Server Link] 
     - used to connect your local repository to the remote server.
 ```
-```text
+```bash
 17. git push [variable name] master
     - sends the committed changes of master branch to your remote repository.
 
@@ -157,15 +156,15 @@ date: 2022-08-15T22:38:59+02:00
       git push [variable name] :[branch name] 
       - deletes a branch on your remote repository.
 ```
-```text
+```bash
 18. git pull [Repository Link] 
     - fetches and merges changes on the remote server to your working directory.
 ```
-```text
+```bash
 19. git stash save
     - stores all the modified tracked files.
 ```
-```text
+```bash
 20. git stash pop
     - restores the most recently stashed files.
 
@@ -176,13 +175,13 @@ date: 2022-08-15T22:38:59+02:00
       - discards the most recently stashed changeset.
 ```
 &nbsp;
-| **Reference:**  |
-| :--- |
-| {{< rawhtml >}}
-<a class="roll" target="_blank" href="https://gist.github.com/gwenf/19e5748a5391929e8e938a22c8a4b3f2">
-  <span data-attr="Top GitHub Commands">Top GitHub Commands</span>
-</a>
-{{< /rawhtml >}}|
+
+**Reference:**
+
+{{< rawhtml >}} <div class="lnkRef"> {{< /rawhtml >}}
+
+{{< a_blank target="_blank" title="Top GitHub Commands" url="https://gist.github.com/gwenf/19e5748a5391929e8e938a22c8a4b3f2" >}}
+{{< rawhtml >}} </div> {{< /rawhtml >}}  
 
 &nbsp;
 

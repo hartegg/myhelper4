@@ -544,8 +544,6 @@ INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 INFO: 2014/09/29 attempting to create  post/first.md of post
 INFO: 2014/09/29 curpath: /Users/quoha/Sites/zafta/themes/zafta/archetypes/default.md
 ERROR: 2014/09/29 Unable to Cast <nil> to map[string]interface{}
-
-$
 ```
 
 That wasn't very nice, was it?
@@ -606,7 +604,6 @@ title = "second"
 +++
 my second post
 
-$
 ```
 
 Build the web site and then verify the results.
@@ -625,7 +622,6 @@ WARN: 2014/09/29 Unable to locate layout: [404.html theme/404.html]
 0 tags created
 0 categories created
 in 4 ms
-$
 ```
 
 The output says that it created 2 pages. Those are our new posts:
@@ -636,7 +632,6 @@ $ find public -type f -name '*.html' | xargs ls -l
 -rw-r--r--  1 quoha  staff   0 Sep 29 22:13 public/post/first/index.html
 -rw-r--r--  1 quoha  staff   0 Sep 29 22:13 public/post/index.html
 -rw-r--r--  1 quoha  staff   0 Sep 29 22:13 public/post/second/index.html
-$
 ```
 
 The new files are empty because because the templates used to generate the content are empty. The homepage doesn't show the new content, either. We have to update the templates to add the posts.
@@ -664,8 +659,6 @@ $ vi themes/zafta/layouts/index.html
 </body>
 </html>
 :wq
-
-$
 ```
 
 Hugo uses the Go template engine. That engine scans the template files for commands which are enclosed between "{{" and "}}". In our template, the commands are:
@@ -714,7 +707,6 @@ $ cat public/index.html
 
 </body>
 </html>
-$
 ```
 
 Congratulations, the home page shows the title of the two posts. The posts themselves are still empty, but let's take a moment to appreciate what we've done. Your template now generates output dynamically. Believe it or not, by inserting the range command inside of those curly braces, you've learned everything you need to know to build a theme. All that's really left is understanding which template will be used to generate each content file and becoming familiar with the commands for the template engine.
@@ -755,8 +747,6 @@ $ vi themes/zafta/layouts/_default/single.html
 </body>
 </html>
 :wq
-
-$
 ```
 
 Build the web site and verify the results.
@@ -807,7 +797,6 @@ $ cat public/post/second/index.html
 
 </body>
 </html>
-$
 ```
 
 Notice that the posts now have content. You can go to localhost:1313/post/first to verify.
@@ -862,8 +851,6 @@ $ cat public/index.html
 
 </body>
 </html>
-
-$
 ```
 
 ### Create a Post Listing

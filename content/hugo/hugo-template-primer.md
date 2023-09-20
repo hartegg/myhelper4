@@ -51,7 +51,7 @@ functions.
 
 Accessing a predefined variable "foo":
 
-```html
+```go
 {{ foo }}
 ```
 
@@ -59,7 +59,7 @@ Accessing a predefined variable "foo":
 
 Calling the add function with input of 1, 2:
 
-```html
+```go
 {{ add 1 2 }}
 ```
 
@@ -67,13 +67,13 @@ Calling the add function with input of 1, 2:
 
 Accessing the Page Parameter "bar"
 
-```html
+```go
 {{ .Params.bar }}
 ```
 
 **Parentheses can be used to group items together**
 
-```html
+```go
 {{ if or (isset .Params "alt") (isset .Params "caption") }} Caption {{ end }}
 ```
 
@@ -92,7 +92,7 @@ A variable is accessed by referencing the variable name.
 
 Variables can also be defined and referenced.
 
-```html
+```go
 {{ $address := "123 Main St."}}
 {{ $address }}
 ```
@@ -108,7 +108,7 @@ functions cannot be added without recompiling hugo.
 
 **Example:**
 
-```html
+```go
 {{ add 1 2 }}
 ```
 
@@ -120,7 +120,7 @@ include a trailing dot. The templates location will always be starting at
 the /layout/ directory within Hugo.
 
 **Example:**
-```html
+```go
 {{ template "chrome/header.html" . }}
 ```
 
@@ -136,7 +136,7 @@ range.
 
 **Example 1: Using Context**
 
-```html
+```go
 {{ range array }}
     {{ . }}
 {{ end }}
@@ -144,7 +144,7 @@ range.
 
 **Example 2: Declaring value variable name**
 
-```html
+```go
 {{range $element := array}}
     {{ $element }}
 {{ end }}
@@ -152,7 +152,7 @@ range.
 
 **Example 2: Declaring key and value variable name**
 
-```html
+```go
 {{range $index, $element := array}}
     {{ $index }}
     {{ $element }}
@@ -172,12 +172,12 @@ Go Templates treat the following values as false:
 
 **Example 1: If**
 
-```html
+```go
 {{ if isset .Params "title" }}<h4>{{ index .Params "title" }}</h4>{{ end }}
 ```
 **Example 2: If -> Else**
 
-```html
+```go
 {{ if isset .Params "alt" }}
     {{ index .Params "alt" }}
 {{else}}
@@ -187,7 +187,7 @@ Go Templates treat the following values as false:
 
 **Example 3: And & Or**
 
-```html
+```go
 {{ if and (or (isset .Params "title") (isset .Params "caption")) (isset .Params "attr")}}
 ```
 
@@ -198,12 +198,12 @@ is to use "with" instead. With rebinds the context `.` within its scope,
 and skips the block if the variable is absent.
 
 The first example above could be simplified as:
-```html
+```go
 {{ with .Params.title }}<h4>{{ . }}</h4>{{ end }}
 ```
 
 **Example 5: If -> Else If**
-```html
+```go
 {{ if isset .Params "alt" }}
     {{ index .Params "alt" }}
 {{ else if isset .Params "caption" }}
@@ -226,13 +226,13 @@ A few simple examples should help convey how to use the pipe.
 
 **Example 1 :**
 
-```html
+```go
 {{ if eq 1 1 }} Same {{ end }}
 ```
 
 is the same as
 
-```html
+```go
 {{ eq 1 1 | if }} Same {{ end }}
 ```
 It does look odd to place the if at the end, but it does provide a good
@@ -240,7 +240,7 @@ illustration of how to use the pipes.
 
 **Example 2 :**
 
-```html
+```go
 {{ index .Params "disqus_url" | html }}
 ```
 
@@ -248,7 +248,7 @@ Access the page parameter called "disqus_url" and escape the HTML.
 
 **Example 3 :**
 
-```html
+```go
 {{ if or (or (isset .Params "title") (isset .Params "caption")) (isset .Params "attr")}}
     Stuff Here
 {{ end }}
@@ -256,7 +256,7 @@ Access the page parameter called "disqus_url" and escape the HTML.
 
 Could be rewritten as
 
-```html
+```go
 {{  isset .Params "caption" | or isset .Params "title" | or isset .Params "attr" | if }}
     Stuff Here
 {{ end }}
@@ -273,7 +273,7 @@ access this from within the loop you will likely want to set it to a variable
 instead of depending on the context.
 
 **Example:**
-```html
+```go
   {{ $title := .Site.Title }}
   {{ range .Params.tags }}
         <li> <a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a> - {{ $title }} </li>
@@ -316,7 +316,7 @@ notoc: true
 ```
 
 Here is the corresponding code inside of the template:
-```html
+```go
   {{ if not .Params.notoc }}
         <div id="toc" class="well col-md-4 col-sm-6">
     {{ .TableOfContents }}
@@ -332,10 +332,12 @@ parameters, which are values which will be available to you in chrome.
 For instance, you might declare:
 
 ```yaml
+---
 params:
   CopyrightHTML: "Copyright &#xA9; 2013 John Doe. All Rights Reserved."
   TwitterUser: "spf13"
   SidebarRecentLimit: 5
+---
 ```
 
 Within a footer layout, you might then declare a `<footer>` which is only
@@ -344,7 +346,7 @@ you would declare it to be HTML-safe, so that the HTML entity is not escaped
 again. This would let you easily update just your top-level config file each
 January 1st, instead of hunting through your templates.
 
-```html
+```go
 {{if .Site.Params.CopyrightHTML}}<footer>
 <div class="text-center">{{.Site.Params.CopyrightHTML | safeHtml}}</div>
 </footer>{{end}}
@@ -354,7 +356,7 @@ An alternative way of writing the "if" and then referencing the same value
 is to use "with" instead. With rebinds the context `.` within its scope,
 and skips the block if the variable is absent:
 
-```html
+```go
 {{with .Site.Params.TwitterUser}}<span class="twitter">
 <a href="https://twitter.com/{{.}}" rel="author">
 <img src="/images/twitter.png" width="48" height="48" title="Twitter: {{.}}"

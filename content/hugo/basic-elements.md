@@ -138,7 +138,7 @@ You can also use inline Markdown.
 
 ## Code
 
-```text
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>

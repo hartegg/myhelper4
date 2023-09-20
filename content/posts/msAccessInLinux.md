@@ -18,10 +18,11 @@ autonumbering: false
 
 Free multi-platform database tool for developers, database administrators, analysts and all people who need to work with databases. Supports all popular databases: MySQL, PostgreSQL, SQLite, Oracle, DB2, SQL Server, Sybase, MS Access, Teradata, Firebird, Apache Hive, Phoenix, Presto, etc.
 
-You can use {{< a_blank_self_role_link target="_blank" title="DBeaver" url="https://dbeaver.io/" >}}. It has "MS Access (UCanAccess)" driver to open .mdb files.
+You can use {{< a_blank target="_blank" title="DBeaver" url="https://dbeaver.io/" >}}. It has "MS Access (UCanAccess)" driver to open .mdb files.
 
-Here is a guide ho to  {{< a_blank_self_role_link target="_blank" title="install" url="https://www.how2shout.com/linux/how-to-install-dbeaver-on-ubuntu-20-04-lts/" >}} dbeaver on Ubuntu 20.04
-```md
+Here is a guide ho to  {{< a_blank target="_blank" title="install" url="https://www.how2shout.com/linux/how-to-install-dbeaver-on-ubuntu-20-04-lts/" >}} dbeaver on Ubuntu 20.04
+
+```bash
 wget https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
 sudo dpkg -i dbeaver-ce_latest_amd64.deb
 sudo apt install -f

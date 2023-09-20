@@ -59,8 +59,8 @@ img-optimize --std --path ${FOLDER}
 **Reference:**
 {{< rawhtml >}} <div class="lnkRef"> {{< /rawhtml >}}
 
-  {{< a_blank target="_blank" title="Script for Optimizing Images" url="https://christitus.com/script-for-optimizing-images/#dependencies" >}} 
-  {{< a_blank target="_blank" title="My favorite Linux commands for optimizing web images" url="https://opensource.com/article/21/12/optimize-web-images-linux" >}} 
+{{< a_blank target="_blank" title="Script for Optimizing Images" url="https://christitus.com/script-for-optimizing-images/#dependencies" >}}
+{{< a_blank target="_blank" title="My favorite Linux commands for optimizing web images" url="https://opensource.com/article/21/12/optimize-web-images-linux" >}}
 
 {{< rawhtml >}} </div> {{< /rawhtml >}}
 

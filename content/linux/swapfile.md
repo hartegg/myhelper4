@@ -136,13 +136,13 @@ $ sudo nano /etc/sysctl.conf
 
 **-- put at the end of file**
 
-```md
+```bash
 vm.swappiness=10
 ```
 
 **-- add this on old computers with low RAM**
 
-```md
+```bash
 vm.swappiness=60
 ```
 

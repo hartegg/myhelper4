@@ -108,13 +108,13 @@ nix-env --switch-generation #
 
 NIX stores all the .desktop files for the programs it installs @ ```/home/$USER/.nix-profile/share/applications/``` and a simple symlink will fix them not showing up in your start menu.
 
-```
+```bash
 ln -s /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/
 
 ```
 
 
- **Reference:**  
+# Reference  
  
 {{< rawhtml >}} <div class="lnkRef"> {{< /rawhtml >}}
 

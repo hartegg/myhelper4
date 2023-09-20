@@ -20,13 +20,13 @@ thumbnail: images/linux.svg
 
 Install ImageMagick
 
-```html
+```bash
 $ sudo apt install imagemagick
 ```
 
 ### Resize to 400px width into image.min.jpg
 
-```html
+```bash
 $ convert image.jpg -resize 400 image.min.jpg
 ```
 
@@ -34,7 +34,7 @@ $ convert image.jpg -resize 400 image.min.jpg
 
 resize with quality to 400px width into image.min.jpg
 
-```html
+```bash
 $ convert image.jpg -quality 75 -resize 400 image.min.jpg
 ```
 
@@ -42,13 +42,13 @@ $ convert image.jpg -quality 75 -resize 400 image.min.jpg
 
 resize with quality to 400px width into image.min.jpg
 
-```html
+```bash
 convert image.jpg -quality 75 -resize 400 -strip image.min.jpg
 ```
 
 ### For the best quality
 
-```html
+```bash
 convert image.jpg -sampling-factor 4:2:0 -strip -quality 75 -interlace JPEG -colorspace sRGB -resize 400 converted.jpg
 ```
 
@@ -60,14 +60,14 @@ $3 - output file\
 \
 and put the followinc code in it
 
-```html
+```bash
 #!/bin/bash
 convert $1 -sampling-factor 4:2:0 -strip -quality 75 -interlace JPEG -colorspace sRGB -resize $2 $3
 ```
 
 in folder with images
 
-```html
+```bash
 chmod +x webjpeg
 webjpeg image.jpg 400 image.min.jpg
 ```
@@ -75,7 +75,7 @@ webjpeg image.jpg 400 image.min.jpg
 \
 To see all 'convert' (ImageMagick) options run
 
-```html
+```bash
 $ convert man
 ```
 
@@ -83,13 +83,13 @@ $ convert man
 
 ## PNG image
 
-```html
+```bash
 convert screenshoot.png -strip -resize 400 screenshoot.min.png
 ```
 
 ### And then for evan smaller file you can convert it from .png to .jpg
 
-```html
+```bash
 convert screenshoot.png 400 screenshoot.png
 ```
 
@@ -97,7 +97,7 @@ convert screenshoot.png 400 screenshoot.png
 
 mogrify - is part of imagemagick
 
-```html
+```bash
 mogrify -sampling-factor 4:2:0 -strip -quality 75 -interlace JPEG -colorspace sRGB -resize 400 -path "min" *.jpg
 ```
 
@@ -115,13 +115,13 @@ sudo npm -g install svgo
 
 ### Optimaze svg file
 
-```html
+```bash
 sudo logo logo.svg -o logo.min.svg
 ```
 
 ### Example output of compression
 
-```html
+```text
 logo.svg:
 Done in 39 ms!
 4.111 KiB 60,8% = 1.61 KiB

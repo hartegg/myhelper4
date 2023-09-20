@@ -10,6 +10,7 @@ categories:
 tags:
   - terminal
   - debian
+  - linux
 toc: true
 autonumbering: true
 author: helper4
@@ -22,14 +23,14 @@ Linux is a versatile operating system that offers a vast array of features and t
 
 The "ls" command is one of the most frequently used commands in Linux. It is used to list the contents of a directory. The basic syntax for the ls command is as follows:
 
-```md
+```bash
 ls [OPTIONS] [FILE]
 ```
 
 For example, if you want to list the contents of the current directory, simply type:
 
-```md
-ls 
+```bash
+ls -ll
 ```
 
 This will give you a list of all the files and directories in the current directory.
@@ -38,13 +39,13 @@ This will give you a list of all the files and directories in the current direct
 
 The "cd" command is used to change the current directory. The basic syntax for the cd command is as follows:
 
-```md
+```man
 cd [DIRECTORY]
 ```
 
 For example, if you want to change to the "Documents" directory, simply type:
 
-```md
+```bash
 cd Documents
 ```
 This will change your current directory to "Documents".
@@ -53,7 +54,7 @@ This will change your current directory to "Documents".
 
 The "pwd" command is used to print the current working directory. The basic syntax for the pwd command is as follows:
 
-```md
+```bash
 pwd
 ```
 
@@ -63,13 +64,13 @@ This will display the current working directory on the screen.
 
 The "mkdir" command is used to create a new directory. The basic syntax for the mkdir command is as follows:
 
-```md
+```man
 mkdir [DIRECTORY NAME]
 ```
 
 For example, if you want to create a new directory called "mydirectory", simply type:
 
-```md
+```bash
 mkdir mydirectory
 ```
 
@@ -79,7 +80,7 @@ This will create a new directory called "mydirectory" in the current directory.
 
 The "rm" command is used to remove files or directories. The basic syntax for the rm command is as follows:
 
-```md
+```bash
 rm myfile.txt
 ```
 This will remove the file "myfile.txt" from the current directory.
@@ -88,12 +89,12 @@ This will remove the file "myfile.txt" from the current directory.
 
 The "cp" command is used to copy files. The basic syntax for the cp command is as follows:
 
-```md
+```man
 cp [OPTIONS] [SOURCE] [DESTINATION]
 ```
 For example, if you want to copy a file called "myfile.txt" from the current directory to the "Documents" directory, simply type:
 
-```md
+```bash
 cp myfile.txt Documents/
 ```
 This will copy the file "myfile.txt" to the "Documents" directory.
@@ -102,12 +103,12 @@ This will copy the file "myfile.txt" to the "Documents" directory.
 
 The "mv" command is used to move or rename files. The basic syntax for the mv command is as follows:
 
-```md
+```man
 mv [OPTIONS] [SOURCE] [DESTINATION]
 ```
 For example, if you want to rename a file called "myfile.txt" to "newfile.txt", simply type:
 
-```md
+```bash
 mv myfile.txt newfile.txt
 ```
 This will rename the file "myfile.txt" to "newfile.txt".
@@ -116,12 +117,12 @@ This will rename the file "myfile.txt" to "newfile.txt".
 
 The "cat" command is used to display the contents of a file. The basic syntax for the cat command is as follows:
 
-```md
+```man
 cat [FILE]
 ```
 For example, if you want to display the contents of a file called "myfile.txt", simply type:
 
-```md
+```bash
 cat myfile.txt
 ```
 This will display the contents of the file "myfile.txt".
@@ -130,12 +131,12 @@ This will display the contents of the file "myfile.txt".
 
 The "grep" command is used to search for text in a file or files. The basic syntax for the grep command is as follows:
 
-```md
+```man
 grep [OPTIONS] [PATTERN] [FILE]
 ```
 For example, if you want to search for the word "Linux" in a file called "mytextfile.txt", simply type:
 
-```md
+```bash
 grep Linux mytextfile.txt
 ```
 This will display all the lines in the file that contain the word "Linux".
@@ -144,19 +145,19 @@ This will display all the lines in the file that contain the word "Linux".
 
 The "top" command is used to monitor the system resources, such as CPU usage, memory usage, and so on. The basic syntax for the top command is as follows:
 
-```md
+```bash
 top
 ```
 This will display a real-time view of the system resources being used by different processes.
 
 Or you can use a better version _htop_ first install it
 
-```md
+```bash
 sudo apt install htop
 ```
 then start it 
 
-```md
+```bash
 htop
 ```
 
@@ -164,13 +165,13 @@ htop
 
 The "tar" command is used to compress and extract files. The basic syntax for the tar command is as follows:
 
-```md
+```man
 tar [OPTIONS] [FILE]
 ```
 
 For example, if you want to create a compressed archive of all the files in the current directory, simply type:
 
-```md
+```bash
 tar -czvf archive.tar.gz *
 ```
 
@@ -178,7 +179,7 @@ This will create a compressed archive of all the files in the current directory 
 
 To extract the files from the archive, simply type:
 
-```md
+```bash
 tar -xzvf archive.tar.gz
 ```
 This will extract all the files from the archive.
@@ -187,12 +188,12 @@ This will extract all the files from the archive.
 
 The "ssh" command is used to establish a secure shell connection to a remote system. The basic syntax for the ssh command is as follows:
 
-```md
+```man
 ssh [USERNAME]@[REMOTE-HOST]
 ```
 For example, if you want to connect to a remote system with the IP address "192.168.0.10" using the username "myusername", simply type:
 
-```md
+```bash
 ssh myusername@192.168.0.10
 ```
 This will establish a secure shell connection to the remote system.

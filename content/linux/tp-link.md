@@ -114,6 +114,11 @@ In summary, the provided set of commands is used to clone, build, and install th
 Overall, the TP-Link AC1300 WiFi Dual Band USB Adapter is a reliable and high-performing solution for improving your wireless connectivity. Its compact design, impressive dual-band capabilities, fast speeds, and ease of use make it a fantastic addition to any setup. Whether you need a wireless adapter for your laptop, desktop, or even a gaming console, the AC1300 adapter is a worthy choice that won't disappoint. I highly recommend it to anyone seeking a dependable and affordable wireless networking solution.
 
 
-| **Reference:**  |
-| :--- |
-| - {{< a_blank target="_blank" title="Install TP Link" url="https://community.tp-link.com/en/home/forum/topic/208022" >}} | 
+**Reference:**
+
+{{< rawhtml >}} <div class="lnkRef"> {{< /rawhtml >}} 
+
+{{< a_blank target="_blank" title="Install TP Link" url="https://community.tp-link.com/en/home/forum/topic/208022" >}}
+{{< rawhtml >}} </div> {{< /rawhtml >}}   
+
+&nbsp;
