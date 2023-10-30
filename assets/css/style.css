@@ -476,7 +476,7 @@ pre::before {
     margin: 10px 0 0 0;
     font-weight: bold;
     color: #d5daaa;
-    z-index: 9999999999999999;
+    z-index: 999999999;
     position:absolute;
     top: -4px;
 	left: 15px;
