@@ -1755,7 +1755,7 @@ a.roll:hover span::after {
 	transition: 0.5s ease left;
 	/* opacity: 0;
 	display: none; */
-	animation: 0.75s ease-out opacityOff;
+	animation: 0.5s ease-out opacityOff;
 }
 
 .searchModalHidden {
