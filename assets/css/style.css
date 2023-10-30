@@ -1737,8 +1737,8 @@ a.roll:hover span::after {
 	/* background-color: #67eba2;
  	background-color: #282e37; */
 	 background-color: var(--backgroundText);
-	/* filter: blur(4px); */
-	opacity: 1; 
+	/* filter: blur(4px); 
+	opacity: 1; */
 	padding-top: 2vh;
 	display: flex;
 	flex-direction: column;
@@ -1750,16 +1750,37 @@ a.roll:hover span::after {
 	right: 0;
 	bottom: 0;
 
-	z-index: 9999999999999;
+	z-index: 9999999999999999;
 	overflow: hidden;
 	transition: 0.5s ease left;
-	/* display: none; */
+	/* opacity: 0;
+	display: none; */
+	animation: 0.75s ease-out opacityOff;
 }
-   .searchModalHidden {
+
+.searchModalHidden {
 	display: none;
 }
-   .active{
+.active{
 	left: 0%;
+	animation: 0.5s ease opacityOn;
+}
+
+@-webkit-keyframes opacityOn {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes opacityOff {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
    ul#searchResult{
 	width: 99vw;
