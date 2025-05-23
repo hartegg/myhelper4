@@ -52,28 +52,6 @@ theme = "mainroad"
          url = "/en/tags/js/"
          weight = 40
 
-
-    # [languages.en.menus]
-    #  [[languages.en.menus.main]]
-    #     identifier = "home"
-    #     name = ' '
-    #     pageRef = '/en/'
-    #     pre = "<span class='menuItemHome'>&nbsp;&nbsp;&nbsp;&nbsp;</span>"
-    #     weight = 10
-    #   [[languages.en.menus.main]]
-    #     name = 'Hugo'
-    #     pageRef = '/en/tags/hugo/'
-    #     weight = 20
-    #   [[languages.en.menus.main]]
-    #     name = 'Linux'
-    #     pageRef = '/en/tags/linux/'
-    #     weight = 20
-    #   [[languages.en.menus.main]]
-    #     name = 'JS'
-    #     pageRef = '/en/tags/js/'
-    #     weight = 20
-
-
    [languages.hr]
      languageName = 'Hrvatski'
      languageNameShort = "HR"
@@ -92,36 +70,7 @@ theme = "mainroad"
         url = "/hr/tags/hugo/"
          weight = 20
 
-    # [languages.hr.menus]
-    #  [[languages.hr.menus.main]]
-    #      identifier = "homnaslovnicae"
-    #     name = ' '
-    #     pageRef = '/hr/'
-    #     pre = "<span class='menuItemHome'>&nbsp;&nbsp;&nbsp;&nbsp;</span>"
-    #     weight = 10
-    #   [[languages.en.menus.main]]
-    #     name = 'Hugo'
-    #     pageRef = '/hr/tags/hugo/'
-    #     weight = 20
-    #   [[languages.en.menus.main]]
-    #     name = 'Linux'
-    #     pageRef = '/hr/tags/linux/'
-    #     weight = 20
-    #   [[languages.en.menus.main]]
-    #     name = 'JS'
-    #     pageRef = '/hr/tags/js/'
-    #     weight = 20
 
-
-
-
-# pygmentsCodeFences = true
-# pygmentsUseClasses = true
-# [markup]
-#     [markup.highlight]
-#         lineNoStart = 1
-#         lineNos = true
-#         tabWidth = 4
 
 
 
@@ -137,13 +86,6 @@ theme = "mainroad"
   # taxonomyTerm = ["HTML"]
   # taxonomy = ["HTML"]
 
-#https://codingnconcepts.com/hugo/custom-rss-feed-hugo/#add-full-content-in-rssxml
-# this not working, doesn't generate rss
-# [outputFormats]
-#   [outputFormats.RSS]
-#     mediatype = "application/rss"
-#     baseName = "rss"
-    
 # in Front matter to disable "sitemap_ignore" and/or "rss_ignore" add
 # sitemap_ignore: true
 # rss_ignore: true    
@@ -254,37 +196,6 @@ theme = "mainroad"
   # email = "example@example.com"
 
 enableRobotsTXT = true
-
-#menu = ['main', 'footer']
-
-# [menu]
-
- 
-
-  # [[menu.main]]
-  #     identifier = "contact"
-  #     name = "Contact"
-  #     url = "/contact/"
-  #     weight = 6
-     
-      # [[menu.main]]
-      #   identifier = "contact"
-      #   name = "Contact"
-      #   url = "/contact/"
-      #   parent = "contact" 
-      #   weight = 7
-
-
-  # [[menu.footer]]
-  #     identifier = "home"
-  #     name = "Home"
-  #     url = "/"
-  #     weight = 1
-   # [[menu.footer]]
-  #     identifier = "contact"
-  #     name = "Contact"
-  #     url = "/categories/contact/"
-  #     weight = 2
 
 
 # see https://gohugo.io/about/hugo-and-gdpr/    
