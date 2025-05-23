@@ -29,7 +29,7 @@
 
     {{/*  
 	<link rel="canonical" href="{{ .Permalink }}">
-    <meta name="canonical" content="{{ .Permalink }}">  
+    <meta name="canonical" content="{{ .Permalink }}">   
 	*/}}
 	
 	{{- with .OutputFormats.Get "RSS" }}<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml">{{ end }}

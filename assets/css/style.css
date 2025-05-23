@@ -22,13 +22,14 @@
     url('/fonts/open-sans-latin-ext-700-normal.woff2') format('woff2'),
     url('/fonts/open-sans-latin-ext-700-normal.woff') format('woff');
 }
-h5 {
-  font-weight: 700;
-}
+
 
 
 h1, h2, h3, h4 { 
 	font-family: 'Open Sans', sans-serif; 
+}
+h4, h5 {
+  font-weight: 700;
 }
 blockquote {  
     font-family: 'Open Sans', sans-serif; 
