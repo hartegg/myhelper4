@@ -32,6 +32,10 @@
 {{ $clipboard := resources.Get "js/clipboard.js"   -}}
 {{ $parentingDataLang := resources.Get "js/parentingData-lang.js"   -}}
 
+{{/*  // theme.js  
+uključiti kod implementacije tema/e, treba css preurediti */}}
+{{ $theme := resources.Get "js/theme.js"  -}}
+
 {{ $distAllJS := slice $menu $expand $progressBar $scrollToTop $menuOnScroll $search $trazi | resources.Concat "dist/all2.js" | minify  | fingerprint }}
 <script defer src="{{ $distAllJS.RelPermalink }}"></script>
 
@@ -40,6 +44,8 @@
 {{ if (findRE "<pre" .Content 1) }}
     <script defer src="{{ $distClipboard.RelPermalink }}"></script>
 {{ end }}
+
+
 
 {{/*  {{ if .Site.GetPage "/kontakt-forma.md" }} 
 {{if eq .Section "post"}}

@@ -171,6 +171,8 @@ blockquote {
 	scroll-behavior: smooth;
 	transition: all .4s cubic-bezier(.55,0,.1,1) 0s; 
   }
+
+
    body {
 	margin: 0;
 	font-size: 14px;
@@ -198,6 +200,35 @@ blockquote {
 	font-family: var(--fontFamilyPrimary); 
 	
 }
+
+/* theme start
+++++++++++++++++++++++++
+:root[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+:root[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}*/
+#themeToggle { display: none;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg-color); 
+ 
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  cursor: pointer;
+}
+/* theme end
+++++++++++++++++++++++++*/
    .box {
 	width: 100%;
   	height: 100%;

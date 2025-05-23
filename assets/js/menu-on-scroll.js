@@ -132,7 +132,8 @@
 
 
 
-
+    // first version
+    
     // var navigation = window.document.getElementsByClassName("floatMenu");
     // var navClass = "show-nav";
     // var doc = document.documentElement;

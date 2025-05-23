@@ -1,4 +1,3 @@
-
 var expandBtn = document.querySelectorAll('.expand__button');
 var expandDiv = document.querySelectorAll('.expand');
 
@@ -21,10 +20,3 @@ for (let i = 0; i < expandBtn.length; i++) {
   });
 }
 
-// function sleep(milliseconds) {
-//   const date = Date.now();
-//   let currentDate = null;
-//   do {
-//     currentDate = Date.now();
-//   } while (currentDate - date < milliseconds);
-// }
