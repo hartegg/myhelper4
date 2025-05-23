@@ -4,7 +4,7 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap; 
-	/* src: local('Open Sans'),  učitava samo lokalni font s kompa*/
+	/* src: local('Open Sans'),  učitava samo lokalni font s lokalnog kompa*/
 	src: 
 		 url('/fonts/open-sans-latin-ext-400-normal.woff2') format('woff2'),
 	     url('/fonts/open-sans-latin-ext-400-normal.woff') format('woff'); 
@@ -291,7 +291,7 @@ blockquote {
 	visibility: hidden;
 	content: "";
 }
-   input,
+input,
 button,
 select,
 optgroup,
@@ -419,7 +419,8 @@ code,
 kbd,
 samp {
 	font-family: var(--fontFamilyPrimary);
-	font-size: 15px;
+	font-size: 14px;
+	font-weight: regular;
 }
 
 pre,
@@ -430,8 +431,9 @@ code {
 code {
 	padding: 0 5px;
 	color: #c33;
-	font-weight: bold;
+	
 }
+
 pre {
 	display: block;
 	/* padding: 20px; */
@@ -441,7 +443,7 @@ pre {
 	margin-bottom: 1.25rem;
 	overflow: auto;
 	color: #2a2a2a;
-	font-weight: 550;
+	font-weight: regular;
 	height: auto;
 	border-radius: 3px;
 	border-top-left-radius: 12px;
@@ -488,12 +490,13 @@ pre code {
 	padding-bottom: 0px !important ;
 	display: inline-block;
 	align-items:baseline;
+	
 }
 pre::before {
     content: attr(data-lang);
     /* display: block; */
     margin: 10px 0 0 0;
-    font-weight: bold;
+    font-weight: regular;
     color: #d5daaa;
     z-index: 999999999;
     position:absolute;
