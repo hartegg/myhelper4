@@ -43,7 +43,7 @@
 					{{with  $milePost := resources.Get $thumbnail }}
 
 						{{ if strings.HasSuffix $milePost ".svg"}}
-							<img class="lazyload" style="max-width:50px !important" src="{{ $milePost.RelPermalink }}">  
+							<img class="lazyload" style="max-width:50px !important" src="{{ $milePost.RelPermalink }}" alt="{{ $strAltPost }}">  
 						{{ else }} 
 
 							{{ $src1xPost := (.Fill "500x300 q75 Center webp") }}
@@ -52,7 +52,8 @@
 						
 							<img class="thumbnail__image" src="{{ $src1xPost.RelPermalink }}" 
 								height="{{ .Height }}"
-								width="{{ .Width}}" alt="{{ $strAltPost }}" >
+								width="{{ .Width}}" alt="{{ $strAltPost }}" 
+								alt="{{ $strAltPost }}">
 								{{/*  srcset="{{ $src1x.RelPermalink }} 1x, {{ $src2x.RelPermalink }} 2x"  */}}
 						{{end}} 
 
@@ -64,7 +65,7 @@
 						{{with  $mileList := resources.Get $thumbnail }}
 
 							{{ if strings.HasSuffix $mileList ".svg"}}
-								<img class="lazyload" src="{{ $mileList.RelPermalink }}">  
+								<img class="lazyload" src="{{ $mileList.RelPermalink }}" alt="{{ $strAltList }}">  
 							{{ else }}
 							
 								{{ $src1xList := (.Fill "50x50 q75 Center webp") }}
