@@ -35,8 +35,8 @@
 	{{- with .OutputFormats.Get "RSS" }}<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml">{{ end }}
 	{{ if ne hugo.Environment "production" }}<meta name="robots" content="noindex,nofollow">{{ else }}<meta name="robots" content="index,follow"><meta content="index,follow,snippet,archive" name="googlebot">{{ end }}
 
-	<link rel="preload" href="{{ "/fonts/open-sans-v28-latin-regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin >
-	<link rel="preload" href="{{ "/fonts/BebasNeue-Regular.ttf" | relURL }}" as="font" type="font/ttf" crossorigin >
+	<link href="{{ "/fonts/open-sans-latin-ext-400-normal.woff2" | absURL }}" as="font" type="font/woff2" crossorigin="anonymous" >
+	{{/*  <link rel="preload" href="{{ "/fonts/BebasNeue-Regular.ttf" | relURL }}" as="font" type="font/ttf" crossorigin="anonymous" >  */}}
 	
 	<!-- {{- $googleFontsLink := .Site.Params.googleFontsLink | default "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" }}
 		{{- if hasPrefix $googleFontsLink "https://fonts.googleapis.com/" }}
@@ -140,6 +140,7 @@
 			{{ end }}
 			</div>
 			{{ block "sidebar" . }}{{ partial "sidebar.html" . }}{{ end }}
+			
 		</div>
 		{{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
 	</div>

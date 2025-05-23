@@ -16,6 +16,7 @@ toc: true
 autonumbering: true
 author: helper4
 thumbnail: images/linux.svg
+translationKey: ffmpeg
 ---
 
 FFmpeg is a powerful multimedia framework that can be used to convert, shrink, and manipulate audio and video files. Whether you're working with high-definition footage or simple audio recordings, FFmpeg has the tools you need to get the job done quickly and efficiently.

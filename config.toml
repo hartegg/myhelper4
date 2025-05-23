@@ -1,9 +1,10 @@
 # Config.toml example https://github.com/Vimux/Mainroad/
 
-baseurl = "https://myhelper4.netlify.app/"
+#baseurl = "https://myhelper4.netlify.app/"
+baseurl = "/"
 
 title =  "myHelper4" # bez ovoga ne prikazuje logo
-languageCode = "en-us" # ["en-us", "hr-hr"]
+#languageCode =  ["en-us", "hr-hr"]
 paginate = "10" # Number of posts per page
 theme = "mainroad"
 #disqusShortname = "" # Enable comments by entering your Disqus shortname
@@ -19,16 +20,100 @@ theme = "mainroad"
 # posts = "/:slug"
 
 
-# DefaultContentLanguage = "en"
-# [languages]
-#   [languages.en]
-#     title = "My Helper 4"
-#     languageName = "English"
-#     weight = 1
-#   [languages.hr]
-#     title = "My Helper 4"
-#     languageName = "Hrvatski"
-#     weight = 2
+ DefaultContentLanguage = "en"
+ defaultContentLanguageInSubdir = true
+
+ [languages]
+
+   [languages.en]
+    languageName = "English"
+    languageNameShort = "EN"
+    languageFlag = "🇬🇧"
+    weight = 1
+    contentDir = "content/en"
+
+      [[languages.en.menu.main]] 
+      identifier = "home"
+      name = " "
+      url = "/en/"
+      pre = "<span class='menuItemHome'>&nbsp;&nbsp;&nbsp;&nbsp;</span>"
+      weight = 1
+
+      [[languages.en.menu.main]]
+         name = "Hugo"
+        url = "/en/tags/hugo/"
+         weight = 20
+      [[languages.en.menu.main]]
+         name = "Linux"
+         url = "/en/tags/linux/"
+         weight = 30
+      [[languages.en.menu.main]]
+         name = "JS"
+         url = "/en/tags/js/"
+         weight = 40
+
+
+    # [languages.en.menus]
+    #  [[languages.en.menus.main]]
+    #     identifier = "home"
+    #     name = ' '
+    #     pageRef = '/en/'
+    #     pre = "<span class='menuItemHome'>&nbsp;&nbsp;&nbsp;&nbsp;</span>"
+    #     weight = 10
+    #   [[languages.en.menus.main]]
+    #     name = 'Hugo'
+    #     pageRef = '/en/tags/hugo/'
+    #     weight = 20
+    #   [[languages.en.menus.main]]
+    #     name = 'Linux'
+    #     pageRef = '/en/tags/linux/'
+    #     weight = 20
+    #   [[languages.en.menus.main]]
+    #     name = 'JS'
+    #     pageRef = '/en/tags/js/'
+    #     weight = 20
+
+
+   [languages.hr]
+     languageName = 'Hrvatski'
+     languageNameShort = "HR"
+     languageFlag = "🇭🇷"
+     weight = 2
+     contentDir = "content/hr"
+
+      [[languages.hr.menu.main]]
+      name = " "
+      url = "/hr/"
+      weight = 3
+      pre = "<span class='menuItemHome'>&nbsp;&nbsp;&nbsp;&nbsp;</span>"
+
+      [[languages.hr.menu.main]]
+        name = "Hugo"
+        url = "/hr/tags/hugo/"
+         weight = 20
+
+    # [languages.hr.menus]
+    #  [[languages.hr.menus.main]]
+    #      identifier = "homnaslovnicae"
+    #     name = ' '
+    #     pageRef = '/hr/'
+    #     pre = "<span class='menuItemHome'>&nbsp;&nbsp;&nbsp;&nbsp;</span>"
+    #     weight = 10
+    #   [[languages.en.menus.main]]
+    #     name = 'Hugo'
+    #     pageRef = '/hr/tags/hugo/'
+    #     weight = 20
+    #   [[languages.en.menus.main]]
+    #     name = 'Linux'
+    #     pageRef = '/hr/tags/linux/'
+    #     weight = 20
+    #   [[languages.en.menus.main]]
+    #     name = 'JS'
+    #     pageRef = '/hr/tags/js/'
+    #     weight = 20
+
+
+
 
 # pygmentsCodeFences = true
 # pygmentsUseClasses = true
@@ -147,7 +232,7 @@ theme = "mainroad"
   list = "right"   # Configure layout for list pages
   single = "right" # Configure layout for single pages false
   # Enable widgets in given order
-  widgets = [ "categories", "taglist"]
+   widgets = [ "categories", "taglist" ]
   # alternatively "ddg-search" can be used, to search via DuckDuckGo
   # widgets = ["search","ddg-search", "recent", "categories", "taglist", "social", "languages"]
 
@@ -163,55 +248,18 @@ theme = "mainroad"
   # instagram = "username"
   # linkedin = "username"
   # telegram = "username"
-  # github = "username"
+   # github = "hartegg"
   # gitlab = "username"
   # bitbucket = "username"
   # email = "example@example.com"
 
 enableRobotsTXT = true
 
-menu = ['main', 'footer']
+#menu = ['main', 'footer']
 
-[menu]
+# [menu]
 
-  [[menu.main]]
-      identifier = "home"
-      name = " "
-     # pre = "<svg class='svg-inline fa-home' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='house' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 500' data-fa-i2svg=''><path fill='currentColor' d='M575.8 255.5C575.8 273.5 560.8 287.6 543.8 287.6H511.8L512.5 447.7C512.5 450.5 512.3 453.1 512 455.8V472C512 494.1 494.1 512 472 512H456C454.9 512 453.8 511.1 452.7 511.9C451.3 511.1 449.9 512 448.5 512H392C369.9 512 352 494.1 352 472V384C352 366.3 337.7 352 320 352H256C238.3 352 224 366.3 224 384V472C224 494.1 206.1 512 184 512H128.1C126.6 512 125.1 511.9 123.6 511.8C122.4 511.9 121.2 512 120 512H104C81.91 512 64 494.1 64 472V360C64 359.1 64.03 358.1 64.09 357.2V287.6H32.05C14.02 287.6 0 273.5 0 255.5C0 246.5 3.004 238.5 10.01 231.5L266.4 8.016C273.4 1.002 281.4 0 288.4 0C295.4 0 303.4 2.004 309.5 7.014L564.8 231.5C572.8 238.5 576.9 246.5 575.8 255.5L575.8 255.5z'/></svg>"
-     # pre = "<img src='images/home.png' />"
-       pre = "<span class='menuItemHome'>&nbsp;&nbsp;&nbsp;&nbsp;</span>"
-      url = "/"
-      weight = 1
-
-  [[menu.main]]
-      identifier = "hugo"
-      name = "Hugo"
-      url = "/tags/hugo/"
-      weight = 3
-  
-  [[menu.main]]
-      identifier = "linux"
-      name = "Linux"
-      url = "/tags/linux/"
-      weight = 4
-  
-    [[menu.main]]
-      identifier = "js"
-      name = "Js"
-      url = "/tags/js/"
-      weight = 5
-
-    # [[menu.main]]
-    #   identifier = "html"
-    #   name = "Html"
-    #   url = "/tags/html/"
-    #   weight = 5
-
-    [[menu.main]]
-      identifier = "css"
-      name = "Css"
-      url = "/tags/css/"
-      weight = 5
+ 
 
   # [[menu.main]]
   #     identifier = "contact"
@@ -223,7 +271,7 @@ menu = ['main', 'footer']
       #   identifier = "contact"
       #   name = "Contact"
       #   url = "/contact/"
-      #   parent = "contact"
+      #   parent = "contact" 
       #   weight = 7
 
 

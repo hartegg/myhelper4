@@ -1,6 +1,6 @@
 <?php
 
-header("Location: https://ikm.hr/");
-die();
+//header("Location: https://ikm.hr/");
+//die();
 
 // Silence is golden.

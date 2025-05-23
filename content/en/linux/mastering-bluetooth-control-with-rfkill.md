@@ -36,7 +36,7 @@ This will display a list of all RF devices on your system, along with their curr
 
 Output:
 
-```bash
+```text
 0: hci0: Bluetooth
         Soft blocked: no
         Hard blocked: no

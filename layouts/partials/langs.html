@@ -1,0 +1,21 @@
+{{ $siteLanguages := site.Languages}}
+{{ $pageLang := .Page.Lang}}
+    
+{{- range .Page.AllTranslations }}
+<div style="float: right; margin:15px 5px;">  
+    {{ $translation := . }}
+
+    {{- range sort $siteLanguages "Weight" "asc" }}
+
+                {{- if eq $translation.Lang .Lang }}
+                    {{ if eq $pageLang .Lang}}
+                        <a class="flagselect" href="{{ $translation.Permalink | relURL }}">{{ .Params.languageFlag }}&nbsp;&nbsp;{{ .Params.languageNameShort }}</a>
+                    {{ else }}
+                        <a class="flagnoselect" href="{{ $translation.Permalink | relURL }}">{{ .Params.languageFlag }}&nbsp;&nbsp;{{ .Params.languageNameShort }}</a>
+                    {{ end }}
+                {{- end }}
+
+       
+    {{- end }}
+</div> 
+{{- end }} 

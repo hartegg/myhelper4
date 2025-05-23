@@ -54,7 +54,7 @@
 
         // added - if current curScroll < threshold 
         // or if I'm on the top of the page
-        // between 0 - 110 (threshold)
+        // between 0 - 125 (threshold)
         if(curScroll < threshold){
             menu.classList.remove('hide');
             menu.classList.remove('wideMenuEffect-100');

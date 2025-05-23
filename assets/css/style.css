@@ -4,11 +4,13 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap; 
-	src: local('Open Sans'),
-		 /* url('../fonts/open-sans-v28-latin-regular.woff2') format('woff2'), 
-		    url('../fonts/open-sans-v28-latin-regular.woff') format('woff');  */
-		 url('{{ if ne hugo.Environment "production" }}../fonts/open-sans-v28-latin-regular.woff2{{ else }}../fonts/open-sans-v28-latin-regular.woff2{{ end }}') format('woff2'), 
-         url('{{ if ne hugo.Environment "production" }}../fonts/open-sans-v28-latin-regular.woff{{ else }}../fonts/open-sans-v28-latin-regular.woff{{ end }}') format('woff'); 
+	/* src: local('Open Sans'),  učitava samo lokalni font s kompa*/
+	src: 
+		 url('/fonts/open-sans-latin-ext-400-normal.woff2') format('woff2'),
+	     url('/fonts/open-sans-latin-ext-400-normal.woff') format('woff'); 
+
+/* 		 url('{{ if ne hugo.Environment "production" }}../fonts/open-sans-v28-latin-regular.woff2{{ else }}../fonts/open-sans-v28-latin-regular.woff2{{ end }}') format('woff2'), 
+         url('{{ if ne hugo.Environment "production" }}../fonts/open-sans-v28-latin-regular.woff{{ else }}../fonts/open-sans-v28-latin-regular.woff{{ end }}') format('woff');  */
 }
 
 h1, h2, h3, h4 { 
@@ -33,12 +35,12 @@ blockquote {
 
 {{- $fontOpenSans := `"Open Sans", Arial, Serif, Sans Serif, Helvetica` -}}
 {{- $fontMono := `SFMono, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace` -}}
-{{- $BebasNeueRegular := `"Bebas Neue", Arial, Helvetica` -}}
-
+/* {{- $BebasNeueRegular := `"Bebas Neue", Arial, Helvetica` -}}
+ */
 {{- $fontFamilyPrimary := .Site.Params.style.vars.fontFamilyPrimary | default $fontOpenSans -}}
 {{- $fontFamilySecondary := .Site.Params.style.vars.fontFamilySecondary | default $fontMono -}}
 /* only for Featured Title */
-{{- $fontFamilysFeaturedTitle := .Site.Params.style.vars.fontFamilysFeaturedTitle | default $BebasNeueRegular -}}
+/* {{- $fontFamilysFeaturedTitle := .Site.Params.style.vars.fontFamilysFeaturedTitle | default $BebasNeueRegular -}} */
 
 /* {{ $footerBG := resources.Get "images/footerBG.jpg" }} */
 .footerImage { 
@@ -53,7 +55,7 @@ blockquote {
 
 	--fontFamilyPrimary: {{ $fontFamilyPrimary }};
 	--fontFamilySecondary: {{ $fontFamilySecondary }};
-	--fontFamilysFeaturedTitle : {{ $fontFamilysFeaturedTitle }};
+	/* --fontFamilysFeaturedTitle : {{ $fontFamilysFeaturedTitle }}; */
 
 	--backgroundText : #f7f7f7;
 	--color-button-disabled: #999;
@@ -62,6 +64,7 @@ blockquote {
 	--bg-color-black: #2a2a2a;
 	--color-white: #fff;
 	--color-purple: #383b75;
+	--color-ccc: #ccc;
 
 	/* contact form */
 	--color-error-bg: #fceded;
@@ -156,6 +159,7 @@ blockquote {
    body {
 	margin: 0;
 	font-size: 14px;
+	color: #404c4f;
 	/* font-size: .875rem; */
 	line-height: 1.6;
 	word-wrap: break-word;
@@ -1763,7 +1767,8 @@ a.roll:hover span::after {
 }
 .active{
 	left: 0%;
-	animation: 0.5s ease opacityOn;
+	/* animation: 0.5s ease opacityOn; */
+	animation: 0.5s ease opacityOn;;
 }
 
 @-webkit-keyframes opacityOn {
@@ -1771,11 +1776,11 @@ a.roll:hover span::after {
         opacity: 0.1;
     }
     100% {
-        opacity: 1;
+        opacity: 0.99;
     }
 }
 @-webkit-keyframes opacityOff {
-    0% {
+    80% {
         opacity: 1;
     }
     100% {
@@ -2123,6 +2128,25 @@ input[type=reset]:hover {
 	border: 1px solid rgba(0, 0, 0, .1);
 }
    /* Widgets */
+
+   /* Flags navigation */
+.flagselect {
+  border: 1px solid var(--highlightColor);
+  background: #f2f2f2;
+  padding: 5px;
+  margin: 5px;
+  font-weight: bold;
+  color: black;
+  font-size: 90%;
+
+}
+.flagnoselect {
+  padding: 5px;
+  margin: 5px;
+  color: #f2f2f2;
+  font-size: 90%;
+
+}
    .widget {
 	margin-bottom: 35px;
 	overflow: hidden;
@@ -2269,8 +2293,16 @@ input[type=text]:focus,
    /* Languages Widget */
    .widget-languages__link {
 	display: block;
+	
+	padding: 5px 10px;
+  font-weight: 700;
+
+  widget__item> a> span> .btn {
+	background: var(--color-ccc);
+  }
 }
    .widget-languages__link:hover .widget-languages__link-btn {
+	
 	color: var(--color-white);
 	background: var(--highlightColor);
 }
