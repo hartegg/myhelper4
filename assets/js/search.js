@@ -32,7 +32,13 @@ window.addEventListener('keydown', function(event) {
  * Get the posts lists in json format.
  */
 const getPostsJSON = async () => {
-    let response = await fetch('/index.json')
+    /* let response = await fetch('/index.json')  only for one lang site*/
+
+let lang = window.location.pathname.split('/')[1];
+if (!['en', 'hr'].includes(lang)) lang = 'en'; // fallback na engleski
+let response = await fetch(`/${lang}/index.json`);
+
+
     let data = await response.json()
     return data
 }
@@ -45,7 +51,7 @@ const filterPostsJSON = (query, element) => {
     let result, itemsWithElement;
     query = new RegExp(query, 'ig')
     result = dataJSON.filter(item => query.test(item.title))
-    // console.log(result);
+     console.log(result);
     itemsWithElement = result.map(item => (
        `<li class="search-result-item">
             <h2><a href="${item.permalink}">${item.title}</a></h2>
