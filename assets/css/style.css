@@ -13,6 +13,20 @@
          url('{{ if ne hugo.Environment "production" }}../fonts/open-sans-v28-latin-regular.woff{{ else }}../fonts/open-sans-v28-latin-regular.woff{{ end }}') format('woff');  */
 }
 
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url('/fonts/open-sans-latin-ext-700-normal.woff2') format('woff2'),
+    url('/fonts/open-sans-latin-ext-700-normal.woff') format('woff');
+}
+h5 {
+  font-weight: 700;
+}
+
+
 h1, h2, h3, h4 { 
 	font-family: 'Open Sans', sans-serif; 
 }
