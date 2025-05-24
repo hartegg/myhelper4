@@ -1,16 +1,14 @@
-   /* open-sans-regular - latin */
-   @font-face {
-	font-family: 'Open Sans';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap; 
-	/* src: local('Open Sans'),  učitava samo lokalni font s lokalnog kompa*/
-	src: 
-		 url('/fonts/open-sans-latin-ext-400-normal.woff2') format('woff2'),
-	     url('/fonts/open-sans-latin-ext-400-normal.woff') format('woff'); 
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap; 
+  /* src: local('Open Sans'),  učitava samo lokalni font s lokalnog kompa*/
+  src: 
+	url('/fonts/open-sans-latin-ext-400-normal.woff2') format('woff2'),
+	url('/fonts/open-sans-latin-ext-400-normal.woff') format('woff'); 
 
-/* 		 url('{{ if ne hugo.Environment "production" }}../fonts/open-sans-v28-latin-regular.woff2{{ else }}../fonts/open-sans-v28-latin-regular.woff2{{ end }}') format('woff2'), 
-         url('{{ if ne hugo.Environment "production" }}../fonts/open-sans-v28-latin-regular.woff{{ else }}../fonts/open-sans-v28-latin-regular.woff{{ end }}') format('woff');  */
 }
 
 @font-face {
@@ -22,8 +20,6 @@
     url('/fonts/open-sans-latin-ext-700-normal.woff2') format('woff2'),
     url('/fonts/open-sans-latin-ext-700-normal.woff') format('woff');
 }
-
-
 
 h1, h2, h3, h4 { 
 	font-family: 'Open Sans', sans-serif; 
@@ -458,8 +454,8 @@ pre,
 code,
 kbd,
 samp {
-	font-family: var(--fontFamilyPrimary);
-	font-size: 14px;
+	font-family: var(--fontFamilySecondary);
+	font-size: 13px;
 	font-weight: regular;
 }
 
@@ -504,7 +500,7 @@ pre:focus {
 	outline: 3px solid var(--highlightColor);
 	outline-offset: 2px;
 	
-	 background: linear-gradient(138deg, var(--color-podnaslovi) 19%, var(--color-purple) 100%);
+	background: linear-gradient(138deg, var(--color-podnaslovi) 19%, var(--color-purple) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--color-podnaslovi)",endColorstr="var(--color-purple)",GradientType=1);	
   transition: all 200ms linear;
 }
