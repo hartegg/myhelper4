@@ -1,6 +1,6 @@
 ---
 title: Opens link in new browser window or tab
-summary:
+summary: Opens link in new browser window or tab
 date: 2022-04-23T03:24:46+02:00
 draft: false
 author: helper4

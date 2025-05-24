@@ -1,6 +1,6 @@
 ---
 title: Install Hugo and Git on Windows
-summary:  Install Hugo on Windows
+summary:  Install Hugo and Git on Windows
 date: 2023-08-28T22:19:19+02:00
 draft: false
 hideSummary: false

@@ -16,8 +16,12 @@
     "renderToDisk": "hugo server --disableFastRender --gc --renderToDisk --cleanDestinationDir",
     "renderToDisk:preview": "npm run renderToDisk -- --buildDrafts --buildFuture",
     "rednerToDisk:production": "npm run renderToDisk -- --minify  --environment production ",
-    "hugo version": "hugo --version"
+    "hugo version": "hugo --version",
+    "newpost": "node ./newpost-wrapper.js"
   },
   "author": "hartegg",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^12.6.2"
+  }
 }

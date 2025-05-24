@@ -68,8 +68,17 @@ theme = "mainroad"
       [[languages.hr.menu.main]]
         name = "Hugo"
         url = "/hr/tags/hugo/"
-         weight = 20
+         weight = 4
 
+      [[languages.hr.menu.main]]
+        name = "Linux"
+        url = "/hr/tags/linux/"
+         weight = 5
+
+      [[languages.hr.menu.main]]
+        name = "Js"
+        url = "/hr/tags/js/"
+         weight = 6
 
 
 

@@ -1,74 +1,71 @@
 ---
-title: "One of My Favourite Conky Theme"
-summary: Conky is a highly customizable system monitoring tool for Linux that displays real-time information about your system's performance on your desktop.
-date: 2023-08-31T22:23:10+02:00
+title: Jedna od meni najboljih Conky tema
+summary: Conky je visoko prilagodljiv alat za nadzor sustava u Linuxu koji prikazuje informacije o performansama vašeg računala u stvarnom vremenu, direktno na radnoj površini
+date: 2025-05-24T23:56:54+02:00
+lastmod: 2025-05-24T23:56:54+02:00
 draft: false
-hideSummary: false
-ShowCodeCopyButtons: true
-categories:
+author: helper4
+categories: 
+  - Linux
+menuItem:
   - Linux
 tags:
   - conky
   - linux
   - debian
-  - theme
 toc: true
-autonumbering: true
-author: helper4
+autonumbering: true 
 thumbnail: images/linux.svg
 ---
 
-Conky is a highly customizable system monitoring tool for Linux that displays real-time information about your system's performance on your desktop. Whether you're a Linux enthusiast or just curious about monitoring your system, Conky is a versatile tool to have. Here's a brief guide on how to install Conky on your Linux system.
+Conky je visoko prilagodljiv alat za nadzor sustava u Linuxu koji prikazuje informacije o performansama vašeg računala u stvarnom vremenu, direktno na radnoj površini. Bilo da ste strastveni Linux korisnik ili samo znatiželjni o praćenju svog sustava, Conky je svestran alat koji vrijedi imati. Evo kratkog vodiča kako instalirati Conky na vaš Linux sustav.
 
-## Install conky
+## Instaliraj Conky
 
-Install conky on debian based system
+Instaliraj Conky na distribuciju baziranom na debianu
 
 ```bash
 sudo apt-get update
 sudo apt install conky-all -y
 ```
-Install conky witn nix package manager
+Instalirajte Conky koristeći Nix upravitelj paketa
 
 ```bash
 nix-env -iA nixpkgs.conky
 ```
-Or download it https://sourceforge.net/projects/conky.mirror/
-
-
+ili preuzmite it https://sourceforge.net/projects/conky.mirror/
 
 ## Uninstall conky and it's dependencies
 
-You play a little and now you want to remove it
+Nije vam se svidjelo? Ništa zato, ovako uklonite Conky
 
 ```bash
 sudo apt-get -y autoremove conky
 ```
 
+## Preuzmite i Instalirajte Conky Manager
 
-## Download and Install Conky Manager
+Idite na Conky Manager GitHub stranicu https://github.com/teejee2008/conky-manager
 
-Go to Conky Manager GitHub page https://github.com/teejee2008/conky-manager
-
-Once the download is complete, navigate to the folder where the package is located using the terminal. For example:
+Kada se preuzimanje završi, otvorite terminal i idite u mapu gdje je paket spremljen. Na primjer:
 
 ```bash
 cd ~/Downloads
 ```
 
-Install the Conky Manager package
+Instalirajte Conky Manager package pomoću slijedećih naredbi
 
 ```bash
 sudo dpkg -i conky-manager*.deb
 sudo apt --fix-broken install
 ```
 
-## Theme Gotham
-### Conky theme Gotham With seconds
+## Tema Gotham
+### Conky tema Gotham sa sekundama
 
-{{< img_in_post "/images/gothamsec2.jpg" "Conky theme Gotham With seconds" >}}
+{{< img_in_post "/images/gothamsec2.jpg" "Conky tema Gotham sa sekundama" >}}
 
-Save it as GothamWithSeconds in folder ```/home/YourUsername/.conky/Gotham```
+Spremite kao GothamWithSeconds u mapu `/home/YourUsername/.conky/Gotham`
 
 ```text
  --[[
@@ -146,11 +143,11 @@ ${voffset 30}${offset 12}${font Ubuntu:pixelsize=22}${color FFA300}HD ${offset 9
 
 ```
 
-### Conky theme Gotham Without seconds
+### Conky tema Gotham bez sekundi
  
 {{< img_in_post "/images/gothamsec.jpg" "Conky theme Gotham Without seconds" >}}
 
-Save it as GothamWithoutSeconds in folder ```/home/YourUsername/.conky/Gotham```
+Spremite kao GothamWithoutSeconds u mapu ```/home/YourUsername/.conky/Gotham```
 
 ```text
 
@@ -231,5 +228,3 @@ ${voffset 30}${offset 12}${font Ubuntu:pixelsize=22}${color FFA300}HD ${offset 9
 
 
 ```
-
-

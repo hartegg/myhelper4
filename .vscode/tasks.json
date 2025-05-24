@@ -1,0 +1,54 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "📝 New Hugo Post",
+      "type": "shell",
+      "command": "${workspaceFolder}/newpost.sh",
+      "args": [
+        "${input:postNameHR}",
+        "${input:postNameEN}",
+        "${input:menuItem}",
+        "${input:langChoice}"
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "postNameHR",
+      "type": "promptString",
+      "description": "Unesi ime datoteke za HR (npr. nova-objava)",
+      "default": "nova-objava"
+    },
+    {
+      "id": "postNameEN",
+      "type": "promptString",
+      "description": "Unesi ime datoteke za EN (npr. new-post)",
+      "default": "new-post"
+    },
+    {
+      "id": "menuItem",
+      "type": "promptString",
+      "description": "Unesi naziv foldera (npr. linux, hugo, js)",
+      "default": "linux"
+    },
+    {
+      "id": "langChoice",
+      "type": "pickString",
+      "description": "Odaberi jezik (hr, en, all)",
+      "options": [
+        "hr",
+        "en",
+        "all"
+      ],
+      "default": "all"
+    }
+  ]
+}
