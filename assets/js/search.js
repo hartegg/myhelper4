@@ -4,73 +4,115 @@ let searchInput = document.querySelector('#searchInput'),
 
 let dataJSON;
 
-// add keydown listener, when user hit '/', it will focus on search input (Desktop)
+
+
+const lang = window.location.pathname.split('/')[1];
+if(lang === 'hr') {
+    searchInput.placeholder = "Upiši traženi pojam...";
+} else {
+    searchInput.placeholder = "Search...";
+}
+
+
+// Kada korisnik pritisne '/', fokusira input
 window.addEventListener('keydown', function(event) {
     if (event.key === '/') {
-        event.preventDefault()
-        searchInput.focus()
+        event.preventDefault();
+        searchInput.focus();
     }
-})
-// add keydown listener, when user hit 'ESC', it will close search result and unfocus search input.
+});
+
+// Kada korisnik pritisne 'ESC', zatvara se search modal
 window.addEventListener('keydown', function(event) {
-    if (event.key === "Escape" && searchModal2.classList.contains("active")) 
-    {
+    if (event.key === "Escape" && searchModal2.classList.contains("active")) {
         searchInput.value = '';
         searchResult.innerHTML = '';
         searchModal2.classList.toggle('active');
-        searchInput.blur()
+        searchInput.blur();
     }
 
-    // open search on CTRL+SHIFT+F
-     if (event.ctrlKey && event.shiftKey && event.key == "F" && !searchModal2.classList.contains("active")) {
+    // CTRL+SHIFT+F otvara modal
+    if (event.ctrlKey && event.shiftKey && event.key == "F" && !searchModal2.classList.contains("active")) {
         event.preventDefault();
         searchModal2.classList.toggle('active');
-     }
-})
 
-/**
- * Get the posts lists in json format.
- */
+        // Fokus nakon prikaza moda
+        setTimeout(() => {
+            searchInput.focus();
+        }, 500); // 50ms je dovoljno
+    }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+    searchInput.focus();
+    });
+
+
+// Dohvaća index.json (ovisno o jeziku)
 const getPostsJSON = async () => {
-    /* let response = await fetch('/index.json')  only for one lang site*/
+    let lang = window.location.pathname.split('/')[1];
+    if (!['en', 'hr'].includes(lang)) lang = 'en'; // fallback
+    let response = await fetch(`/${lang}/index.json`);
+    let data = await response.json();
+    return data;
+};
 
-let lang = window.location.pathname.split('/')[1];
-if (!['en', 'hr'].includes(lang)) lang = 'en'; // fallback na engleski
-let response = await fetch(`/${lang}/index.json`);
+// Highlight funkcija
+const highlight = (text, keyword) => {
+    if (!text || !keyword) return text;
+    const regex = new RegExp(`(${keyword})`, 'gi');
+    return text.replace(regex, '<mark>$1</mark>');
+};
 
-
-    let data = await response.json()
-    return data
-}
-/**
- * @param query, element.
- * query: the keyword that user given.
- * element: target element to show the result.
- */
+// Filtrira rezultate
 const filterPostsJSON = (query, element) => {
-    let result, itemsWithElement;
-    query = new RegExp(query, 'ig')
-    result = dataJSON.filter(item => query.test(item.title))
-     console.log(result);
-    itemsWithElement = result.map(item => (
-       `<li class="search-result-item">
-            <h2><a href="${item.permalink}">${item.title}</a></h2>
-            <em>${item.categories} </em>
-            <p>${item.summary}</p>
-        </li>`
-    ))
+    query = query.trim().toLowerCase();
+    if (!query) {
+        element.innerHTML = '';
+        return;
+    }
+
+    let result = dataJSON.filter(item => {
+        const title = item.title?.toLowerCase() || '';
+        const summary = item.summary?.toLowerCase() || '';
+        return title.includes(query) || summary.includes(query);
+    });
+
+    let itemsWithElement = result.map(item => {
+        const highlightedTitle = highlight(item.title, query);
+        const highlightedSummary = highlight(item.summary, query);
+        const categories = item.categories || '';
+        
+        return `
+            <li class="search-result-item">
+                <h2><a href="${item.permalink}">${highlightedTitle}</a></h2>
+                <em>${categories}</em>
+                <p>${highlightedSummary}</p>
+            </li>
+        `;
+    });
+
+    if (itemsWithElement.length > 0) {
+        itemsWithElement.unshift(`<p class="">Click 'ESC' to cancel search.</p>`);
+    } else {
+        itemsWithElement.push(`<p>No results found.</p>`);
+    }
+
     element.style.display = 'block';
-    itemsWithElement.unshift(`<p class="">Click 'ESC' for cancel search.</p>`)
     element.innerHTML = itemsWithElement.join('');
-}
-/**
- * searchInputAction take two arguments, event and callback  */ 
+};
+
+// Dodavanje event listenera
 const searchInputAction = (event, callback) => {
-    searchInput.addEventListener(event, callback)
-}
-/**
- * When user focus on the search input, function getPostsJSON called. */
-searchInputAction('focus', () => getPostsJSON().then(data => dataJSON = data))
-/**
- * filtering result with the query that user given on search input. */
-searchInputAction('keyup', (event) => filterPostsJSON(event.target.value, searchResult))
+    searchInput.addEventListener(event, callback);
+};
+
+// Prilikom fokusa dohvaća json podatke
+searchInputAction('focus', () => {
+    getPostsJSON().then(data => dataJSON = data);
+});
+
+// Kod unosa filtrira i prikazuje rezultate
+searchInputAction('keyup', (event) => {
+    filterPostsJSON(event.target.value, searchResult);
+});
