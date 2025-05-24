@@ -40,7 +40,7 @@ theme = "mainroad"
       weight = 1
 
       [[languages.en.menu.main]]
-         name = "Hugo"
+        name = "Hugo"
         url = "/en/tags/hugo/"
          weight = 20
       [[languages.en.menu.main]]
