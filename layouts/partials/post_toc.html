@@ -53,6 +53,61 @@
 {{- end }}
 {{- end }}
 <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const tocNav = document.querySelector('.tocNav');
+  const contentTocNav = document.querySelector('.tocNav__content');
+  const tocNavButton = document.querySelector('.tocNav__button');
+  const tocMenu = document.querySelector('.toc__menu');
+  //const TOC_KEY = 'tocNavState'; // ključ u localStorage
+  const TOC_KEY = 'tocNavState_' + window.location.pathname; // za svaku stranicu/post
+
+
+  // ➤ Funkcija za otvaranje TOC
+  function openTOC() {
+    tocNav.classList.add('active');
+    contentTocNav.style.maxHeight = (tocMenu.scrollHeight + 40) + "px";
+    tocNavButton.querySelector('svg').classList.remove('expand-icon__right');
+    tocNavButton.querySelector('svg').classList.add('expand-icon__down');
+    localStorage.setItem(TOC_KEY, 'open');
+  }
+
+  // ➤ Funkcija za zatvaranje TOC
+  function closeTOC() {
+    tocNav.classList.remove('active');
+    contentTocNav.style.maxHeight = null;
+    tocNavButton.querySelector('svg').classList.add('expand-icon__right');
+    tocNavButton.querySelector('svg').classList.remove('expand-icon__down');
+    localStorage.setItem(TOC_KEY, 'closed');
+  }
+
+  // ➤ OnClick toggle + spremanje stanja
+  tocNavButton.onclick = function () {
+    if (tocNav.classList.contains('active')) {
+      closeTOC();
+    } else {
+      openTOC();
+    }
+  };
+
+  // ➤ Na učitavanje stranice: primijeni prethodno stanje
+  const savedState = localStorage.getItem(TOC_KEY);
+  if (savedState === 'open') {
+    openTOC();
+  } else {
+    closeTOC();
+  }
+
+  // ➤ Animacija (CSS via JS, kao što si već imao)
+  let sheet = document.createElement('style');
+  sheet.innerHTML = ".tocNav.active { height: " + (tocMenu.scrollHeight + 40) + "px !important; width: 100% !important; transition: width 0.2s, height 0.2s; transition-delay: 0s, 0.45s;}";
+  document.body.appendChild(sheet);
+});
+</script>
+
+
+
+{{/*  stara verzija
+<script>
 let tocNav = document.querySelector('.tocNav');
 let contenttocNav = document.querySelector('.tocNav__content');
 let tocNavButton = document.querySelector('.tocNav__button');
@@ -75,4 +130,4 @@ tocNavButton.onclick = function(){
 let sheet = document.createElement('style')
 sheet.innerHTML = ".tocNav.active { height: " +  (tocMenu.scrollHeight + 40)  + "px !important;  width: 100% !important; transition: width 0.2s, height 0.2s;  transition-delay: 0s, 0.45s;}";
 document.body.appendChild(sheet);
-</script>
+</script>  */}}
