@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
             parentElement.setAttribute('data-lang', dataLang);
         });
   
-        console.log("više od jedan")
+        //console.log("više od jedan")
     
     }else{
-        console.log("manje od jedan")
+        //console.log("manje od jedan")
   
         const parentElement = document.querySelector('pre');
         const childElement = parentElement.querySelector('code');

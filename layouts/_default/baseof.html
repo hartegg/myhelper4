@@ -163,6 +163,8 @@
 {{- partial "javascript.html" . -}}  
 {{- partial "cookieconsent.html" . -}}  
 
+
+
 {{/*  <script src="{{ "js/theme.js" | relURL }}" defer></script>  */}}
 
 
@@ -179,10 +181,10 @@
 {{- partial "scrollToTop.html" . -}}
 
 <script>
-	function myFunction() {
-	   var element = document.body;
-	   element.classList.toggle("dark-mode");
-	}
+	  function myFunction() {
+	  var element = document.body;
+	  element.classList.toggle("dark-mode");
+	  }
 </script>
 
 {{/*  {{- $jssvg := resources.Get "js/svg-inject.min.js" | resources.Fingerprint -}}

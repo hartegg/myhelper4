@@ -12,10 +12,10 @@ function ask(question) {
 }
 
 (async () => {
-  const postNameHR = await ask("📝 Ime posta (HR)- Obavezan unos: ");
-  const postNameEN = await ask("📝 Ime posta (EN)- Obavezan unos: ");
-  const menuItem = await ask("📁 Menu item (npr. hugo, js, linux)- Obavezan unos: ");
-  const lang = await ask("🌐 Jezik (hr, en, all)- tu odabrati npr. en i samo taj file će napravit ili hr ili all: ");
+  const postNameHR = await ask("📝 Ime posta (HR)*: ");
+  const postNameEN = await ask("📝 Ime posta (EN)*: ");
+  const menuItem = await ask("📁 Mapa (npr. hugo, js, linux)*: ");
+  const lang = await ask("🌐 Jezik (hr, en, all)*: ");
 
   rl.close();
 

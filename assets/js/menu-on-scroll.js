@@ -111,7 +111,7 @@
             navbar2.style.borderBottom = '0';
 
             // scrollLine
-            scrollLine.style.top = menuHeight-5.5+ "px"
+            scrollLine.style.top = menuHeight-1.0+ "px"
 
             // banner
             if(positionSticky !== null){

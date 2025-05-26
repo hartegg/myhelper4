@@ -61,8 +61,10 @@ blockquote {
 }
 
 :root {
-	--highlightColor: {{ $highlightColor }}; 
+	/* --highlightColor: {{ $highlightColor }};  */
 	--secondHighlightColor: {{ $highlightColor }}20;
+
+	 --accent-color: {{ $highlightColor }};
 
 	--fontFamilyPrimary: {{ $fontFamilyPrimary }};
 	--fontFamilySecondary: {{ $fontFamilySecondary }};
@@ -84,10 +86,162 @@ blockquote {
 	--color-status: #43a908;
 
 	--table-border-color: #e6e4e4;
+	
+	/* default background gradiant */
+	--bg-color-1: #081a30;
+    --bg-color-2: #081a30;
+    --bg-color-3: #5596bc;
+    --bg-color-4: #d3e7f2;
+    --bg-color-5: #d3e7f2;
+    /* --highlightColor: #007bff; */
 
 }
 
+    :root[data-accent="blue"] {
+      --highlightColor: #656ef6;
+      --bg-color-1: #081a30; --bg-color-2: #081a30; --bg-color-3: #5596bc; --bg-color-4: #d3e7f2; --bg-color-5: #d3e7f2;
+    }
+    :root[data-accent="green"] {
+      --highlightColor: #28a745;
+      --bg-color-1: #0d4925; --bg-color-2: #126431; --bg-color-3: #7ac495; --bg-color-4: #86efac; --bg-color-5: #dcfce7;
+    }
+   :root[data-accent="orange"] {
+      --highlightColor: #ff9800;
+      --bg-color-1: #431407; --bg-color-2: #7f1d1d; --bg-color-3: #b46e57; --bg-color-4: #f7b78a; --bg-color-5: #fed7aa;
+    }
+    :root[data-accent="red"] {
+      --highlightColor: #e9361e;
+      --bg-color-1: #4c0519; --bg-color-2: #7f1d1d; --bg-color-3: #bd6d81; --bg-color-4: #fd899d; --bg-color-5: #ffbfc6;
+    }
+    :root[data-accent="purple"] {
+      --highlightColor: #8b5cf6;
+      --bg-color-1: #3b0764; --bg-color-2: #4c1d95; --bg-color-3: #8b5cf6; --bg-color-4: #c4b5fd; --bg-color-5: #ede9fe;
+    }
+    :root[data-accent="pink"] {
+      --highlightColor: #ec4899;
+      --bg-color-1: #831843; --bg-color-2: #9d174d; --bg-color-3: #ec4899; --bg-color-4: #f9a8d4; --bg-color-5: #fce7f3;
+    }
+    :root[data-accent="gray"] {
+      --highlightColor: #6b7280;
+      --bg-color-1: #111827; --bg-color-2: #1f2937; --bg-color-3: #6b7280; --bg-color-4: #d1d5db; --bg-color-5: #f3f4f6;
+    }
+    :root[data-accent="indigo"] {
+      --highlightColor: #6366f1;
+      --bg-color-1: #1e1b4b; --bg-color-2: #312e81; --bg-color-3: #6366f1; --bg-color-4: #bec9ff; --bg-color-5: #e0e7ff;
+    }
+    :root[data-accent="yellow"] {
+      --highlightColor: #f59e0b;
+      --bg-color-1: #78350f; --bg-color-2: #b45309; --bg-color-3: #f59e0b; --bg-color-4: #fcd34d; --bg-color-5: #fef9c3;
+    }
 
+
+   /*  :root[data-accent="orange"] {
+      --highlightColor: #ff9800;
+      --bg-color-1: #431407; --bg-color-2: #7f1d1d; --bg-color-3: #9a3412; --bg-color-4: #f97316; --bg-color-5: #fed7aa;
+    }
+    :root[data-accent="red"] {
+      --highlightColor: #e9361e;
+      --bg-color-1: #4c0519; --bg-color-2: #881337; --bg-color-3: #be123c; --bg-color-4: #f43f5e; --bg-color-5: #fda4af;
+    }
+    :root[data-accent="purple"] {
+      --highlightColor: #8b5cf6;
+      --bg-color-1: #3b0764; --bg-color-2: #6d28d9; --bg-color-3: #8b5cf6; --bg-color-4: #c4b5fd; --bg-color-5: #ede9fe;
+    }
+    :root[data-accent="pink"] {
+      --highlightColor: #ec4899;
+      --bg-color-1: #831843; --bg-color-2: #be185d; --bg-color-3: #ec4899; --bg-color-4: #f9a8d4; --bg-color-5: #fce7f3;
+    }
+    :root[data-accent="gray"] {
+      --highlightColor: #6b7280;
+      --bg-color-1: #111827; --bg-color-2: #374151; --bg-color-3: #6b7280; --bg-color-4: #d1d5db; --bg-color-5: #f3f4f6;
+    }
+    :root[data-accent="teal"] {
+      --highlightColor: #06b6d4;
+      --bg-color-1: #164e63; --bg-color-2: #0e7490; --bg-color-3: #06b6d4; --bg-color-4: #67e8f9; --bg-color-5: #a5f3fc;
+    }
+    :root[data-accent="yellow"] {
+      --highlightColor: #f59e0b;
+      --bg-color-1: #78350f; --bg-color-2: #b45309; --bg-color-3: #f59e0b; --bg-color-4: #fcd34d; --bg-color-5: #fef9c3;
+    }
+    :root[data-accent="indigo"] {
+      --highlightColor: #6366f1;
+      --bg-color-1: #312e81; --bg-color-2: #4338ca; --bg-color-3: #6366f1; --bg-color-4: #a5b4fc; --bg-color-5: #e0e7ff;
+    } */
+
+
+/* :root[data-accent="blue"] {
+  --highlightColor: #007BFF;
+}
+:root[data-accent="green"] {
+  --highlightColor: #28a745;
+}
+:root[data-accent="orange"] {
+ --highlightColor: #ff9800;
+}
+:root[data-accent="red"] {
+  --highlightColor: #e9361e;
+} */
+/* Elementi koji koriste accent color - start
+------------------------------------------------*/
+.accented {
+  color: var(--highlightColor);
+  border: 1px solid var(--highlightColor);
+  padding: 0.5em;
+  border-radius: 4px;
+}
+/* primjer korištenja */
+
+button {
+  border:0; padding: 7px; cursor: pointer;
+  background-color: var(--highlightColor);
+  color: white;
+}
+
+.accent-button {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0.25em;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  outline: none;
+  background-color: transparent;
+}
+.accent-button.active {
+  border: 2px solid black;
+  box-shadow: 0 0 0 2px white;
+}
+
+.accent-button:hover {
+  transform: scale(1.1);
+  border-color: var(--highlightColor);
+}
+#accent-buttons{
+	width: 215px;
+	float: right;
+	margin-top: 10px;
+}
+
+
+/* .accent-button[data-accent-option="red"] {
+  background-color: #ff0000;
+}
+
+.accent-button[data-accent-option="green"] {
+  background-color: #00aa00;
+}
+
+.accent-button[data-accent-option="orange"] {
+  background-color: #ff8800;
+}
+
+.accent-button[data-accent-option="blue"] {
+  background-color: #007bff; */
+/* } */
+
+/* Elementi koji koriste accent color - end
+------------------------------------------------*/
 
 ::-moz-selection {
 	color: var(--color-white);
@@ -180,8 +334,17 @@ blockquote {
 	/* background-image: linear-gradient(to bottom, #081a30, #093b5e, #3b84af, #cce3f1); */
 	/* === gradient generator === https://cssgradient.io/ === */
 	background: rgb(8,26,48); 
-	background: linear-gradient(180deg, rgba(8,26,48,1) 0%, rgba(8,26,48,1) 15%, rgba(85,150,188,1) 40%, rgba(211,231,242,1) 70%, rgba(211,231,242,1) 100%); 
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#081a30",endColorstr="#d3e7f2",GradientType=1);
+/* 	background: linear-gradient(180deg, rgba(8,26,48,1) 0%, rgba(8,26,48,1) 15%, rgba(85,150,188,1) 40%, rgba(211,231,242,1) 70%, rgba(211,231,242,1) 100%); 
+ */	
+    background: linear-gradient(
+        180deg,
+        var(--bg-color-1) 0%,
+        var(--bg-color-2) 20%,
+        var(--bg-color-3) 40%,
+        var(--bg-color-4) 70%,
+        var(--bg-color-5) 100%
+      );
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#081a30",endColorstr="#d3e7f2",GradientType=1);
 	
 	/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients */
 	/* background:
@@ -212,6 +375,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }*/
+
 #themeToggle { display: none;
   position: fixed;
   top: 1rem;
@@ -245,7 +409,7 @@ mark {
 }
 
 
-   .noSelectText {
+.noSelectText {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; 	 /* Safari */	 /* Konqueror HTML */
        -moz-user-select: none;	 /* Old versions of Firefox */	 /* Internet Explorer/Edge */
@@ -455,7 +619,7 @@ code,
 kbd,
 samp {
 	font-family: var(--fontFamilySecondary);
-	font-size: 13px;
+	font-size: 14px;
 	font-weight: regular;
 }
 
@@ -1244,13 +1408,24 @@ Selects all <p> elements that are next to <h2> elements.
 	width: fit-content;
 }
 
+.youtube-lazy {
+  aspect-ratio: 16 / 9;
+  background: #000;
+  overflow: hidden;
+}
+
+.youtube-lazy svg {
+  filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.5));
+}
+
 div.content p img,
 div.content img {
  border-radius: 10px !important;
 }
 div.content p img,
 div.content img {
-	float: right;
+	/* float: right; */
+	align-content: center;
     width: auto;
 	border: 8px solid #f7f7f7;
 	border: 8px solid var(--backgroundText);

@@ -129,7 +129,6 @@ theme = "mainroad"
   source = 'assets'
   target = 'assets'
 
-
 [params]
   description = "My Helper 4 is esentially a How to... of things I use with Hugo, css, js, linux, windows ect." # Description of your site
   opengraph = false # Enable OpenGraph if true
@@ -192,7 +191,7 @@ theme = "mainroad"
   tags_counter = true # Enable counter for each tag in "Tags" widget (disabled by default)
   categories_counter = true # Enable counter for each category in "Categories" widget
 
-[params.widgets.social]
+#[params.widgets.social]
   # Enable parts of social widget
   # facebook = "username"
   # twitter = "username"

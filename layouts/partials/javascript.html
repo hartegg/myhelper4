@@ -31,13 +31,31 @@
 {{ $trazi := resources.Get "js/trazi.js"   -}}
 {{ $clipboard := resources.Get "js/clipboard.js"   -}}
 {{ $parentingDataLang := resources.Get "js/parentingData-lang.js"   -}}
+{{/*  {{ $theme := resources.Get "js/theme.js"  -}}   */}}{{/*  // theme.js  uključiti kod implementacije tema/e, treba css preurediti */}}
+ {{ $accentSwitcher := resources.Get "js/accent-switcher.js"  -}}  
 
-{{/*  // theme.js  
-uključiti kod implementacije tema/e, treba css preurediti */}}
-{{ $theme := resources.Get "js/theme.js"  -}}
 
-{{ $distAllJS := slice $menu $expand $progressBar $scrollToTop $menuOnScroll $search $trazi | resources.Concat "dist/all2.js" | minify  | fingerprint }}
+{{/*  {{ $distAllJS := slice $menu $expand $progressBar $scrollToTop $menuOnScroll $search $trazi $accentSwicher | resources.Concat "dist/all2.js" | minify  | fingerprint }}
+<script defer src="{{ $distAllJS.RelPermalink }}"></script>  */}}
+
+
+{{/* Stvori slice od svih varijabli */}}
+{{ $allJS := slice $menu $expand $progressBar $scrollToTop $menuOnScroll $search $trazi $accentSwitcher }}
+
+{{/* Filteriraj samo valjane (ne-nil) resurse */}}
+{{ $validJS := slice }}
+{{ range $allJS }}
+  {{ if . }}
+    {{ $validJS = $validJS | append . }}
+  {{ end }}
+{{ end }}
+
+{{/* Spoji i minificiraj */}}
+{{ $distAllJS := $validJS | resources.Concat "dist/all2.js" | minify | fingerprint }}
+
 <script defer src="{{ $distAllJS.RelPermalink }}"></script>
+
+
 
 {{ $distClipboard := slice $clipboard  | resources.Concat "dist/clipboard.js" | minify  | fingerprint }}
 
