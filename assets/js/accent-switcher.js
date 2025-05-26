@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const btn = document.createElement("button");
         btn.className = "accent-button";
         btn.dataset.accentOption = color;
+        btn.name = color; // Dodan atribut "name"
         btn.style.backgroundColor = highlightMap[color];
 
         btn.addEventListener("click", () => {
