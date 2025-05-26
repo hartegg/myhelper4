@@ -1,32 +1,3 @@
-/* 
-document.addEventListener("DOMContentLoaded", () => {
-  const savedAccent = localStorage.getItem("accent-color");
-  if (savedAccent) {
-    document.documentElement.setAttribute("data-accent", savedAccent);
-  }
-
-  const buttons = document.querySelectorAll("[data-accent-option]");
-
-  buttons.forEach(button => {
-    const color = button.getAttribute("data-accent-option");
-
-    // Označi aktivnu boju odmah po učitavanju
-    if (color === savedAccent) {
-      button.classList.add("active");
-    }
-
-    // Dodaj event za promjenu boje
-    button.addEventListener("click", () => {
-      document.documentElement.setAttribute("data-accent", color);
-      localStorage.setItem("accent-color", color);
-
-      // Makni 'active' s drugih, dodaj na trenutno kliknuti
-      buttons.forEach(btn => btn.classList.remove("active"));
-      button.classList.add("active");
-    });
-  });
-}); */
-
  document.addEventListener("DOMContentLoaded", () => {
       const accentColors = [
         "blue", "green", "orange", "red", "purple",
@@ -78,3 +49,32 @@ document.addEventListener("DOMContentLoaded", () => {
       document.documentElement.setAttribute("data-accent", storedAccent);
       setActiveButton("accent-button", storedAccent);
     });
+
+/* v1
+document.addEventListener("DOMContentLoaded", () => {
+  const savedAccent = localStorage.getItem("accent-color");
+  if (savedAccent) {
+    document.documentElement.setAttribute("data-accent", savedAccent);
+  }
+
+  const buttons = document.querySelectorAll("[data-accent-option]");
+
+  buttons.forEach(button => {
+    const color = button.getAttribute("data-accent-option");
+
+    // Označi aktivnu boju odmah po učitavanju
+    if (color === savedAccent) {
+      button.classList.add("active");
+    }
+
+    // Dodaj event za promjenu boje
+    button.addEventListener("click", () => {
+      document.documentElement.setAttribute("data-accent", color);
+      localStorage.setItem("accent-color", color);
+
+      // Makni 'active' s drugih, dodaj na trenutno kliknuti
+      buttons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+    });
+  });
+}); */
