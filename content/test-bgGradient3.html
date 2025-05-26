@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tema s Gradient Pozadinom</title>
+  <style>
+    :root {
+      --bg-color-1: #081a30;
+      --bg-color-2: #081a30;
+      --bg-color-3: #5596bc;
+      --bg-color-4: #d3e7f2;
+      --bg-color-5: #d3e7f2;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(
+        180deg,
+        var(--bg-color-1) 0%,
+        var(--bg-color-2) 15%,
+        var(--bg-color-3) 40%,
+        var(--bg-color-4) 70%,
+        var(--bg-color-5) 100%
+      );
+      transition: background 0.6s ease;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    .theme-btn {
+      margin: 5px;
+      width: 36px;
+      height: 36px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      outline: 2px solid white;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .theme-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .theme-btn.active {
+      box-shadow: 0 0 0 3px #fff, 0 0 6px 3px rgba(255,255,255,0.5);
+    }
+  </style>
+</head>
+<body>
+  <h1>Odaberi Temu</h1>
+  <div id="theme-buttons"></div>
+
+  <script>
+    const themes = {
+      izvorna: ["#081a30", "#081a30", "#5596bc", "#d3e7f2", "#d3e7f2"],
+      zelena: ["#14532d", "#166534", "#22c55e", "#86efac", "#dcfce7"],
+      plava: ["#1e3a8a", "#2563eb", "#3b82f6", "#60a5fa", "#93c5fd"],
+      crvena: ["#4c0519", "#881337", "#be123c", "#f43f5e", "#fda4af"],
+      narancasta: ["#431407", "#7f1d1d", "#9a3412", "#f97316", "#fed7aa"],
+      ljubičasta: ["#3b0764", "#6d28d9", "#8b5cf6", "#c4b5fd", "#ede9fe"],
+      siva: ["#111827", "#374151", "#6b7280", "#d1d5db", "#f3f4f6"],
+      žuta: ["#78350f", "#b45309", "#f59e0b", "#fcd34d", "#fef9c3"],
+      tirkizna: ["#164e63", "#0e7490", "#06b6d4", "#67e8f9", "#a5f3fc"],
+      ružičasta: ["#831843", "#be185d", "#ec4899", "#f9a8d4", "#fce7f3"]
+    };
+
+    const defaultTheme = themes.izvorna;
+
+    const container = document.getElementById("theme-buttons");
+
+    let currentThemeKey = "izvorna";
+
+    Object.entries(themes).forEach(([key, colors]) => {
+      const btn = document.createElement("button");
+      btn.className = "theme-btn";
+      btn.style.background = colors[2];
+      btn.dataset.key = key;
+      btn.addEventListener("click", () => {
+        applyTheme(colors);
+        localStorage.setItem("theme", JSON.stringify(colors));
+        localStorage.setItem("themeKey", key);
+        setActiveButton(key);
+      });
+      container.appendChild(btn);
+    });
+
+    function applyTheme(colors) {
+      colors.forEach((color, index) => {
+        document.documentElement.style.setProperty(`--bg-color-${index + 1}`, color);
+      });
+    }
+
+    function setActiveButton(activeKey) {
+      document.querySelectorAll(".theme-btn").forEach(btn => {
+        if (btn.dataset.key === activeKey) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+    }
+
+    const stored = localStorage.getItem("theme");
+    const storedKey = localStorage.getItem("themeKey");
+    if (stored && storedKey) {
+      try {
+        const savedColors = JSON.parse(stored);
+        if (Array.isArray(savedColors)) {
+          applyTheme(savedColors);
+          setActiveButton(storedKey);
+        }
+      } catch (e) {
+        console.error("Neispravna spremljena tema", e);
+      }
+    } else {
+      setActiveButton("izvorna");
+    }
+  </script>
+</body>
+</html>

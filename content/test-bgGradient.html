@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tema s Gradient Pozadinom</title>
+  <style>
+    :root {
+      --bg-color-1: #081a30;
+      --bg-color-2: #081a30;
+      --bg-color-3: #5596bc;
+      --bg-color-4: #d3e7f2;
+      --bg-color-5: #d3e7f2;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(
+        180deg,
+        var(--bg-color-1) 0%,
+        var(--bg-color-2) 15%,
+        var(--bg-color-3) 40%,
+        var(--bg-color-4) 70%,
+        var(--bg-color-5) 100%
+      );
+      transition: background 0.6s ease;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    .theme-btn {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      background: #ffffff22;
+      color: white;
+      backdrop-filter: blur(4px);
+    }
+
+    .theme-btn:hover {
+      background: #ffffff44;
+    }
+  </style>
+</head>
+<body>
+  <h1>Odaberi Temu</h1>
+  <div id="theme-buttons"></div>
+
+  <script>
+    const themes = {
+      zelena: ["#14532d", "#166534", "#22c55e", "#86efac", "#dcfce7"],
+      plava: ["#1e3a8a", "#2563eb", "#3b82f6", "#60a5fa", "#93c5fd"],
+      crvena: ["#4c0519", "#881337", "#be123c", "#f43f5e", "#fda4af"],
+      narancasta: ["#431407", "#7f1d1d", "#9a3412", "#f97316", "#fed7aa"]
+    };
+
+    const container = document.getElementById("theme-buttons");
+
+    Object.entries(themes).forEach(([name, colors]) => {
+      const btn = document.createElement("button");
+      btn.textContent = name.charAt(0).toUpperCase() + name.slice(1);
+      btn.className = "theme-btn";
+      btn.addEventListener("click", () => {
+        applyTheme(colors);
+        localStorage.setItem("theme", JSON.stringify(colors));
+      });
+      container.appendChild(btn);
+    });
+
+    function applyTheme(colors) {
+      colors.forEach((color, index) => {
+        document.documentElement.style.setProperty(`--bg-color-${index + 1}`, color);
+      });
+    }
+
+    const stored = localStorage.getItem("theme");
+    if (stored) {
+      try {
+        const savedColors = JSON.parse(stored);
+        if (Array.isArray(savedColors)) {
+          applyTheme(savedColors);
+        }
+      } catch (e) {
+        console.error("Neispravna spremljena tema", e);
+      }
+    }
+  </script>
+</body>
+</html>

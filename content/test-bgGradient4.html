@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tema s Gradient Pozadinom i Accent Bojama</title>
+  <style>
+    :root {
+      --bg-color-1: #081a30;
+      --bg-color-2: #081a30;
+      --bg-color-3: #5596bc;
+      --bg-color-4: #d3e7f2;
+      --bg-color-5: #d3e7f2;
+      --highlightColor: #007bff;
+    }
+
+    :root[data-accent="blue"] { --highlightColor: #007BFF; }
+    :root[data-accent="green"] { --highlightColor: #28a745; }
+    :root[data-accent="orange"] { --highlightColor: #ff9800; }
+    :root[data-accent="red"] { --highlightColor: #e9361e; }
+    :root[data-accent="purple"] { --highlightColor: #8b5cf6; }
+    :root[data-accent="pink"] { --highlightColor: #ec4899; }
+    :root[data-accent="gray"] { --highlightColor: #6b7280; }
+    :root[data-accent="teal"] { --highlightColor: #06b6d4; }
+    :root[data-accent="yellow"] { --highlightColor: #f59e0b; }
+    :root[data-accent="indigo"] { --highlightColor: #6366f1; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(
+        180deg,
+        var(--bg-color-1) 0%,
+        var(--bg-color-2) 15%,
+        var(--bg-color-3) 40%,
+        var(--bg-color-4) 70%,
+        var(--bg-color-5) 100%
+      );
+      transition: background 0.6s ease;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    h1 {
+      margin-bottom: 1em;
+    }
+
+    .theme-btn, .accent-button {
+      margin: 5px;
+      width: 36px;
+      height: 36px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      outline: 2px solid white;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .theme-btn:hover, .accent-button:hover {
+      transform: scale(1.1);
+    }
+
+    .theme-btn.active, .accent-button.active {
+      box-shadow: 0 0 0 3px #fff, 0 0 6px 3px rgba(255,255,255,0.5);
+    }
+
+    #accent-buttons {
+      display: flex;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Odaberi Temu</h1>
+  <div id="theme-buttons"></div>
+  <div id="accent-buttons"></div>
+
+  <script>
+    const themes = {
+      izvorna: ["#081a30", "#081a30", "#5596bc", "#d3e7f2", "#d3e7f2"],
+      zelena: ["#14532d", "#166534", "#22c55e", "#86efac", "#dcfce7"],
+      plava: ["#1e3a8a", "#2563eb", "#3b82f6", "#60a5fa", "#93c5fd"],
+      crvena: ["#4c0519", "#881337", "#be123c", "#f43f5e", "#fda4af"],
+      narancasta: ["#431407", "#7f1d1d", "#9a3412", "#f97316", "#fed7aa"],
+      ljubičasta: ["#3b0764", "#6d28d9", "#8b5cf6", "#c4b5fd", "#ede9fe"],
+      siva: ["#111827", "#374151", "#6b7280", "#d1d5db", "#f3f4f6"],
+      žuta: ["#78350f", "#b45309", "#f59e0b", "#fcd34d", "#fef9c3"],
+      tirkizna: ["#164e63", "#0e7490", "#06b6d4", "#67e8f9", "#a5f3fc"],
+      ružičasta: ["#831843", "#be185d", "#ec4899", "#f9a8d4", "#fce7f3"]
+    };
+
+    const accentColors = [
+      "blue", "green", "orange", "red", "purple",
+      "pink", "gray", "teal", "yellow", "indigo"
+    ];
+
+    const themeContainer = document.getElementById("theme-buttons");
+    const accentContainer = document.getElementById("accent-buttons");
+
+    Object.entries(themes).forEach(([key, colors]) => {
+      const btn = document.createElement("button");
+      btn.className = "theme-btn";
+      btn.style.background = colors[2];
+      btn.dataset.key = key;
+      btn.addEventListener("click", () => {
+        applyTheme(colors);
+        localStorage.setItem("theme", JSON.stringify(colors));
+        localStorage.setItem("themeKey", key);
+        setActiveButton("theme-btn", key);
+      });
+      themeContainer.appendChild(btn);
+    });
+
+    accentColors.forEach(color => {
+      const btn = document.createElement("button");
+      btn.className = "accent-button";
+      btn.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue(`--highlightColor`);
+      btn.dataset.accentOption = color;
+      btn.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue(`--accent-${color}`) || btn.style.backgroundColor;
+      btn.addEventListener("click", () => {
+        document.documentElement.setAttribute("data-accent", color);
+        localStorage.setItem("accent-color", color);
+        setActiveButton("accent-button", color);
+      });
+      accentContainer.appendChild(btn);
+    });
+
+    function applyTheme(colors) {
+      colors.forEach((color, index) => {
+        document.documentElement.style.setProperty(`--bg-color-${index + 1}`, color);
+      });
+    }
+
+    function setActiveButton(className, activeKey) {
+      document.querySelectorAll(`.${className}`).forEach(btn => {
+        if (btn.dataset.key === activeKey || btn.dataset.accentOption === activeKey) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+    }
+
+    // Init load
+    const storedTheme = localStorage.getItem("theme");
+    const storedKey = localStorage.getItem("themeKey");
+    const storedAccent = localStorage.getItem("accent-color");
+
+    if (storedTheme && storedKey) {
+      try {
+        const savedColors = JSON.parse(storedTheme);
+        if (Array.isArray(savedColors)) {
+          applyTheme(savedColors);
+          setActiveButton("theme-btn", storedKey);
+        }
+      } catch (e) { console.error("Neispravna spremljena tema", e); }
+    } else {
+      setActiveButton("theme-btn", "izvorna");
+    }
+
+    if (storedAccent) {
+      document.documentElement.setAttribute("data-accent", storedAccent);
+      setActiveButton("accent-button", storedAccent);
+    }
+  </script>
+</body>
+</html>
