@@ -1,37 +1,37 @@
 {{/*  {{- if .Param "toc" }}
-{{- if gt (len .TableOfContents) 32 }}<!-- Issue #247 -->
-<div class="post__toc toc">
-	<div class="toc__title">Podnaslovi</div>
-	<div class="podnasloviToggle"><span></span></div>
-	<!-- <div class="toc__title">{{ T "toc_title" }}</div>
-	<div class="toc__title">{{ partial "share-buttons.html" . }}</div> -->
-	<div class="toc__menu">
-		{{ .TableOfContents }}
-	</div>
-</div>
-{{- end }}
+  {{- if gt (len .TableOfContents) 32 }}<!-- Issue #247 -->
+    <div class="post__toc toc">
+      <div class="toc__title">Podnaslovi</div>
+      <div class="podnasloviToggle"><span></span></div>
+      <!-- <div class="toc__title">{{ T "toc_title" }}</div>
+      <div class="toc__title">{{ partial "share-buttons.html" . }}</div> -->
+      <div class="toc__menu">
+        {{ .TableOfContents }}
+      </div>
+    </div>
+  {{- end }}
 {{- end }}  */}}
 
 {{/* 
- {{- if .Param "toc" }}
-{{- if gt (len .TableOfContents) 32 }}<!-- Issue #247 -->
-<div class="expand">
+{{- if .Param "toc" }}
+  {{- if gt (len .TableOfContents) 32 }}<!-- Issue #247 -->
+    <div class="expand">
 
-    <button type="button" class="expand__button expand__button-fix" aria-label="Expand Button">
-      <div class="">{{ T "toc_title" }}</div>     
-	  <span class="expand-icon expand-icon__right expand-icon-fix">
-          {{ partial "svgs/arrow/keyboard-arrow-right.svg" (dict "width" 24 "height" 24) }}
-      </span>
+        <button type="button" class="expand__button expand__button-fix" aria-label="Expand Button">
+          <div class="">{{ T "toc_title" }}</div>     
+        <span class="expand-icon expand-icon__right expand-icon-fix">
+              {{ partial "svgs/arrow/keyboard-arrow-right.svg" (dict "width" 24 "height" 24) }}
+          </span>
 
-    </button>
+        </button>
 
-    <div class="expand__content expand__content-fix">
-        <div  class="toc__menu">
-			{{ .TableOfContents }}
+        <div class="expand__content expand__content-fix">
+            <div  class="toc__menu">
+          {{ .TableOfContents }}
+            </div>
         </div>
     </div>
-</div>
-{{- end }}
+  {{- end }}
 {{- end }} 
 */}}
 
@@ -60,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const tocMenu = document.querySelector('.toc__menu');
   //const TOC_KEY = 'tocNavState'; // ključ u localStorage
   const TOC_KEY = 'tocNavState_' + window.location.pathname; // za svaku stranicu/post
-
 
   // ➤ Funkcija za otvaranje TOC
   function openTOC() {
