@@ -16,6 +16,7 @@ toc: true
 autonumbering: false
 author: helper4
 thumbnail: images/hugo.svg
+translationKey: instaliraj-hugo-i-git-na-windowsima
 ---
 
 

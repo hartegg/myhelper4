@@ -28,3 +28,19 @@ HUGO_VERSION = "0.101.0"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
+
+[[redirects]]
+from = "/"
+to = "/en/"
+status = 302
+force = true
+
+[[redirects]]
+from = "/en/*"
+to = "/en/:splat"
+status = 200
+
+[[redirects]]
+from = "/hr/*"
+to = "/hr/:splat"
+status = 200

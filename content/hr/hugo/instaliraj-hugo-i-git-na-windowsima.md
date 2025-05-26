@@ -15,6 +15,7 @@ tags:
 toc: true
 autonumbering: false 
 thumbnail: images/hugo.svg
+translationKey: instaliraj-hugo-i-git-na-windowsima
 ---
 
 Hugo je moćan i fleksibilan generator statičkih web stranica koji vam omogućuje jednostavnu izgradnju brzih i učinkovitih web stranica. Ako koristite Windows i želite početi raditi s Hugom, na pravom ste mjestu. U ovom vodiču ćemo vas provesti kroz korake za instalaciju Huga na Windows računalo.

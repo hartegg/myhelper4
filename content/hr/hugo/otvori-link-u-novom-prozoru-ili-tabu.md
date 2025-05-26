@@ -16,6 +16,7 @@ tags:
 toc: false
 autonumbering: false 
 thumbnail: images/hugo.svg
+translationKey: link-in-new-window-tab
 ---
 
 

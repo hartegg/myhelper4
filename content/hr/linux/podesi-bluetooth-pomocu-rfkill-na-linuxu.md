@@ -16,6 +16,7 @@ tags:
 toc: true
 autonumbering: true 
 thumbnail: images/linux.svg
+translationKey: podesi-bluetooth-pomocu-rfkill-na-linuxu
 ---
 
 

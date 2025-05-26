@@ -1,5 +1,5 @@
 ---
-title: "MS Access database in Linux"
+title: "MS Access na Linuxu"
 summary: "Easy way to use Ms Access in linux"
 date: 2023-02-13T23:00:40+01:00
 draft: false
@@ -12,6 +12,7 @@ tags:
 thumbnail: images/linux.svg
 toc: false
 autonumbering: false
+translationKey: ms-access-na-linuxu
 ---
 
 ## Universal Database Tool

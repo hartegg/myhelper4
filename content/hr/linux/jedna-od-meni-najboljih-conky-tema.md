@@ -16,6 +16,7 @@ tags:
 toc: true
 autonumbering: true 
 thumbnail: images/linux.svg
+translationKey: jedna-od-meni-najboljih-conky-tema
 ---
 
 Conky je visoko prilagodljiv alat za nadzor sustava u Linuxu koji prikazuje informacije o performansama vašeg računala u stvarnom vremenu, direktno na radnoj površini. Bilo da ste strastveni Linux korisnik ili samo znatiželjni o praćenju svog sustava, Conky je svestran alat koji vrijedi imati. Evo kratkog vodiča kako instalirati Conky na vaš Linux sustav.

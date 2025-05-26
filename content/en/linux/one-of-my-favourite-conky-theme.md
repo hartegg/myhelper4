@@ -1,5 +1,5 @@
 ---
-title: "One of My Favourite Conky Theme"
+title: One of My Favourite Conky Theme
 summary: Conky is a highly customizable system monitoring tool for Linux that displays real-time information about your system's performance on your desktop.
 date: 2023-08-31T22:23:10+02:00
 draft: false
@@ -16,6 +16,7 @@ toc: true
 autonumbering: true
 author: helper4
 thumbnail: images/linux.svg
+translationKey: jedna-od-meni-najboljih-conky-tema
 ---
 
 Conky is a highly customizable system monitoring tool for Linux that displays real-time information about your system's performance on your desktop. Whether you're a Linux enthusiast or just curious about monitoring your system, Conky is a versatile tool to have. Here's a brief guide on how to install Conky on your Linux system.

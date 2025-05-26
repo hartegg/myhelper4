@@ -14,6 +14,7 @@ toc: true
 autonumbering: true
 author: helper4
 thumbnail: images/linux.svg
+translationKey: podesi-bluetooth-pomocu-rfkill-na-linuxu
 ---
 
 ## What is rfkill?

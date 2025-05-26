@@ -12,6 +12,7 @@ tags:
 thumbnail: images/linux.svg
 toc: false
 autonumbering: false
+translationKey: ms-access-na-linuxu
 ---
 
 ## Universal Database Tool

@@ -12,6 +12,7 @@ tags:
   - hugo
 thumbnail: images/hugo.svg
 lastmod: 2022-05-23T15:04:44.773Z
+translationKey: link-in-new-window-tab
 ---
 
 {{< text_to_img "zuja nije zakon" >}}

@@ -14,12 +14,12 @@ function ask(question) {
 (async () => {
   const postNameHR = await ask("📝 Ime posta (HR)*: ");
   const postNameEN = await ask("📝 Ime posta (EN)*: ");
-  const menuItem = await ask("📁 Mapa (npr. hugo, js, linux)*: ");
+  const postFolder = await ask("📁 Mapa (npr. hugo, js, linux)*: ");
   const lang = await ask("🌐 Jezik (hr, en, all)*: ");
 
   rl.close();
 
-  const command = `bash ./newpost.sh ${postNameHR} ${postNameEN} ${menuItem} ${lang}`;
+  const command = `bash ./newpost.sh ${postNameHR} ${postNameEN} ${postFolder} ${lang}`;
   console.log(`\n🚀 Pokrećem: ${command}\n`);
 
   exec(command, (error, stdout, stderr) => {
@@ -34,5 +34,5 @@ function ask(question) {
   });
 })();
 
-// skriptu pokrenuti terminalu 
+// skriptu pokrenuti u terminalu 
 // npm run newpost

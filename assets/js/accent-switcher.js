@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ];
 
       const highlightMap = {
-        blue: "#007BFF",
+        blue: "#1e3d57",
         green: "#28a745",
         orange: "#ff9800",
         red: "#e9361e",
