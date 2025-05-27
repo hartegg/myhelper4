@@ -61,7 +61,7 @@ blockquote {
 }
 
 :root {
-	/* --highlightColor: {{ $highlightColor }};  */
+ /* --highlightColor: {{ $highlightColor }};  */
 	--secondHighlightColor: {{ $highlightColor }}20;
 
 	 --accent-color: {{ $highlightColor }};
@@ -94,44 +94,43 @@ blockquote {
     --bg-color-4: #d3e7f2;
     --bg-color-5: #d3e7f2;
     /* --highlightColor: #007bff; */
-
 }
 
     :root[data-accent="blue"] {
-      --highlightColor: #656ef6;
+      --highlightColor: #5596bc;
       --bg-color-1: #081a30; --bg-color-2: #081a30; --bg-color-3: #5596bc; --bg-color-4: #d3e7f2; --bg-color-5: #d3e7f2;
     }
     :root[data-accent="green"] {
       --highlightColor: #28a745;
-      --bg-color-1: #0d4925; --bg-color-2: #126431; --bg-color-3: #7ac495; --bg-color-4: #86efac; --bg-color-5: #dcfce7;
+      --bg-color-1: #0d4925; --bg-color-2: #0d4925; --bg-color-3: #7ac495; --bg-color-4: #dcfce7; --bg-color-5: #dcfce7;
     }
    :root[data-accent="orange"] {
       --highlightColor: #ff9800;
-      --bg-color-1: #431407; --bg-color-2: #7f1d1d; --bg-color-3: #b46e57; --bg-color-4: #f7b78a; --bg-color-5: #fed7aa;
+      --bg-color-1: #431407; --bg-color-2: #431407; --bg-color-3: #b46e57; --bg-color-4: #fed7aa; --bg-color-5: #fed7aa;
     }
     :root[data-accent="red"] {
       --highlightColor: #e9361e;
-      --bg-color-1: #4c0519; --bg-color-2: #7f1d1d; --bg-color-3: #bd6d81; --bg-color-4: #fd899d; --bg-color-5: #ffbfc6;
+      --bg-color-1: #4c0519; --bg-color-2: #4c0519; --bg-color-3: #bd6d81; --bg-color-4: #fdcfd4; --bg-color-5: #fdcfd4;
     }
     :root[data-accent="purple"] {
       --highlightColor: #8b5cf6;
-      --bg-color-1: #3b0764; --bg-color-2: #4c1d95; --bg-color-3: #8b5cf6; --bg-color-4: #c4b5fd; --bg-color-5: #ede9fe;
+      --bg-color-1: #3b0764; --bg-color-2: #3b0764; --bg-color-3: #8b5cf6; --bg-color-4: #ede9fe; --bg-color-5: #ede9fe;
     }
-    :root[data-accent="pink"] {
-      --highlightColor: #ec4899;
-      --bg-color-1: #831843; --bg-color-2: #9d174d; --bg-color-3: #ec4899; --bg-color-4: #f9a8d4; --bg-color-5: #fce7f3;
+    :root[data-accent="green2"] {
+      --highlightColor: #249596;
+      --bg-color-1: #0C3C3D; --bg-color-2: #0C3C3D; --bg-color-3: #249596; --bg-color-4: #BBF0EF; --bg-color-5: #BBF0EF;
     }
     :root[data-accent="gray"] {
       --highlightColor: #6b7280;
-      --bg-color-1: #111827; --bg-color-2: #1f2937; --bg-color-3: #6b7280; --bg-color-4: #d1d5db; --bg-color-5: #f3f4f6;
+      --bg-color-1: #111827; --bg-color-2: #111827; --bg-color-3: #6b7280; --bg-color-4: #f3f4f6; --bg-color-5: #f3f4f6;
     }
     :root[data-accent="indigo"] {
       --highlightColor: #6366f1;
-      --bg-color-1: #1e1b4b; --bg-color-2: #312e81; --bg-color-3: #6366f1; --bg-color-4: #bec9ff; --bg-color-5: #e0e7ff;
+      --bg-color-1: #1e1b4b; --bg-color-2: #1e1b4b; --bg-color-3: #6366f1; --bg-color-4: #e0e7ff; --bg-color-5: #e0e7ff;
     }
     :root[data-accent="yellow"] {
       --highlightColor: #f59e0b;
-      --bg-color-1: #78350f; --bg-color-2: #b45309; --bg-color-3: #f59e0b; --bg-color-4: #fcd34d; --bg-color-5: #fef9c3;
+      --bg-color-1: #78350f; --bg-color-2: #78350f; --bg-color-3: #f59e0b; --bg-color-4: #fef9c3; --bg-color-5: #fef9c3;
     }
 
 

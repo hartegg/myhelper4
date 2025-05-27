@@ -1,16 +1,16 @@
  document.addEventListener("DOMContentLoaded", () => {
       const accentColors = [
         "blue", "green", "orange", "red", "purple",
-        "pink", "gray", "yellow", "indigo"
+        "green2", "gray", "yellow", "indigo"
       ];
 
       const highlightMap = {
-        blue: "#1e3d57",
+        blue: "#5596bc",
         green: "#28a745",
         orange: "#ff9800",
         red: "#e9361e",
         purple: "#8b5cf6",
-        pink: "#ec4899",
+        green2: "#249596",
         gray: "#6b7280",
         yellow: "#f59e0b",
         indigo: "#6366f1"
