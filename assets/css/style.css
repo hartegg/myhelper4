@@ -56,15 +56,16 @@ blockquote {
 /* {{ $footerBG := resources.Get "images/footerBG.jpg" }} */
 .footerImage { 
 	/* background:#00012f url( {{ $footerBG.RelPermalink }} ) !important; */
-	background:#000147 !important;
-	background-size: cover !important;
+	/* background:#000147 !important;
+	background-size: cover !important; */
 }
 
 :root {
- /* --highlightColor: {{ $highlightColor }};  */
-	--secondHighlightColor: {{ $highlightColor }}20;
+ /* --highlightColor: {{ $highlightColor }};  
+	--secondHighlightColor: {{ $highlightColor }}20;*/
 
 	 --accent-color: {{ $highlightColor }};
+	 --secondHighlightColor: var(--accent-color)20;
 
 	--fontFamilyPrimary: {{ $fontFamilyPrimary }};
 	--fontFamilySecondary: {{ $fontFamilySecondary }};
@@ -75,9 +76,10 @@ blockquote {
 	--color-grey-extra-light: #f6f6f6;
 	--color-podnaslovi: #2a2a2a;
 	--bg-color-black: #2a2a2a;
-	--color-white: #fff;
+	--color-white: #ffffff;
 	--color-purple: #383b75;
 	--color-ccc: #ccc;
+	--color-s1: #cccccc;
 
 	/* contact form */
 	--color-error-bg: #fceded;
@@ -105,7 +107,7 @@ blockquote {
       --bg-color-1: #0d4925; --bg-color-2: #0d4925; --bg-color-3: #7ac495; --bg-color-4: #dcfce7; --bg-color-5: #dcfce7;
     }
    :root[data-accent="orange"] {
-      --highlightColor: #ff9800;
+      --highlightColor: #b46e57;
       --bg-color-1: #431407; --bg-color-2: #431407; --bg-color-3: #b46e57; --bg-color-4: #fed7aa; --bg-color-5: #fed7aa;
     }
     :root[data-accent="red"] {
@@ -1356,7 +1358,7 @@ div.content p {
 	margin-bottom: 0;
 
 	background: var(--highlightColor);
-	background: linear-gradient(138deg, var(--highlightColor) 19%, var(--color-purple) 100%);
+	background: linear-gradient(138deg, var(--highlightColor) 19%, var(--bg-color-1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--highlightColor)",endColorstr="var(--color-purple)",GradientType=1);	
 	
 	border-radius:  0px 3px 3px 0px;
@@ -1386,7 +1388,7 @@ Selects all <p> elements that are next to <h2> elements.
 	margin-left:  -27px;
 	font-weight: bold;
 	border-radius:  0px 3px 3px 0px;
-	background: #009d81; 
+	background: var(--bg-color-1);
 	/* background: var(--secondHighlightColor); */
 	color: var(--color-white);
 
@@ -1400,9 +1402,10 @@ Selects all <p> elements that are next to <h2> elements.
 	margin-left:  -27px;
 	font-weight: bold;
 	border-radius:  0px 3px 3px 0px;
-	background: #9d3400; 
+	background: var(--bg-color-5); 
 	/* background: var(--secondHighlightColor); */
-	color: var(--color-white);
+	color: var(--bg-color-2);
+	border-bottom: 2px solid var(--bg-color-2);
 
 	width: fit-content;
 }
@@ -2561,10 +2564,10 @@ input[type=text]:focus,
 	text-align: center;
 	padding: 5px 25px;
 	font-size: 14px;
-	font-size: .75rem;
-	color: #999;
-	background: #2a2a2a;
-	border-top: 3px solid #999;
+	font-size: .80rem;
+	color:  var(--color-s1) ;
+	background: var(--bg-color-1);
+	border-top: 4px solid var(--bg-color-3);
 	/* background:  url('var(--footerImage)');   */
 	/* background: rgb(30,116,166);
 	background: -moz-linear-gradient(315deg, rgba(30,116,166,1) 0%, rgba(16,47,85,1) 50%, rgba(30,116,166,1) 100%);
