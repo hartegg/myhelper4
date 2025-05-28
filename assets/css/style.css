@@ -245,12 +245,12 @@ button {
 ------------------------------------------------*/
 
 ::-moz-selection {
-	color: var(--color-white);
-	background-color: {{ $highlightColor }}80;
+	color: var(--bg-color-3);
+	background-color: var(--bg-color-4);
   }
    ::selection {
-	color: var(--color-white);
-	background-color: {{ $highlightColor }}80;
+	color: var(--bg-color-3);
+	background-color: var(--bg-color-4);
   }
    .margin-20 {
 	margin:20px
@@ -638,7 +638,8 @@ code {
 pre {
 	display: block;
 	/* padding: 20px; */
-	 padding: 15px 20px; 
+	 /* padding: 5px 10px;  */
+	  padding: 0; 
 	/* padding-bottom: 0px; */
 	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
@@ -655,6 +656,7 @@ pre {
 
 
 }
+
 pre:hover {
 	outline: 3px solid var(--highlightColor);
 	outline-offset: 2px;
@@ -665,25 +667,18 @@ pre:focus {
 	outline: 3px solid var(--highlightColor);
 	outline-offset: 2px;
 	
-	background: linear-gradient(138deg, var(--color-podnaslovi) 19%, var(--color-purple) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--color-podnaslovi)",endColorstr="var(--color-purple)",GradientType=1);	
+/* 	background: linear-gradient(138deg, var(--color-podnaslovi) 19%, var(--color-purple) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--color-podnaslovi)",endColorstr="var(--color-purple)",GradientType=1); */	
+
+	background: linear-gradient(138deg, var(--color-podnaslovi) 19%, var(--bg-color-2) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--color-podnaslovi)",endColorstr="var(--color-purple)",GradientType=1);
   transition: all 200ms linear;
 }
 
-pre code {
-	padding: 0 20px 10px 0; 
-	color: inherit;
-	white-space: inherit;
-	background: inherit;
-	border: 0;
-	padding-bottom: 0px !important ;
-	display: inline-block;
-	align-items:baseline;
-}
 
 /* parenting data-lang start */
 pre code {
-	padding: 0 20px 10px 0; 
+	/* padding: 0 20px 10px 0;  */
 	color: inherit;
 	white-space: inherit;
 	background: inherit;
@@ -691,7 +686,7 @@ pre code {
 	padding-bottom: 0px !important ;
 	display: inline-block;
 	align-items:baseline;
-	
+	margin: 15px 10px;
 }
 pre::before {
     content: attr(data-lang);
