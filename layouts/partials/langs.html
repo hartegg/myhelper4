@@ -1,12 +1,32 @@
 {{ $siteLanguages := site.Languages}}
-{{/*  {{ $pageLang := .Page.Lang}}
-    
+{{ $pageLang := .Page.Lang }}
+
+{{ range .Page.AllTranslations }}
+
+  <div style="float: right; margin:15px 0;">
+    {{ $lang := .Lang }}
+      <a class="{{ if eq $lang $pageLang }}flagselect{{ else }}flagnoselect{{ end }}" href="{{ .RelPermalink }}">
+        <img 
+          class="flag-icon" 
+          src="/flags/{{ if eq .Lang "hr" }}hr{{ else }}en{{ end }}.svg" 
+          alt="{{ .Lang | upper }} flag" 
+          data-lang="{{ (index (where site.Languages "Lang" .Lang) 0).LanguageName }}" 
+          title="{{ (index (where site.Languages "Lang" .Lang) 0).LanguageName | upper }}"  
+          height="24" width="24" 
+        />
+      </a>
+  </div>
+  
+{{ end }}
+
+{{ partial "accent-colors.html" . }} 
+
+{{/* 
 {{- range .Page.AllTranslations }}
 <div style="float: right; margin:15px 5px;">  
     {{ $translation := . }}
 
     {{- range sort $siteLanguages "Weight" "asc" }}
-
                 {{- if eq $translation.Lang .Lang }}
                     {{ if eq $pageLang .Lang}}  */}}
                         {{/* ######## <a class="flagselect" href="{{ $translation.Permalink | relURL }}">{{ .Params.languageFlag }}&nbsp;&nbsp;{{ .Params.languageNameShort }}</a>  */}}
@@ -22,23 +42,9 @@
                         </a>   
                     {{ end }}
                 {{- end }}
-
-       
     {{- end }}
 </div> 
-
 {{- end }}   */}}
 
-{{ $pageLang := .Page.Lang }}
-{{ range .Page.AllTranslations }}
-  <div style="float: right; margin:15px 0px;">
-    {{ $lang := .Lang }}
-
-    <a class="{{ if eq $lang $pageLang }}flagselect{{ else }}flagnoselect{{ end }}" href="{{ .RelPermalink }}">
-      <img class="flag-icon" src="/flags/{{ if eq .Lang "hr" }}hr{{ else }}us{{ end }}.png" alt="{{ .Lang | upper }} flag" title="{{ .Lang | upper }}" height="24" width="24" />
-    </a>   
-  </div>
-{{ end }}
 
 
-{{ partial "accent-colors.html" . }} 
