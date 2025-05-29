@@ -1,7 +1,5 @@
-
-
 {{ $siteLanguages := site.Languages}}
-{{ $pageLang := .Page.Lang}}
+{{/*  {{ $pageLang := .Page.Lang}}
     
 {{- range .Page.AllTranslations }}
 <div style="float: right; margin:15px 5px;">  
@@ -10,10 +8,18 @@
     {{- range sort $siteLanguages "Weight" "asc" }}
 
                 {{- if eq $translation.Lang .Lang }}
-                    {{ if eq $pageLang .Lang}}
-                        <a class="flagselect" href="{{ $translation.Permalink | relURL }}">{{ .Params.languageFlag }}&nbsp;&nbsp;{{ .Params.languageNameShort }}</a>
-                    {{ else }}
-                        <a class="flagnoselect" href="{{ $translation.Permalink | relURL }}">{{ .Params.languageFlag }}&nbsp;&nbsp;{{ .Params.languageNameShort }}</a>
+                    {{ if eq $pageLang .Lang}}  */}}
+                        {{/* ######## <a class="flagselect" href="{{ $translation.Permalink | relURL }}">{{ .Params.languageFlag }}&nbsp;&nbsp;{{ .Params.languageNameShort }}</a>  */}}
+{{/*                          <a class="flagselect" href="{{ $translation.Permalink | relURL }}">
+                              <img class="flag-icon" src="/flags/{{ if eq .Lang "hr" }}hr{{ else }}us{{ end }}.png" alt="{{ .Lang }} flag" />
+                              {{ .Params.languageNameShort }}
+                        </a>
+                    {{ else }}  */}}
+                        {{/* ########## <a class="flagnoselect" href="{{ $translation.Permalink | relURL }}">{{ .Params.languageFlag }}&nbsp;&nbsp;{{ .Params.languageNameShort }}</a>  */}}
+ {{/*                         <a class="flagselect" href="{{ $translation.Permalink | relURL }}">
+                              <img class="flag-icon" src="/flags/{{ if eq .Lang "hr" }}hr{{ else }}us{{ end }}.png" alt="{{ .Lang }} flag" />
+                              {{ .Params.languageNameShort }}
+                        </a>   
                     {{ end }}
                 {{- end }}
 
@@ -21,5 +27,18 @@
     {{- end }}
 </div> 
 
-{{- end }} 
+{{- end }}   */}}
+
+{{ $pageLang := .Page.Lang }}
+{{ range .Page.AllTranslations }}
+  <div style="float: right; margin:15px 0px;">
+    {{ $lang := .Lang }}
+
+    <a class="{{ if eq $lang $pageLang }}flagselect{{ else }}flagnoselect{{ end }}" href="{{ .RelPermalink }}">
+      <img class="flag-icon" src="/flags/{{ if eq .Lang "hr" }}hr{{ else }}us{{ end }}.png" alt="{{ .Lang | upper }} flag" title="{{ .Lang | upper }}" height="24" width="24" />
+    </a>   
+  </div>
+{{ end }}
+
+
 {{ partial "accent-colors.html" . }} 
