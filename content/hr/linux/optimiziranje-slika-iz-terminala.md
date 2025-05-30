@@ -1,79 +1,81 @@
 ---
-title: Optimizing images for web from command line
-summary: Optimizing images for web from command line
-date: 2023-08-09T23:02:33+02:00
+title: Optimiziranje slika iz terminala
+summary: Optimiziranje slika iz terminala
+date: 2025-05-30T17:24:13+02:00
+lastmod: 2025-05-30T17:24:13+02:00
 draft: false
-hideSummary: false
-ShowCodeCopyButtons: true
+author: helper4
 categories:
   - Linux
 tags:
   - linux
   - image
 toc: true
-autonumbering: true
-author: helper4
+autonumbering: true 
 thumbnail: images/linux.svg
+translationKey: optimiziranje-slika-iz-terminala
 ---
 
-## Resize images
 
-Install ImageMagick
+## Promjena veličine slika
+
+Instalirajte ImageMagick
 
 ```bash
 $ sudo apt install imagemagick
 ```
 
-### Resize to 400px width into image.min.jpg
+### Promjena veličine slike na širinu od 400px  i spremanje kao image.min.jpg
 
 ```bash
 $ convert image.jpg -resize 400 image.min.jpg
 ```
 
-### Quality
+### Kvaliteta
 
-resize with quality to 400px width into image.min.jpg
+postavi veličinu na 400px i spremanje kao image.min.jpg
 
 ```bash
 $ convert image.jpg -quality 75 -resize 400 image.min.jpg
 ```
 
-### Strip all metadata
+### Uklanjanje(_strip_) svih metapodataka
 
-resize with quality to 400px width into image.min.jpg
+ukloni sve metapodatake i postavi veličinu na 400px i spremanje kao image.min.jpg
 
 ```bash
 convert image.jpg -quality 75 -resize 400 -strip image.min.jpg
 ```
 
-### For the best quality
+### Za najbolju kvalitetu
 
 ```bash
 convert image.jpg -sampling-factor 4:2:0 -strip -quality 75 -interlace JPEG -colorspace sRGB -resize 400 converted.jpg
 ```
 
-### Make a bash script with a name web/jpeg
-
-$1 - input file\
-$2 - widfh\
-$3 - output file\
-\
-and put the followinc code in it
+### Izrada bash skripte pod nazivom web/jpeg
 
 ```bash
+# $1 - ulazna datoteka
+# $2 - širina
+# $3 - izlazna datoteka
+
+# i dodaj niži kod
+
+
 #!/bin/bash
 convert $1 -sampling-factor 4:2:0 -strip -quality 75 -interlace JPEG -colorspace sRGB -resize $2 $3
 ```
 
-in folder with images
+u folder sa slikama
 
 ```bash
 chmod +x webjpeg
 webjpeg image.jpg 400 image.min.jpg
 ```
 
-\
-To see all 'convert' (ImageMagick) options run
+
+Za prikaz svih dostupnih opcija convert naredbe iz ImageMagicka pokrenite:
 
 ```bash
 $ convert man
@@ -81,21 +83,23 @@ $ convert man
 
 &nbsp;
 
-## PNG image
+## PNG slike
+
+Konvertiraj sliku iz .png u .jpg foramt
 
 ```bash
 convert screenshoot.png -strip -resize 400 screenshoot.min.png
 ```
 
-### And then for evan smaller file you can convert it from .png to .jpg
+za još manju veličinu datoteke možete ih pretvoriti iz .png u .jpg 
 
 ```bash
-convert screenshoot.png 400 screenshoot.png
+convert screenshoot.png 400 screenshoot.jpg
 ```
 
-### For batch images run this
+### Za grupnu obradu (batch) slika koristite ovo
 
-mogrify - is part of imagemagick
+**mogrify** - is part of imagemagick
 
 ```bash
 mogrify -sampling-factor 4:2:0 -strip -quality 75 -interlace JPEG -colorspace sRGB -resize 400 -path "min" *.jpg
@@ -103,23 +107,22 @@ mogrify -sampling-factor 4:2:0 -strip -quality 75 -interlace JPEG -colorspace sR
 
 &nbsp;
 
-## Optimize SVG
+## OOptimizacija SVG datoteka
 
-SVG\
-install js package SVGO\
-first install nodejs then
+SVG:
+Instalirajte JavaScript paket SVGO. Prvo instalirajte Node.js, zatim:
 
 ```html
 sudo npm -g install svgo
 ```
 
-### Optimaze svg file
+### Optimizirajte SVG datoteku
 
 ```bash
 sudo logo logo.svg -o logo.min.svg
 ```
 
-### Example output of compression
+### Primjer rezultata kompresije
 
 ```text
 logo.svg:
@@ -127,10 +130,10 @@ Done in 39 ms!
 4.111 KiB 60,8% = 1.61 KiB
 ```
 
-### For batch use
+### Za grupnu obradu SVG 
 
--f for the folder option\
--0 for output
+-f za mapu option\
+-0 za izlaz
 
 ```html
 svgo -f path/to/svgs -0 path/to/optimizesvgs
@@ -148,4 +151,3 @@ svgo -f path/to/svgs -0 path/to/optimizesvgs
 {{< rawhtml >}} </div> {{< /rawhtml >}}
 
 &nbsp;
-

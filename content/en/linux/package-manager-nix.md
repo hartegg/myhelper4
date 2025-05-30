@@ -8,13 +8,13 @@ ShowCodeCopyButtons: true
 categories:
   - Linux
 tags:
-  - package-manager
   - linux
   - nix
 toc: true
 autonumbering: true
 author: helper4
 thumbnail: images/linux.svg
+translationKey: instalacijski-paket-nix
 ---
 
 Nix Package Manager is a powerful, purely functional package manager designed to manage software packages and configurations in a declarative and reproducible manner. It was initially developed for the NixOS operating system but has since gained popularity as a package manager that can be used on various Unix-like systems, including Linux and macOS.
@@ -105,8 +105,6 @@ nix-env --switch-generation #
 
 ## Troubleshooting
 ### Programs not showing up in start menu
-
-NIX stores all the .desktop files for the programs it installs @ ```/home/$USER/.nix-profile/share/applications/``` and a simple symlink will fix them not showing up in your start menu.
 
 ```bash
 ln -s /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/

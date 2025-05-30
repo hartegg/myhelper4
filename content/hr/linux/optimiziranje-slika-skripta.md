@@ -1,10 +1,10 @@
 ---
-title: Optimizing Images Script
-summary: Optimizing images is easy with this script! Img-optimizer + ImageMagicK leverages multiple CLI tools to give the best results
-date: 2023-08-09T23:57:15+02:00
+title: Skripta za optimiziaciju slika 
+summary: Jednostavna skripta za optimiziaciju slika
+date: 2025-05-30T16:38:51+02:00
+lastmod: 2025-05-30T16:38:51+02:00
 draft: false
-hideSummary: false
-ShowCodeCopyButtons: true
+author: helper4
 categories:
   - Linux
   - Windows
@@ -12,15 +12,15 @@ tags:
   - image
   - linux
 toc: true
-autonumbering: true
-author: helper4
+autonumbering: true 
 thumbnail: images/linux.svg
 translationKey: optimiziranje-slika-skripta
 ---
 
-Optimizing images is easy with this script! Img-optimizer + ImageMagicK leverages multiple CLI tools to give the best results
 
-# Dependencies
+Skripta za optimiziaciju slika. Img-optimizer + ImageMagick koristi više CLI alata kako bi postigao najbolje rezultate.
+
+# Potrebno instalirati
 
 ```bash
 sudo apt install jpegoptim optipng imagemagick webp -y
@@ -29,9 +29,9 @@ sudo ln -s $HOME/.img-optimize/optimize.sh /usr/local/bin/img-optimize
 sudo chmod +x /usr/local/bin/img-optimize
 ```
 
-# Custom Script
+# Prilagođena skripta
 
-Change the variables for FOLDER, WIDTH, and HEIGHT.
+Promijenite varijable za FOLDER, ŠIRINU (WIDTH) i VISINU (HEIGHT).
 
 
 ```bash
@@ -59,8 +59,8 @@ img-optimize --std --path ${FOLDER}
 **Reference:**
 {{< rawhtml >}} <div class="lnkRef"> {{< /rawhtml >}}
 
-{{< a_blank target="_blank" title="Script for Optimizing Images" url="https://christitus.com/script-for-optimizing-images/#dependencies" >}}
-{{< a_blank target="_blank" title="My favorite Linux commands for optimizing web images" url="https://opensource.com/article/21/12/optimize-web-images-linux" >}}
+{{< a_blank target="_blank" title="Skripta za optimizaciju slika" url="https://christitus.com/script-for-optimizing-images/#dependencies" >}}
+{{< a_blank target="_blank" title="Moje omiljene Linux naredbe za optimizaciju web slika" url="https://opensource.com/article/21/12/optimize-web-images-linux" >}}
 
 {{< rawhtml >}} </div> {{< /rawhtml >}}
 

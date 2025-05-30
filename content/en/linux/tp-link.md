@@ -17,6 +17,7 @@ toc: true
 autonumbering: true
 author: helper4
 thumbnail: images/linux.svg
+translationKey: tp-link
 ---
 
 
