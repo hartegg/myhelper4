@@ -438,70 +438,41 @@ mark {
       transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 	  z-index: 999999999999;
     }
-   
-/* .flag-icon {
-  width: 24px;
-  height: auto;
-  vertical-align: middle;
-  margin-right: 4px;
-  border-radius: 2px;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
-} */
 
-/* .flag-icon {
-  width: 24px;
-  height: auto;
-  vertical-align: middle;
-  margin-right: 6px;
-}
-   /* Flags navigation 
-.flagselect {
-  border: 1px solid var(--highlightColor);
-  margin: 5px; 
-  font-weight: bold;
-  color: black;
-  font-size: 90%;
-    border-radius: 50%;
-} */
-
-.flag-icon {
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-  border-radius: 50%; /* učini sliku kružnom */
-  transition: all 0.3s ease; 
-}
-
-.flagselect .flag-icon {
-  border: 2px solid var(--highlightColor); /* plavi krug oko aktivnog jezika */
-  margin: 2px;
-     /*  border: 2px solid black; 
-  box-shadow: 0 0 0 2px white;*/
-
-
-}
-.flag-icon:hover {
-  transform: scale(1.2);
-  border-color: var(--highlightColor);
-} 
-.flagnoselect {
-  vertical-align: middle;
-  border-radius: 50%; 
-  margin: 2px;
-  border: 2px solid var(--bg-color-1);
-} 
-
-.language-label {
-  display: none;
-  margin-left: 6px;
-  font-size: 14px;
-  color: white;
-}
-
-/* a.flagselect:hover .language-label,
-a.flagnoselect:hover .language-label {
-  display: inline;
-} */
+	/* boxLang start
+	******************* */
+	.boxLang{
+		float: right; 
+		margin:13px 3px;
+		padding:1px;
+	}
+	.flag-icon {
+	/*   width: 24px;
+	height: 24px; */
+	vertical-align: middle;
+	border-radius: 50%; /* učini sliku kružnom */
+	transition: all 0.3s ease; 
+	}
+	.flagselect .flag-icon {
+	/* border: 2px solid var(--highlightColor); */ /* plavi krug oko aktivnog jezika */
+	/*  margin: 0 10px;
+	border: 2px solid black; */
+	vertical-align: middle;
+	box-shadow: 0 0 0 2px white; 
+	}
+	.flagnoselect {
+		vertical-align: middle;
+	box-shadow: 0 0 0 1px transparent; 
+	}
+	.flagnoselect > .flag-icon {
+		margin-top: -3px;
+	}
+	.flag-icon:hover {
+	transform: scale(1.1);
+	border-color: var(--color-s1);
+	} 
+	/* boxLang end
+	******************* */
 
    .container {
 	position: relative;

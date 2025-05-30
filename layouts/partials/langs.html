@@ -3,7 +3,7 @@
 
 {{ range .Page.AllTranslations }}
 
-  <div style="float: right; margin:15px 0;">
+  <div class="boxLang">
     {{ $lang := .Lang }}
       <a class="{{ if eq $lang $pageLang }}flagselect{{ else }}flagnoselect{{ end }}" href="{{ .RelPermalink }}">
         <img 
@@ -11,7 +11,7 @@
           src="/flags/{{ if eq .Lang "hr" }}hr{{ else }}en{{ end }}.svg" 
           alt="{{ .Lang | upper }} flag" 
           data-lang="{{ (index (where site.Languages "Lang" .Lang) 0).LanguageName }}" 
-          title="{{ (index (where site.Languages "Lang" .Lang) 0).LanguageName | upper }}"  
+          title="{{ (index (where site.Languages "Lang" .Lang) 0).LanguageName }}"  
           height="24" width="24" 
         />
       </a>
