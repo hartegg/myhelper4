@@ -8,17 +8,32 @@ read {{ else }} {{ $minutes }} min read {{ end }} */}} {{/* {{ $minutes := div
 </div>
 {{ end }} */}}
 
-<!--
-https://makewithhugo.com/add-a-word-count/-->
+<!-- https://makewithhugo.com/add-a-word-count/-->
 
-{{ $readTime := mul (div (countwords .Content) 150.0) 60 }} 
+
+{{/*  {{ $readTime := mul (div (countwords .Content) 150.0) 60 }} 
 {{ if lt $readTime 1 }}
-<div class="meta__text post-word-count meta__item">less then 1 minute</div>
+    <div class="meta__text post-word-count meta__item">less then 1 minute</div>
 {{ else }}
-<!--
-<div class="meta__text post-word-count meta__item"> {{ math.Floor (div $readTime 60) }} min. i {{ mod $readTime 60 }} sec.  of reading, {{ .WordCount }} words</div>
--->
-<div class="meta__text post-word-count meta__item">
-  {{ math.Floor (div $readTime 60) }} min. of reading, {{ .WordCount }} words
-</div>
+  <div class="meta__text post-word-count meta__item">
+    {{ math.Floor (div $readTime 60) }} min. of reading, {{ .WordCount }} words
+  </div>
+{{ end }}  */}}
+
+{{ $readTime := mul (div (countwords .Content) 150.0) 60 }}
+{{ $lang := .Site.Language.Lang }}
+
+{{ if lt $readTime 1 }}
+  <div class="meta__text post-word-count meta__item">
+    {{ if eq $lang "hr" }}manje od 1 minute{{ else }}less than 1 minute{{ end }}
+  </div>
+{{ else }}
+  <div class="meta__text post-word-count meta__item">
+    {{ if eq $lang "hr" }}
+      {{ math.Floor (div $readTime 60) }} min. čitanja, {{ .WordCount }} riječi
+    {{ else }}
+      {{ math.Floor (div $readTime 60) }} min. of reading, {{ .WordCount }} words
+    {{ end }}
+  </div>
 {{ end }}
+

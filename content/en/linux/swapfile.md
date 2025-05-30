@@ -1,9 +1,7 @@
 ---
 title: Swapfile - craete, resize, remove
 summary:
-  A swapfile allows Linux to simulate the disk space as RAM. When your system
-  starts running out of RAM, it uses the swap space to and swaps some content of
-  the RAM
+ Swap datoteka omogućuje Linuxu da koristi prostor na disku kao RAM
 date: 2022-04-19T20:29:22+02:00
 draft: false
 hideSummary: false
@@ -22,6 +20,7 @@ autonumbering: true
 author: helper4
 thumbnail: images/linux.svg
 lastmod: 2022-06-20T15:06:14.473Z
+translationKey: swapfile
 ---
 
 ## Create swapfile

@@ -118,18 +118,18 @@
 
 	
 	
-{{ $svgClose := resources.Get "svg/close.svg" }}  
-<div id="divSearchModal" class="searchModal">
-	 <div class="mSticky"> 
-	{{/* 	<div class="searchHead"> */}}
-			<input id="searchInput" class="sInput border-radius" type="text" placeholder="Search...">
-			<img class="svgClose" src="{{ $svgClose.RelPermalink }}" alt="" title="Close search" height="30" width="30" />
-		</div>	
-	<ul id="searchResult">
-	<!-- the search result will appear here -->
-	</ul>
-	{{/*  </div>  */}}
-</div>
+	{{ $svgClose := resources.Get "svg/close.svg" }}  
+	<div id="divSearchModal" class="searchModal">
+		<div class="mSticky"> 
+		{{/* 	<div class="searchHead"> */}}
+				<input id="searchInput" class="sInput border-radius" type="text" placeholder="Search...">
+				<img class="svgClose" src="{{ $svgClose.RelPermalink }}" alt="" title="Close search" height="30" width="30" />
+			</div>	
+		<ul id="searchResult">
+		<!-- the search result will appear here -->
+		</ul>
+		{{/*  </div>  */}}
+	</div>
 
 
 	<div class="container container--outer" >
