@@ -51,7 +51,7 @@
 
 # Recent Posts widget
 - id: recent_title
-  translation: "Najnoviji postovi"
+  translation: "Najnovije objave"
 
 # Social widget
 - id: social_title
