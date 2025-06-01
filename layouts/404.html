@@ -1,8 +1,12 @@
-{{ define "main" }}
-<main class="main" role="main">
-	<div class="warning">
-		<h1 class="warning__headline">{{ T "404_title" }}</h1>
-		<p class="warning__text">{{ T "404_text" }} <a href="{{ "" | relLangURL }}">{{ T "404_linktext" }}</a>.</p>
-	</div>
-</main>
-{{ end }}
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ i18n "pageNotFound" }}</title>
+</head>
+<body>
+  <h1>{{ i18n "pageNotFound" }}</h1>
+  <p>{{ i18n "pageNotFoundDescription" }}</p>
+  <a href="{{ "/" | relLangURL }}">{{ i18n "backHome" }}</a>
+</body>
+</html>

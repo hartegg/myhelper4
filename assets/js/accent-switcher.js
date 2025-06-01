@@ -1,7 +1,7 @@
  document.addEventListener("DOMContentLoaded", () => {
       const accentColors = [
         "blue", "green", "orange", "red", "purple",
-        "green2", "gray", "yellow", "indigo"
+        "green2", "bluish", "yellow", "brown"
       ];
 
       const highlightMap = {
@@ -11,9 +11,9 @@
         red: "#e9361e",
         purple: "#8b5cf6",
         green2: "#249596",
-        gray: "#6b7280",
+        bluish: "#4DA1A9",
         yellow: "#f59e0b",
-        indigo: "#6366f1"
+        brown: "#D98324"
       };
 
       const container = document.getElementById("accent-buttons");

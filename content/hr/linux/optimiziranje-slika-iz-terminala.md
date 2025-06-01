@@ -107,7 +107,7 @@ mogrify -sampling-factor 4:2:0 -strip -quality 75 -interlace JPEG -colorspace sR
 
 &nbsp;
 
-## OOptimizacija SVG datoteka
+## Optimizacija SVG datoteka
 
 SVG:
 Instalirajte JavaScript paket SVGO. Prvo instalirajte Node.js, zatim:

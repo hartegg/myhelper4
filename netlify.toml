@@ -44,3 +44,9 @@ status = 200
 from = "/hr/*"
 to = "/hr/:splat"
 status = 200
+
+# Add this at the end
+[[redirects]]
+from = "/*"
+to = "/404.html"
+status = 404

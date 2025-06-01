@@ -130,14 +130,14 @@ blockquote {
       --bg-color-1: #0C3C3D; --bg-color-2: #0C3C3D; --bg-color-3: #249596; --bg-color-4: #BBF0EF; --bg-color-5: #BBF0EF;
 	   
     }
-    :root[data-accent="gray"] {
-      --highlightColor: #6b7280;
-      --bg-color-1: #111827; --bg-color-2: #111827; --bg-color-3: #6b7280; --bg-color-4: #f3f4f6; --bg-color-5: #f3f4f6;
+    :root[data-accent="bluish"] {
+      --highlightColor: #4DA1A9;
+      --bg-color-1: #2E5077; --bg-color-2: #2E5077; --bg-color-3: #4DA1A9; --bg-color-4: #F6F4F0; --bg-color-5: #F6F4F0;
 	   
     }
-    :root[data-accent="indigo"] {
-      --highlightColor: #6366f1;
-      --bg-color-1: #1e1b4b; --bg-color-2: #1e1b4b; --bg-color-3: #6366f1; --bg-color-4: #e0e7ff; --bg-color-5: #e0e7ff;
+    :root[data-accent="brown"] {
+      --highlightColor: #D98324;
+      --bg-color-1: #443627; --bg-color-2: #443627; --bg-color-3: #D98324; --bg-color-4: #EFDCAB; --bg-color-5: #EFDCAB;
 	   
     }
     :root[data-accent="yellow"] {
