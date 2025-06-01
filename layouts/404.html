@@ -1,12 +1,80 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ i18n "pageNotFound" }}</title>
-</head>
-<body>
-  <h1>{{ i18n "pageNotFound" }}</h1>
-  <p>{{ i18n "pageNotFoundDescription" }}</p>
-  <a href="{{ "/" | relLangURL }}">{{ i18n "backHome" }}</a>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Page Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding: 4rem;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      a {
+        color: #007acc;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    </style>
+    <script>
+      (function () {
+        // Provjeri jezik iz URL-a
+        const path = window.location.pathname;
+        const langMatch = path.match(/^\/(en|hr)\b/);
+        const lang = langMatch ? langMatch[1] : null;
+
+        // Ako već nismo na jeziku i postoji podržani jezik, redirectaj JEDNOM
+        const alreadyRedirected = sessionStorage.getItem("redirected404");
+
+        if (!alreadyRedirected && lang && !path.includes("/404.html")) {
+          sessionStorage.setItem("redirected404", "true");
+          window.location.replace(`/${lang}/404.html`);
+        }
+
+        // Ako nije en ili hr, prikazat će engleski kao fallback
+      })();
+    </script>
+  </head>
+  <body>
+    <h1 id="title">Page Not Found</h1>
+    <p id="message">The page you are looking for doesn't exist.</p>
+    <p>
+      <a id="link" href="/en/">Go to homepage</a>
+    </p>
+
+    <script>
+      // Ispis teksta ovisno o jeziku
+      const translations = {
+        en: {
+          title: "Page Not Found",
+          message: "The page you are looking for doesn't exist.",
+          link: "Go to homepage",
+          href: "/en/"
+        },
+        hr: {
+          title: "Stranica nije pronađena",
+          message: "Stranica koju tražite ne postoji.",
+          link: "Povratak na početnu",
+          href: "/hr/"
+        }
+      };
+
+      const path = window.location.pathname;
+      const langMatch = path.match(/^\/(en|hr)\b/);
+      const lang = langMatch ? langMatch[1] : "en"; // default: en
+      const t = translations[lang];
+
+      // Postavi lokalizirane vrijednosti
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("message").textContent = t.message;
+      const link = document.getElementById("link");
+      link.textContent = t.link;
+      link.href = t.href;
+    </script>
+  </body>
 </html>

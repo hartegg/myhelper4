@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tema s Gradient Pozadinom i Accent Bojama</title>
+  <style>
+    :root {
+      --bg-color-1: #081a30;
+      --bg-color-2: #081a30;
+      --bg-color-3: #5596bc;
+      --bg-color-4: #d3e7f2;
+      --bg-color-5: #d3e7f2;
+      --highlightColor: #007bff;
+    }
+
+    :root[data-accent="blue"] {
+      --highlightColor: #007BFF;
+      --bg-color-1: #081a30; --bg-color-2: #081a30; --bg-color-3: #5596bc; --bg-color-4: #d3e7f2; --bg-color-5: #d3e7f2;
+    }
+    :root[data-accent="green"] {
+      --highlightColor: #28a745;
+      --bg-color-1: #14532d; --bg-color-2: #166534; --bg-color-3: #22c55e; --bg-color-4: #86efac; --bg-color-5: #dcfce7;
+    }
+    :root[data-accent="orange"] {
+      --highlightColor: #ff9800;
+      --bg-color-1: #431407; --bg-color-2: #7f1d1d; --bg-color-3: #9a3412; --bg-color-4: #f97316; --bg-color-5: #fed7aa;
+    }
+    :root[data-accent="red"] {
+      --highlightColor: #e9361e;
+      --bg-color-1: #4c0519; --bg-color-2: #881337; --bg-color-3: #be123c; --bg-color-4: #f43f5e; --bg-color-5: #fda4af;
+    }
+    :root[data-accent="purple"] {
+      --highlightColor: #8b5cf6;
+      --bg-color-1: #3b0764; --bg-color-2: #6d28d9; --bg-color-3: #8b5cf6; --bg-color-4: #c4b5fd; --bg-color-5: #ede9fe;
+    }
+    :root[data-accent="pink"] {
+      --highlightColor: #ec4899;
+      --bg-color-1: #831843; --bg-color-2: #be185d; --bg-color-3: #ec4899; --bg-color-4: #f9a8d4; --bg-color-5: #fce7f3;
+    }
+    :root[data-accent="gray"] {
+      --highlightColor: #6b7280;
+      --bg-color-1: #111827; --bg-color-2: #374151; --bg-color-3: #6b7280; --bg-color-4: #d1d5db; --bg-color-5: #f3f4f6;
+    }
+    :root[data-accent="teal"] {
+      --highlightColor: #06b6d4;
+      --bg-color-1: #164e63; --bg-color-2: #0e7490; --bg-color-3: #06b6d4; --bg-color-4: #67e8f9; --bg-color-5: #a5f3fc;
+    }
+    :root[data-accent="yellow"] {
+      --highlightColor: #f59e0b;
+      --bg-color-1: #78350f; --bg-color-2: #b45309; --bg-color-3: #f59e0b; --bg-color-4: #fcd34d; --bg-color-5: #fef9c3;
+    }
+    :root[data-accent="indigo"] {
+      --highlightColor: #6366f1;
+      --bg-color-1: #312e81; --bg-color-2: #4338ca; --bg-color-3: #6366f1; --bg-color-4: #a5b4fc; --bg-color-5: #e0e7ff;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(
+        180deg,
+        var(--bg-color-1) 0%,
+        var(--bg-color-2) 15%,
+        var(--bg-color-3) 40%,
+        var(--bg-color-4) 70%,
+        var(--bg-color-5) 100%
+      );
+      transition: background 0.6s ease;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    h1 {
+      margin-bottom: 1em;
+    }
+
+    .accent-button {
+      margin: 5px;
+      width: 36px;
+      height: 36px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      outline: 2px solid white;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .accent-button:hover {
+      transform: scale(1.1);
+    }
+
+    .accent-button.active {
+      box-shadow: 0 0 0 3px #fff, 0 0 6px 3px rgba(255,255,255,0.5);
+    }
+
+    #accent-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Odaberi Temu</h1>
+  <div id="accent-buttons"></div>
+
+  <script>
+    const accentColors = [
+      "blue", "green", "orange", "red", "purple",
+      "pink", "gray", "teal", "yellow", "indigo"
+    ];
+
+    const accentContainer = document.getElementById("accent-buttons");
+
+    accentColors.forEach(color => {
+      const btn = document.createElement("button");
+      btn.className = "accent-button";
+      btn.dataset.accentOption = color;
+      btn.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue(`--highlightColor`);
+      document.documentElement.setAttribute("data-accent", color);
+      btn.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--highlightColor");
+      document.documentElement.removeAttribute("data-accent");
+
+      btn.addEventListener("click", () => {
+        document.documentElement.setAttribute("data-accent", color);
+        localStorage.setItem("accent-color", color);
+        setActiveButton("accent-button", color);
+      });
+      accentContainer.appendChild(btn);
+    });
+
+    function setActiveButton(className, activeKey) {
+      document.querySelectorAll(`.${className}`).forEach(btn => {
+        if (btn.dataset.accentOption === activeKey) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+    }
+
+    const storedAccent = localStorage.getItem("accent-color");
+    if (storedAccent) {
+      document.documentElement.setAttribute("data-accent", storedAccent);
+      setActiveButton("accent-button", storedAccent);
+    } else {
+      document.documentElement.setAttribute("data-accent", "blue");
+      setActiveButton("accent-button", "blue");
+    }
+  </script>
+</body>
+</html>

@@ -20,6 +20,9 @@ theme = "mainroad"
 # posts = "/:slug"
 
 
+[Author]
+code = "myHelper4"
+
  DefaultContentLanguage = "en"
  defaultContentLanguageInSubdir = true
 

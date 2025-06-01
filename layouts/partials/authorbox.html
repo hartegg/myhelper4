@@ -14,12 +14,17 @@
     </div>
   </figure>
   {{- end }}
+
+  <div class="author-box"> <!-- <div potreban radi 404 stranice -->
   {{- with $author.name }}  
   <div class="authorbox__header">
     <span class="authorbox__name">About {{ . }}
   </div>
-  {{- end }} {{- with $author.bio }}
+  {{- end }} 
+  {{- with $author.bio }}
   <div class="authorbox__description">{{ . }}</div>
   {{- end }}
+  </div>
+   
 </div>
 {{- end }}
