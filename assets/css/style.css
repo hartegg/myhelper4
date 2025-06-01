@@ -671,7 +671,7 @@ samp {
 
 pre,
 code {
-	background-color: #afb8c133;
+	background-color: #afb8c1; 
 	border: 2px solid #afb8c133;
 }
 code {
@@ -746,6 +746,10 @@ pre::before {
 	background-color: #272822;
 	padding: 5px 15px 2px 15px;
 	border-radius: 10px 10px 0 0;
+}
+/* if data-lang is null */
+pre:not([data-lang])::before {
+  content: none;
 }
 /* parenting data-lang end */
 
@@ -1261,10 +1265,10 @@ a.featured__link:hover .feturedTitle{
 	width: 100%;
 }
 
-   div.post__content .highlight pre {
-	/* border-radius: 12px !important;
-	background-color: #575d65 !important; */
-}
+/*    div.post__content .highlight pre {
+	border-radius: 12px !important;
+	background-color: #575d65 !important; 
+}*/
 .highlight {
 	max-width: 100%;
 	width: fit-content;

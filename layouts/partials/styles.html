@@ -1,24 +1,17 @@
 {{/*  
     option for more then one file
-    */}}
-    
+*/}}
     
     {{ $style := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . -}}
     {{ $tocnav := resources.Get "css/tocnav.css" | resources.ExecuteAsTemplate "css/tocnav.css" . -}}
-    
     {{ $clipboard := resources.Get "css/clipboard.css" | resources.ExecuteAsTemplate "css/clipboard.css" . -}}
     
-    
-    
-    {{/*  {{ $css := slice $style $tocnav | resources.Concat "dist/style.css" | minify | fingerprint }} */}}
-    {{ $css := slice $style $tocnav | resources.Concat "dist/style.css" | minify  | fingerprint  }} 
-    
-    {{/* {{ $css := slice $style  | resources.Concat "dist/style.css" | resources.PostCSS  | fingerprint }}*/}}
+    {{ $css := slice $style $tocnav | resources.Concat "dist/style.css" | minify | fingerprint  }} 
     <link rel="stylesheet" href="{{ $css.RelPermalink }}">  
     
     {{ $cssClipboard := slice $clipboard  | resources.Concat "dist/clipboard.css" | minify | fingerprint  }} 
     {{/* {{ if (findRE "<pre" .Content 1) }}   */}}
-        <link rel="stylesheet" href="{{ $cssClipboard.RelPermalink }}">
+    <link rel="stylesheet" href="{{ $cssClipboard.RelPermalink }}">
     {{/* {{ end }}  */}}
     
     {{/*  <link rel="stylesheet" href="css/tocnav.css"> */}}

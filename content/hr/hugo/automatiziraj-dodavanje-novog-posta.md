@@ -189,9 +189,10 @@ Nakon toga dodano je vidljivo pod **NPM SCRIPTS**
 
 
 
-Datoteka kreirana s potrebnim frontmater svojstvima
+Datoteka kreirana s potrebnim frontmater svojstvima pod nazivom\
+automatiziraj-dodavanje-novog-posta.md
 
-```automatiziraj-dodavanje-novog-posta.md
+```toml
 ---
 title: Automatiziraj dodavanje novog posta
 summary: Automatiziraj dodavanje novog posta
@@ -209,3 +210,4 @@ autonumbering: true
 thumbnail: images/linux.svg
 ---
 ```
+

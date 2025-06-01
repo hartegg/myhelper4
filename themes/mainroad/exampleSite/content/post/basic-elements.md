@@ -129,7 +129,7 @@ You can also use inline Markdown.
 
 ## Code
 
-```html
+{{< highlight html >}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -140,7 +140,7 @@ You can also use inline Markdown.
   <p>Test</p>
 </body>
 </html>
-```
+{{< highlight  >}}
 
 
 ## Other stuff — abbr, sub, sup, kbd, etc.
