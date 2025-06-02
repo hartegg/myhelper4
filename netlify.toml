@@ -44,7 +44,7 @@ from = "/hr/*"
 to = "/hr/:splat"
 status = 200
 
-# Add this at the end
+# Catch-all 404 (must be last)
 [[redirects]]
 from = "/*"
 to = "/404.html"
