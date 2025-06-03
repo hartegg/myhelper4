@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Page Not Found</title>
+    <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
      /* body {
@@ -75,6 +76,13 @@ DRIBBBLE: https://dribbble.com/shots/4330167-404-Page-Lost-In-Space
     transform: rotate(-3600deg) !important;
 }
 
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+  user-select: none;}
+
 html, body{
     margin: 0;
     width: 100%;
@@ -86,6 +94,7 @@ html, body{
     -ms-user-select: none; /* IE 10+ */
     user-select: none; /* Standard syntax */
     color: #fff;
+    
 }
 
 h1{
@@ -332,13 +341,13 @@ p{
         en: {
           title: "Page Not Found",
           message: "The page you are looking for doesn't exist.",
-          link: "Go to homepage",
+          link: "Go to Homepage",
           href: "/en/"
         },
         hr: {
           title: "Stranica nije pronađena",
           message: "Stranica koju tražite ne postoji.",
-          link: "Povratak na početnu",
+          link: "Povratak na Početnu",
           href: "/hr/"
         }
       };
